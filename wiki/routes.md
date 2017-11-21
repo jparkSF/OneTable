@@ -1,6 +1,6 @@
 # Routes 
 
-  ## Frontend
+  ## Frontend Routes
 
   ### HTML
   * `GET /` `StaticPagesController#root`
