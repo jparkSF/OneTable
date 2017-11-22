@@ -11,7 +11,7 @@ import {
 
 export default () => {
   return (
-    <div>
+    <div className="main">
       <header>
         <Link to="/" className="header-link">
           <h1>OneTable</h1>

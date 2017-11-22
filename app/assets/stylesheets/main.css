@@ -1,0 +1,49 @@
+body {
+  width: 97%;
+  margin: auto;
+  margin-top:20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 100%;
+  font-style: normal;
+}
+
+.main{
+  /* border: 1px solid black; */
+}
+header{
+  
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+
+}
+
+.header-link{
+  font-size:30px;
+  margin: auto 40px;
+
+}
+
+.login-signup{
+  margin: auto 40px;
+  font-size: 15px;
+  
+}
+
+.login-signup > a{
+  /* border: 1px solid black; */
+  margin: 0 5px;
+  height: 100%;
+  padding: 4px 15px 6px 15px;
+  font-weight: 300;
+}
+
+
+
+.login-signup > a:first-child{
+  
+  background: #237B98;
+  border-radius: 3px;
+  color:white;
+  
+}
