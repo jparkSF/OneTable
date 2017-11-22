@@ -11,7 +11,6 @@ const mSTP = state => {
 }
 
 const Auth = ({ loggedIn, path, component: Component }) => {
-  console.log("asdfasd")
   
   return (<Route
     path={path}
