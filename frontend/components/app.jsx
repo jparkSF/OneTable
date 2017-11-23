@@ -1,7 +1,8 @@
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
-import { Link } from 'react-router-dom';
+import { Link, Switch } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 
 const App = () => (
   <div className="main">
@@ -12,6 +13,7 @@ const App = () => (
       <GreetingContainer />
     </header>
     <div className="main-bg"></div>
+
   </div>
 )
 

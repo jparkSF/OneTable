@@ -1,0 +1,75 @@
+.login-form label{
+  margin: 10px 10px;
+}
+
+.login-form-box p {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.login-form input, focus {
+  border: 1px solid;
+  width: 250px;
+  line-height: 40px;
+  margin: 5px 0;
+  border-color: #e0e0e0;
+}
+
+.login-form input[type=text], input[type=password]{
+  padding-left:20px;
+  /* padding-bottom: 4px; */
+  font-size:14px;
+  font-weight: 400;
+}
+
+.login-form input[type=text]:hover, input[type=password]:hover{
+  border-color: #c0c0c0;
+}
+
+.login-form input[type=text]:focus, input[type=password]:focus{
+  outline: #237B98 solid 2px!important;
+}
+
+.login-form input[type=submit] {
+  border: 1px solid;
+  width: 100%;
+  line-height: 40px;
+  margin: 15px 0;
+  border-radius: 3px;
+  text-align: center;
+  color:white;
+  background-color: #DA3743;
+  border-color: #b8222d;
+  font-weight: 300;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.login-form input[type=submit]:hover {
+    background-color: #b8222d;
+    transition-duration: 0.5s;
+}
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: grey;
+  font-size: 12px;
+}
+
+hr {
+  border-left:0px;
+  border-right:0px;
+  border-top:0px;
+  border-bottom:1px;
+  background-color: #e0e0e0;
+  height: 1px;  
+}
+
+.login-form-links {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.login-form-links a {
+  color: #DA3743;
+}

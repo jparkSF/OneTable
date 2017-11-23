@@ -14,20 +14,28 @@ class Greeting extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: false,
+      buttonPath: ''
     };
-    
+    this.formType = this.props.history.location.pathname
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
-  openModal() {
-    console.log(this.props)
-    this.setState({ modalIsOpen: true });
+  openModal(buttonType) {
+    
+    this.setState({ 
+      modalIsOpen: true,
+      buttonPath: buttonType
+    });
+
+  
   }
+
   
   closeModal() {
+    // this.props.history.push('/');
     this.setState({ modalIsOpen: false });
   }
 
@@ -38,8 +46,8 @@ class Greeting extends React.Component{
   sessionLinks() {
     return (
       <nav className="login-signup">
-        <Link to="/signup" onClick={() => {this.openModal()}} className="signup">Sign up</Link>
-        <Link to="/login" onClick={() => {this.openModal()}} className="login">Sign in</Link>
+        <Link to='/signup' onClick={() => {this.openModal('/signup')}} className="signup">Sign up</Link>
+        <Link to='/login' onClick={() => {this.openModal('/login')}} className="login">Sign in</Link>
       </nav>
     )
   }
@@ -63,16 +71,10 @@ class Greeting extends React.Component{
       <div className="header-sessions">
         {this.greeting(this.props)}
         <Modal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
-          style={customStyles}  
+          isOpen={this.state.modalIsOpen} onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal} style={customStyles}  
         >
-          <Switch>
-            <AuthRoute path="/login" component={SessionFormContainer} />
-            <AuthRoute path="/signup" component={SessionFormContainer} />
-          </Switch>
-          
+          <SessionFormContainer closeModal={this.closeModal} buttonPath={this.state.buttonPath}/>
         </Modal>
       </div>
     )
