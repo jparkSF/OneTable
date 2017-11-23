@@ -60,3 +60,14 @@ header{
   height: 400px;
   background-repeat: no-repeat;
 }
+
+/*
+      Font Awesome Style
+*/
+
+.login-form-box i {
+  margin-top: 4px;
+  font-size: 20px !important;
+  float: right;
+  cursor: pointer;
+}

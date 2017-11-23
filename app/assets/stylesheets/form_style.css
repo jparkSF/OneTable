@@ -73,3 +73,8 @@ hr {
 .login-form-links a {
   color: #DA3743;
 }
+
+.error-lists{
+  font-size: 13px;
+  color: #DA3743;
+}

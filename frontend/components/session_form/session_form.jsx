@@ -13,6 +13,9 @@ class SessionForm extends React.Component {
         Object.assign(loginState,signUpState) : loginState
 
     this.closeModal = props.closeModal;
+    // this.errors = this.props.errors.session;
+    this.props.errors.session = [];
+    
   }
 
   componentWillReceiveProps(nextProps) {
@@ -87,8 +90,8 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    return (
-      <ul>
+     return (
+      <ul className="error-lists">
         {this.props.errors.session.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -122,7 +125,7 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <p>{welcomeMsg}</p>
+          <p>{welcomeMsg}<a onClick={() => this.closeModal()}><i className="fa fa-times" aria-hidden="true"></i></a></p>
           <hr />
           {this.renderErrors()}      
           {this.mainForm()}
