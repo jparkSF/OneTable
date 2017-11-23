@@ -4,13 +4,13 @@ import { Link, withRouter } from 'react-router-dom';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
+    // console.log(props)
     let loginState = { email: '', password: ''};
     let signUpState = {first_name: '', last_name:''};
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = 
       this.props.formType === "signup" ? 
         Object.assign(loginState,signUpState) : loginState
-    
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -31,13 +31,6 @@ class SessionForm extends React.Component {
     this.props.processForm( user );
   }
 
-  navLink() {
-    if (this.props.formType === 'login') {
-      return <Link to="/signup">sign up instead</Link>;
-    } else {
-      return <Link to="/login">log in instead</Link>;
-    }
-  }
 
   firstNameForm() {
     return(
@@ -87,6 +80,7 @@ class SessionForm extends React.Component {
   }
 
   mainForm() {
+  
     if (this.props.formType === "login"){
       return(
         <div className="login-form">
@@ -117,9 +111,10 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
+   
     return (
       <ul>
-        {this.props.errors.map((error, i) => (
+        {this.props.errors.session.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
           </li>
@@ -134,7 +129,6 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           Welcome to OneTable
           <br />
-          Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}      
           {this.mainForm()}
         </form>
