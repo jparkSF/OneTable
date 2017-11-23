@@ -15,8 +15,6 @@
     "redux-logger": "^3.0.6",
     "webpack": "^3.5.6"
   },
- 
- 
   "description": "## October, 2017 App Academy Cohort ### OneTable (OpenTable Clone)",
   "version": "1.0.0",
   "main": "webpack.config.js",
@@ -36,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/jparkSF/fullstack_project/issues"
   },
-  "homepage": "https://github.com/jparkSF/fullstack_project#readme"
+  "homepage": "https://github.com/jparkSF/fullstack_project#readme",
+  "devDependencies": {
+    "uglify-js-brunch": "^2.10.0"
+  }
 }
