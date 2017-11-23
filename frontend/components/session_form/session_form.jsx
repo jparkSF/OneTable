@@ -128,6 +128,7 @@ class SessionForm extends React.Component {
           <p>{welcomeMsg}<a onClick={() => this.closeModal()}><i className="fa fa-times" aria-hidden="true"></i></a></p>
           <hr />
           {this.renderErrors()}      
+          
           {this.mainForm()}
 
          
