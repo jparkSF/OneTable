@@ -56,7 +56,7 @@ class Greeting extends React.Component{
   personalGreeting(currentUser, logout) {
     return(
       <hgroup className="header-group">
-        <h2 className="header-name">Hi, {currentUser.first_name}!</h2>
+        <h2 className="header-name">HI, {currentUser.first_name}</h2>
         <button className="header-button" onClick={logout}>Log Out</button>
       </hgroup>
     )
@@ -67,7 +67,7 @@ class Greeting extends React.Component{
   }
 
   render() {
-  
+
     return (
       <div className="header-sessions">
         {this.greeting(this.props)}

@@ -50,6 +50,16 @@ header{
 .header-sessions{
   margin: auto 0;
 }
+.header-group {
+  display: flex;
+  margin: 0 20px;
+  font-weight: 400;
+ 
+  *{
+    margin:0 10px;
+  }
+}
+
 
 /*
       Background Image

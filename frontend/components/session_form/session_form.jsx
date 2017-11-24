@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { login } from '../../utils/sessions';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -13,9 +14,9 @@ class SessionForm extends React.Component {
         Object.assign(loginState,signUpState) : loginState
 
     this.closeModal = props.closeModal;
-    // this.errors = this.props.errors.session;
     this.props.errors.session = [];
-    
+    this.renderErrors = this.renderErrors.bind(this);
+    // this.clearErrors = this.clearErrors.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -34,6 +35,16 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm(user).then(() => this.props.closeModal());
+  }
+
+  demoUser(e) {
+    e.preventDefault();
+    const user = {
+      email: "jpark830@me.com",
+      password: "password"
+    };
+    console.log(this.props)
+    this.props.demoUser(user).then(() => this.props.closeModal());
   }
 
 
@@ -73,6 +84,9 @@ class SessionForm extends React.Component {
           {this.emailForm()}<br />
           {this.passwordForm()}<br /> 
           <input type="submit" value={button} />
+          <input type="button" 
+            onClick={(e) => this.demoUser(e)} 
+            value="TAKE A FREE TOUR" />
         </div>
       )      
     } else {
@@ -84,12 +98,16 @@ class SessionForm extends React.Component {
           {this.emailForm()}<br />
           {this.passwordForm()}<br />
           <input type="submit" value={button} />
+          <input type="button"
+            onClick={(e) => this.demoUser(e)}
+            value="TAKE A FREE TOUR"/>      
         </div>
       )
     }
   }
 
   renderErrors() {
+    const errors = this.props.errors.session;
      return (
       <ul className="error-lists">
         {this.props.errors.session.map((error, i) => (
@@ -101,9 +119,14 @@ class SessionForm extends React.Component {
     );
   }
 
+  clearErrors() {
+    this.props.errors.session = [];
+  }
+
   navLink() {
+    this.clearErrors();
     if (this.props.formType === 'login') {
-    return <Link to="/signup">Create an account</Link>;
+      return <Link to="/signup">Create an account</Link>;
     } else {
       return <Link to="/login">Sign in</Link>;
     }
@@ -127,7 +150,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <p>{welcomeMsg}<a onClick={() => this.closeModal()}><i className="fa fa-times" aria-hidden="true"></i></a></p>
           <hr />
-          {this.renderErrors()}      
+          { this.renderErrors() }      
           
           {this.mainForm()}
 
