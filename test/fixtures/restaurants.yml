@@ -6,11 +6,11 @@
 #  name         :string           not null
 #  owner_id     :integer
 #  address      :string
-#  phone_number :integer          not null
+#  phone_number :string           not null
 #  website      :string
 #  description  :text             not null
-#  opening      :time
-#  closing      :time
+#  opening      :string
+#  closing      :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #

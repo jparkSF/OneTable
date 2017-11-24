@@ -7,8 +7,8 @@ class CreateRestaurants < ActiveRecord::Migration[5.1]
       t.string :phone_number, null: false
       t.string :website
       t.text :description, null: false
-      t.time :opening
-      t.time :closing
+      t.string :opening
+      t.string :closing
 
       t.timestamps
     end
