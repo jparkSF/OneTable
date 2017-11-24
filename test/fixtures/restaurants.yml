@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: restaurants
+#
+#  id           :integer          not null, primary key
+#  name         :string           not null
+#  owner_id     :integer
+#  address      :string
+#  phone_number :integer          not null
+#  website      :string
+#  description  :text             not null
+#  opening      :time
+#  closing      :time
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  phone_number: 1
+  website: MyString
+  description: MyText
+  opening: 2017-11-24 10:02:35
+  closing: 2017-11-24 10:02:35
+
+two:
+  name: MyString
+  address: MyString
+  phone_number: 1
+  website: MyString
+  description: MyText
+  opening: 2017-11-24 10:02:35
+  closing: 2017-11-24 10:02:35
