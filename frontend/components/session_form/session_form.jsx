@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
-      this.props.history.push('/');
+      // this.props.history.push('/');
     }
   }
 
@@ -34,11 +34,10 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm(user).then(() => this.props.closeModal());
+    this.props.processForm(user).then(() => this.closeModal());
   }
 
   demoUser(e) {
-    e.preventDefault();
     const user = {
       email: "jpark830@me.com",
       password: "password"
@@ -72,37 +71,64 @@ class SessionForm extends React.Component {
           onChange={this.update('password')} className="login-input"/>
     )
   }
+  demoEmail() {
+    return (
+      <input type="text" placeholder="" value="jpark830@me.com"
+        onChange={this.update('email')} className="login-input" />
+    )
+  }
+  demoPassword() {
+    return (
+      <input type="password" placeholder="" value="password"
+        onChange={this.update('password')} className="login-input" />
+    )
+  }
 
   mainForm() {
     const button = (this.props.formType === "login") ? 
       "Sign in " : "Create Account";
 
-    if (this.props.formType === "login"){
-      return(
-        <div className="login-form">
-          <br />
-          {this.emailForm()}<br />
-          {this.passwordForm()}<br /> 
-          <input type="submit" value={button} />
-          <input type="button" 
-            onClick={(e) => this.demoUser(e)} 
-            value="TAKE A FREE TOUR" />
-        </div>
-      )      
-    } else {
-      return(
-        <div className="login-form">
-          <br />
-          {this.firstNameForm()}<br />
-          {this.lastNameForm()}<br />
-          {this.emailForm()}<br />
-          {this.passwordForm()}<br />
-          <input type="submit" value={button} />
-          <input type="button"
-            onClick={(e) => this.demoUser(e)}
-            value="TAKE A FREE TOUR"/>      
-        </div>
-      )
+    switch (this.props.formType){
+      case 'login':
+        return(
+          <div className="login-form">
+            <br />
+            {this.emailForm()}<br />
+            {this.passwordForm()}<br /> 
+            <input type="submit" value={button} />
+            <Link to='/demo'>
+              <input type="button" value="TAKE A TOUR" />
+            </Link>
+          </div>
+        )      
+    
+      case 'signup':
+        return(
+          <div className="login-form">
+            <br />
+            {this.firstNameForm()}<br />
+            {this.lastNameForm()}<br />
+            {this.emailForm()}<br />
+            {this.passwordForm()}<br />
+            <input type="submit" value={button} />
+            <Link to='/demo'>
+              <input type="button" value="TAKE A TOUR"/>
+            </Link>
+          </div>
+        )
+      
+        default:
+          return (
+            <div className="login-form">
+              <br />
+              {this.demoEmail()}<br />
+              {this.demoPassword()}<br />
+              <input type="button" onClick={() => this.demoUser()}  value="Demo sign in" />
+              {/* <button onclick="{}"> Demo sign in</button>
+              <input type="button"  value="Demo sign in" /> */}
+            </div>
+          )
+        
     }
   }
 

@@ -36,7 +36,7 @@ class Greeting extends React.Component{
 
   
   closeModal() {
-    // this.props.history.push('/');
+    this.props.history.push('/');
     this.setState({ modalIsOpen: false });
   }
 
