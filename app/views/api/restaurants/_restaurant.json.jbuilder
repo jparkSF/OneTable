@@ -1,4 +1,5 @@
 json.extract! restaurant, 
+  :id,
   :name,
   :owner_id,
   :address,

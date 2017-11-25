@@ -42,7 +42,6 @@ class SessionForm extends React.Component {
       email: "jpark830@me.com",
       password: "password"
     };
-    console.log(this.props)
     this.props.demoUser(user).then(() => this.props.closeModal());
   }
 

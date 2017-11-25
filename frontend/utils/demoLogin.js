@@ -2,9 +2,6 @@
 document.addEventListener('onLoad', () => {
   let email_selector = $('#demo-login-email');
   let password_selector = $('#demo-login-password');
-  console.log(email_selector);
-  console.log(password_selector);
-  console.log("adf")
 })
 function demoLogin() {
   const EMAIL_PHRASE = "jpark830@me.com";
