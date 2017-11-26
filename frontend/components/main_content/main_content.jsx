@@ -18,7 +18,7 @@ class MainContent extends React.Component{
 
   destructRestaurant(restaurant){
     return(
-      <li key={`${restaurant.id}-${uniqueId()}`}>
+      <li className="list-item" key={`${restaurant.id}-${uniqueId()}`}>
         <h5>
           <Link to={`/restaurants/${restaurant.name}`}>
           <p>  {restaurant.name}</p>
@@ -31,10 +31,10 @@ class MainContent extends React.Component{
   scrollArrowButtons() {
     return(
       <div className="paddles">
-        <a className="left-paddle paddle hidden">
+        <a className="left-arrow paddle hidden">
           <i className="fa fa-angle-left" aria-hidden="true"></i>
         </a>
-		    <a className="right-paddle paddle">
+		    <a className="right-arrow paddle">
           <i className="fa fa-angle-right" aria-hidden="true"></i>
         </a>
 	    </div>
@@ -52,7 +52,7 @@ class MainContent extends React.Component{
           <h1 className="content-block-header">Top Cuisines Near You</h1>
           {this.scrollArrowButtons()}
           <div className="content-block-body">
-            <ul className="">
+            <ul className="restaurant-lists">
               {
               Object.keys(restaurants).map((index)=> this.destructRestaurant(restaurants[index]))
               }
