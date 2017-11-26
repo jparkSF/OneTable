@@ -2,10 +2,12 @@
   main content 
 */
 .main-body{
+  width: 80%;
   height: 100%;
   position: relative;
   margin: auto;
   top: -135px;
+  display: inline-block;
 }
 
 
@@ -16,12 +18,12 @@
 */
 
 .content-block{
-  max-width: 82%;
+  max-width: 86%;
   margin: auto;
   background-color: white;
   padding: 30px 30px 10px 30px;
   border-radius: 5px;
-  margin: 30px auto;
+  margin: 30px 25px;
   	
 
 }
@@ -60,11 +62,11 @@
     border-radius: 3px;
   }
 
-  p {
+  h5 {
     margin: auto;
   }
   
-  h5 {
+  p {
     background-color: black;
     color: white;
     font-size: 1rem;
@@ -91,3 +93,23 @@
 }
 
 
+/*
+  Google Map component style
+*/
+.side-map{
+
+}
+
+
+#map{
+  height: 310px;
+  width: 310px;
+}
+
+.main-side{
+  right: 125px;
+  width: 20%;
+  position: absolute;
+  display: inline-block;
+  padding-top: 140px;
+}

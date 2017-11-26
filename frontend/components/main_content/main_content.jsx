@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import isEmpty from 'lodash/isEmpty';
 import uniqueId from '../../utils/id_gen';
-import * as MenuScroll from '../../utils/horz_scroll_menu';
 
 class MainContent extends React.Component{
   constructor(props){
@@ -18,14 +17,13 @@ class MainContent extends React.Component{
   }
 
   destructRestaurant(restaurant){
-    console.log(restaurant);
     return(
       <li key={`${restaurant.id}-${uniqueId()}`}>
-        <p>
+        <h5>
           <Link to={`/restaurants/${restaurant.name}`}>
-          <h5>  {restaurant.name}</h5>
+          <p>  {restaurant.name}</p>
           </Link>
-        </p>
+        </h5>
       </li>
     );
   }

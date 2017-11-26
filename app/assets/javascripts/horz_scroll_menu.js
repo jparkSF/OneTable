@@ -1,4 +1,4 @@
-export const scrollMenu = () => {
+
 
   // duration of scroll animation
   let scrollDuration = 300;
@@ -82,5 +82,5 @@ export const scrollMenu = () => {
   $(leftPaddle).on('click', function () {
     $('.menu').animate({ scrollLeft: '0' }, scrollDuration);
   });
-};
+
 
