@@ -11,21 +11,25 @@ class MainContent extends React.Component{
   componentWillMount(){
     this.props.fetchAllRestaurants();
   }
-  
+
   componentWillReceiveProps(){
     this.render();
   }
 
   destructRestaurant(restaurant){
+    const fixedImageUrl = restaurant.image_url.replace('one-table-dev/','');
+    // console.log(image_url);
+
     let style = {
       opacity: 0.9,
       backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
-      backgroundImage: `url(${restaurant.image_url})`
+      // backgroundImage: `url(${restaurant.image_url})`
+      backgroundImage: `url(${fixedImageUrl})`
     };
 
-    
-    
+
+
     return(
       <li className="list-item" style={style} key={`${restaurant.id}-${uniqueId()}`}>
         <h5>
@@ -51,12 +55,12 @@ class MainContent extends React.Component{
   }
 
   render(){
-  
+
     const restaurants = this.props.restaurants;
     if (isEmpty(restaurants)){
      return null;
     } else {
-      return (      
+      return (
         <div className="content-block">
           <h1 className="content-block-header">Top Cuisines Near You</h1>
           {this.scrollArrowButtons()}
@@ -66,7 +70,7 @@ class MainContent extends React.Component{
               Object.keys(restaurants).map((index)=> this.destructRestaurant(restaurants[index]))
               }
             </ul>
-          </div>   
+          </div>
         </div>
       );
     }

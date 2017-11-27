@@ -33,6 +33,8 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'font-awesome-sass'
 gem 'faker'
 gem "paperclip", "~> 5.0.0"
+gem 'figaro'
+gem 'aws-sdk'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -47,7 +49,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
-  
+
   gem 'guard-livereload', '~> 2.5', require: false
   gem 'guard-rspec'
 end

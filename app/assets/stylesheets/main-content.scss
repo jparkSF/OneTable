@@ -2,10 +2,9 @@
   main content 
 */
 .main-body{
-  width: 80%;
-  height: 100%;
+  width: 85%;
+  max-width: 1200px;
   position: relative;
-  margin: auto;
   top: -135px;
   display: inline-block;
 }
@@ -18,8 +17,8 @@
 */
 
 .content-block{
-  max-width: 86%;
-  margin: auto;
+  display: inline-block;
+  max-width: 93%;
   background-color: white;
   padding: 30px 30px 10px 30px;
   border-radius: 5px;
@@ -42,7 +41,9 @@
   margin: 20px 0;
   overflow-y: hidden;
   overflow-x: hidden;  
-  height: 212px; //hide scroll bar
+  height: 226px; //hide scroll bar
+
+
 
   ul{
     min-width: 210px;
@@ -94,19 +95,22 @@
   Google Map component style
 */
 .side-map{
+  width: 100%;
+  height: inherit;;
 
 }
 
 
 #map{
-  height: 290px;
-  width: 290px;
+  height: inherit;
+  width: auto;
+  border-radius: 5px;
 }
 
 .main-side{
-  right: 125px;
+  height: 320px;
   width: 20%;
-  position: absolute;
+  margin-left:40px;
+  margin-top:40px;
   display: inline-block;
-  padding-top: 140px;
 }

@@ -16,18 +16,18 @@ const App = () => (
       </header>
       <div className="main-bg"></div>
     </div>
-    <div className="main-side">
-      <div className="side-map">
-        <div id="map"></div>
-      </div>
-    </div>
+    
     <div className="main-body">
       <div className="main-contents">
         <MainContentContainer />
       </div>
     </div>
-   
 
+    <div className="main-side">
+      <div className="side-map">
+        <div id="map"></div>
+      </div>
+    </div>
   </div>
 );
 

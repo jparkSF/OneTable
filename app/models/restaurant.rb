@@ -23,6 +23,6 @@ class Restaurant < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   def image_url
-    ActionController::Base.helpers.asset_path(image.url)
+     ActionController::Base.helpers.asset_path(image.url)   
   end 
 end
