@@ -21,13 +21,23 @@ const App = () => (
       <div className="main-contents">
         <MainContentContainer />
       </div>
+      <div className="main-contents">
+        <MainContentContainer />
+      </div>
+      <div className="main-contents">
+        <MainContentContainer />
+      </div>
     </div>
-
+    
     <div className="main-side">
       <div className="side-map">
         <div id="map"></div>
       </div>
     </div>
+
+   
+
+    
   </div>
 );
 

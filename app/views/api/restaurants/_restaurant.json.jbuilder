@@ -1,4 +1,4 @@
-json.extract! restaurant, 
+json.extract! restaurant,
   :id,
   :name,
   :owner_id,
@@ -7,6 +7,5 @@ json.extract! restaurant,
   :website,
   :description,
   :opening,
-  :closing
-
-
+  :closing,
+  :image_url

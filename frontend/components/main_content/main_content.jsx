@@ -17,8 +17,11 @@ class MainContent extends React.Component{
   }
 
   destructRestaurant(restaurant){
-    const fixedImageUrl = restaurant.image_url.replace('one-table-dev/','');
-    // console.log(image_url);
+    let fixedImageUrl = restaurant.image_url;
+    
+    if (restaurant.image_url.includes('one-table-dev/')){
+      fixedImageUrl = restaurant.image_url.replace('one-table-dev/','');
+    }
 
     let style = {
       opacity: 0.9,
