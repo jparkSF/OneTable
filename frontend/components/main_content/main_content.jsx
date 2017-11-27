@@ -68,6 +68,7 @@ class MainContent extends React.Component{
       return (
         
           <div className="main-body">
+          
           <div className="main-contents">
            <div className="content-block">
             <h1 className="content-block-header">Top Cuisines Near You</h1>

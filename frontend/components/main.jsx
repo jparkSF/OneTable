@@ -9,11 +9,17 @@ import { connect } from 'react-redux';
 
 
 class Main extends React.Component {
+  constructor(){
+    super();
+
+    
+  }
+
   render() {
     return (
     <Switch>
         <Route exact path='/' component={MainContentContainer}/>
-        <Route path='/restaurants/new' component={RestaurantsFormContainer} />
+        <Route path='/restaurant/new' component={RestaurantsFormContainer} />
     </Switch>
      
     );

@@ -10,10 +10,10 @@ const App = () => {
   return(
     <div className="main">
       <div className="main-head">
+       
         <Logo />
-        <div className="main-bg"></div>
+       <div className="main-bg"></div>
       </div>
-
       <Main />
 
       
