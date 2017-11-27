@@ -2,9 +2,7 @@ import React from 'react';
 import { Link, Switch } from 'react-router-dom';
 import GreetingContainer from './greeting_container';
 
-class Logo extends React.Component{
-  
-  render() {
+const Logo = () => {
     return(
       <header>
         <div className="header-left">
@@ -19,7 +17,6 @@ class Logo extends React.Component{
         <GreetingContainer />
       </header >
     );
-  }
-}
+};
 
 export default Logo;

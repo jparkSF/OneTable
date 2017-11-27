@@ -11,7 +11,7 @@ const mapStateToProps = (state,ownProps) => {
     loggedIn: Boolean(state.session.currentUser),
     errors: state.errors,
     formType
-  }
+  };
 };
 
 const mapDispatchToProps = (dispatch, { history }) => { 

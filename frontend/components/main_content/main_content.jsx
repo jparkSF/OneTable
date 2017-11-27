@@ -10,6 +10,7 @@ class MainContent extends React.Component{
 
   componentWillMount(){
     this.props.fetchAllRestaurants();
+
   }
 
   componentWillReceiveProps(){
@@ -59,22 +60,33 @@ class MainContent extends React.Component{
 
   render(){
 
+
     const restaurants = this.props.restaurants;
     if (isEmpty(restaurants)){
      return null;
     } else {
       return (
-        <div className="content-block">
-          <h1 className="content-block-header">Top Cuisines Near You</h1>
-          {this.scrollArrowButtons()}
-          <div className="content-block-body">
-            <ul className="restaurant-lists">
-              {
-              Object.keys(restaurants).map((index)=> this.destructRestaurant(restaurants[index]))
-              }
-            </ul>
+        
+          <div className="main-body">
+          <div className="main-contents">
+           <div className="content-block">
+            <h1 className="content-block-header">Top Cuisines Near You</h1>
+             {this.scrollArrowButtons()}
+              <div className="content-block-body">
+               <ul className="restaurant-lists">
+                {
+                 Object.keys(restaurants).map((index)=> this.destructRestaurant(restaurants[index]))
+                }
+              </ul>
+              </div>
+            </div>
           </div>
-        </div>
+          
+         </div>
+          
+
+
+        
       );
     }
   }

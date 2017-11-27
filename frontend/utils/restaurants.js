@@ -7,7 +7,7 @@ export const fetchAllRestaurants = () => (
 
 export const fetchRestaurant = restaurant => (
   $.ajax({
-    method: 'gGET',
+    method: 'GET',
     url: `api/restaurant/${restaurant.id}`
   })
 );

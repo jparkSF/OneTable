@@ -1,18 +1,27 @@
 class Api::RestaurantsController < ApplicationController
-  def index 
+  def index
     @restaurants = Restaurant.all
-  end 
-  
-  def show 
+  end
+
+  def show
     @restaurant = Restaurant.find(params[:id])
-  end 
-  
+  end
+
   def create
     @restaurant = Restaurant.new(restaurant_params)
+
+    puts @restaurant
+    if @restaurant.save
+      render "api/restaurants/show"
+    else
+      render json: @restaurant.errors.full_messages, status: 422
+    end
+
+
   end
-  
-  private 
-  
+
+  private
+
   def restaurant_params
     params.require(:restaurant).permit(
       :name,
@@ -24,8 +33,8 @@ class Api::RestaurantsController < ApplicationController
       :opening,
       :closing
     )
-  end 
+  end
 
-  
-  
+
+
 end

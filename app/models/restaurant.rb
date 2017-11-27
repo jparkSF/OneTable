@@ -16,7 +16,7 @@
 #
 
 class Restaurant < ApplicationRecord
-  validates :name, :address, :phone_number, :website, presence: true
+  validates :name, :address, :phone_number, presence: true
   validates :name, :phone_number, uniqueness: true
 
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "default_restaurant.jpg"

@@ -97,25 +97,6 @@ class Greeting extends React.Component{
     };
   } 
 
-  // sessionMenuClose(){
-
-  //   window.onclick = function (event) {
-  //     console.log(event.target);
-  //     if (!event.target.matches('.drop-button')) {
-  //       var dropdowns = document.getElementsByClassName("dropdown-menu");
-  //       var i;
-  //       for (i = 0; i < dropdowns.length; i++) {
-  //         var openDropdown = dropdowns[i];
-  //         if (openDropdown.classList.contains('show')) {
-  //           openDropdown.classList.remove('show');
-  //         }
-         
-  //       }
-
-  //     }  
-      
-  //   };
-  // }
 
   render() {
 

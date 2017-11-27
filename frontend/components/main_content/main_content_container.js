@@ -3,7 +3,8 @@ import {
   fetchAllRestaurants,
   fetchRestaurant,
   receiveAllRestaurants,
-  requestAllRestaurants
+  requestAllRestaurants,
+  createRestaurant
 } from '../../actions/main_content_actions';
 import MainContent from './main_content';
 import { withRouter } from 'react-router-dom';
@@ -15,7 +16,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchAllRestaurants: () => dispatch(requestAllRestaurants())
+  fetchAllRestaurants: () => dispatch(requestAllRestaurants()),
+  
 });
 
 export default withRouter(connect(

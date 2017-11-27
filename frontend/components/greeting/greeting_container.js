@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
     currentUser: state.session.currentUser,
     buttonPath: ownProps.history.location.pathname
   
-  })
+  });
 };
 
 const mapDispatchToProps = dispatch => ({
@@ -19,4 +19,4 @@ const mapDispatchToProps = dispatch => ({
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Greeting))
+)(Greeting));
