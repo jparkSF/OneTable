@@ -83,27 +83,39 @@ class Greeting extends React.Component{
   }
 
   sessionMenuToggle(){
+    
     if ($('.show').css('opacity') == 0) {
       $('.show').css('opacity', 1);
     } else {
       $('.show').css('opacity', 0);
     }
-  } 
 
-  sessionMenuClose(){
     window.onclick = function (event) {
-      if (!event.target.matches('.drop-button')) {
-        var dropdowns = document.getElementsByClassName("dropdown-menu");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
+      if (!event.target.matches('.drop-button')){
+        $('.show').css('opacity', 0);
       }
     };
-  }
+  } 
+
+  // sessionMenuClose(){
+
+  //   window.onclick = function (event) {
+  //     console.log(event.target);
+  //     if (!event.target.matches('.drop-button')) {
+  //       var dropdowns = document.getElementsByClassName("dropdown-menu");
+  //       var i;
+  //       for (i = 0; i < dropdowns.length; i++) {
+  //         var openDropdown = dropdowns[i];
+  //         if (openDropdown.classList.contains('show')) {
+  //           openDropdown.classList.remove('show');
+  //         }
+         
+  //       }
+
+  //     }  
+      
+  //   };
+  // }
 
   render() {
 

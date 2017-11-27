@@ -21,6 +21,57 @@ body {
 
 }
 
+/*
+  header logo + search
+*/
+.header-left{
+  // width: 200px;
+}
+
+.logo{
+  background-image: url('logo/one-table-logo.png');
+  height: 33px;
+  width: 165px;
+  background-repeat: no-repeat;
+  background-size: 150px;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.header-search{
+  border:1px solid #a8a8a8;
+  top:-10px;
+  border-radius: 16px;
+  height: 28px;
+  display: inline-flex;
+  position: relative; 
+  color: #a8a8a8;
+  padding-left: 35px;
+  width: 160px;
+  font-size: 15px;
+  transition-duration: 0.3s;
+}
+
+.header-search:focus{
+  width:250px;
+  transition-duration: 0.3s;
+}
+
+.header-search::-webkit-input-placeholder {
+  color: grey;
+  font-size: 15px;
+}
+.header-location{
+  -webkit-text-stroke: 1px #d5303b;
+  color: white;
+  top:-9px;
+  position: relative;
+  left:26px;
+  -webkit-font-smoothing: antialiased;
+  
+}
+
 
 /*
       Header, Nav Bar
@@ -33,7 +84,7 @@ header{
 }
 .header-link{
   font-size:30px;
-  margin: auto 40px;
+  margin: auto 10px auto 40px;
 }
 .header-name{
   border-left: 1px solid #dddddd;
@@ -69,6 +120,7 @@ header{
   background: #237B98;
   border-radius: 3px;
   color:white;
+  font-weight: 500;
 }
 .header-sessions{
   margin: auto 0;
@@ -178,8 +230,9 @@ header{
 */
 .main-bg{
   background-image: url('backgrounds/main-bg.jpg');
-  background-size: 100% 370px;
-  height: 370px;
+  background-size: cover;
+  height: 360px;
+  background-position-y: -93px;
   background-repeat: no-repeat;
 }
 

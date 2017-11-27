@@ -1,19 +1,12 @@
 import React from 'react';
-import GreetingContainer from './greeting/greeting_container';
-import SessionFormContainer from './session_form/session_form_container';
 import MainContentContainer from './main_content/main_content_container';
 import { Link, Switch } from 'react-router-dom';
-import { AuthRoute, ProtectedRoute } from '../utils/route_util';
+import Logo from './greeting/logo';
 
 const App = () => (
   <div className="main">
     <div className="main-head">
-      <header>
-        <Link to="/" className="header-link">
-          <h1>Logo + OneTable</h1>
-        </Link>       
-        <GreetingContainer /> 
-      </header>
+      <Logo />
       <div className="main-bg"></div>
     </div>
     
@@ -34,10 +27,6 @@ const App = () => (
         <div id="map"></div>
       </div>
     </div>
-
-   
-
-    
   </div>
 );
 
