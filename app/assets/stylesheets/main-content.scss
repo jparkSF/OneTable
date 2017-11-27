@@ -53,9 +53,7 @@
   }  
   
   li{
-    display: flex;
-    background-color: #7c7c7c;
-    border:1px solid black;
+    display: flex;  
     min-width: 212px;
     height: 210px;
     margin-right: 31px;
@@ -67,13 +65,12 @@
   }
   
   p {
-    background-color: black;
     color: white;
     font-size: 1rem;
     text-align: center;
     width: 100px;
     display: table-cell;
-    text-shadow: rgba(0,0,0,.25) 0 2px 2px;
+    text-shadow: rgba(0,0,0, 1) 0 2px 2px;
     font-weight: 700;
   }
 }
@@ -102,8 +99,8 @@
 
 
 #map{
-  height: 310px;
-  width: 310px;
+  height: 290px;
+  width: 290px;
 }
 
 .main-side{

@@ -17,11 +17,15 @@ class Greeting extends React.Component{
       modalIsOpen: false,
       buttonPath: ''
     };
-    this.formType = this.props.history.location.pathname
+    this.formType = this.props.history.location.pathname;
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     
+  }
+
+  componentWillMount(){
+    //  this.greeting(this.props);
   }
 
   openModal(buttonType) {
@@ -47,23 +51,58 @@ class Greeting extends React.Component{
   sessionLinks() {
     return (
       <nav className="login-signup">
-        <Link to='/signup' onClick={() => {this.openModal('/signup')}} className="signup">Sign up</Link>
-        <Link to='/login' onClick={() => {this.openModal('/login')}} className="login">Sign in</Link>
+        <Link to='/signup' onClick={() => {this.openModal('/signup');}} className="signup">Sign up</Link>
+        <Link to='/login' onClick={() => {this.openModal('/login');}} className="login">Sign in</Link>
       </nav>
-    )
+    );
   }
   
   personalGreeting(currentUser, logout) {
     return(
       <hgroup className="header-group">
-        <h2 className="header-name">HI, {currentUser.first_name}</h2>
-        <button className="header-button" onClick={logout}>Log Out</button>
+        
+        <div className="dropdown">
+          <button className="header-name drop-button" onClick={() => this.sessionMenuToggle()}>Hi, {currentUser.first_name}
+            <i className="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <div id="dropdown-menu" className="dropdown-content show" >
+            <div className="dropdown-items">
+              <a className="header-button" href='/#/user/:id'>My Profile</a>
+              <a className="header-button" href='/#restaurant/new'>Create Restaurant</a>
+              <a className="header-button" href='/#/favorites/'>Your Favorites</a>
+              <button className="header-button" onClick={logout}>Sign out</button>
+            </div>
+          </div>
+        </div>
       </hgroup>
-    )
+    );
   }
 
   greeting({ currentUser, logout }) {
-    return currentUser ? this.personalGreeting(currentUser, logout) : this.sessionLinks()
+    return currentUser ? this.personalGreeting(currentUser, logout) : this.sessionLinks();
+  }
+
+  sessionMenuToggle(){
+    if ($('.show').css('opacity') == 0) {
+      $('.show').css('opacity', 1);
+    } else {
+      $('.show').css('opacity', 0);
+    }
+  } 
+
+  sessionMenuClose(){
+    window.onclick = function (event) {
+      if (!event.target.matches('.drop-button')) {
+        var dropdowns = document.getElementsByClassName("dropdown-menu");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    };
   }
 
   render() {
@@ -78,7 +117,7 @@ class Greeting extends React.Component{
           <SessionFormContainer closeModal={this.closeModal} buttonPath={this.state.buttonPath}/>
         </Modal>
       </div>
-    )
+    );
   }
 }
 

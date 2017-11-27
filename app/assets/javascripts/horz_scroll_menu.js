@@ -10,7 +10,7 @@ $(document).ready(() => {
   // get items dimensions
   let itemsLength = document.getElementsByClassName('list-item');
   let test = document.getElementsByTagName('li');
-  console.log(test);
+  // console.log(test);
   
 
   

@@ -18,4 +18,11 @@
 class Restaurant < ApplicationRecord
   validates :name, :address, :phone_number, :website, presence: true
   validates :name, :phone_number, uniqueness: true
+
+  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "default_restaurant.jpg"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+
+  def image_url
+    ActionController::Base.helpers.asset_path(image.url)
+  end 
 end

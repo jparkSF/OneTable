@@ -6,6 +6,7 @@ html{
   background-color: #2d7c2d;
 }
 body {
+  -webkit-font-smoothing: antialiased;
   width: 85%;
   height: 100px;
   margin: auto;
@@ -34,6 +35,25 @@ header{
   font-size:30px;
   margin: auto 40px;
 }
+.header-name{
+  border-left: 1px solid #dddddd;
+  line-height: 3.375rem;
+  padding: 5px 1rem;
+  line-height: inherit;
+  color: #616161;
+  height: 20px;
+  border-radius:0px !important;
+  -webkit-font-smoothing: antialiased;
+
+
+  .fa{
+    color: #a8a8a8;
+    vertical-align: middle;
+    font-size: 25px;
+    -webkit-text-stroke: 1px white;
+    line-height: 0;
+  }
+}
 .login-signup{
   margin: auto 40px;
   font-size: 15px;
@@ -55,12 +75,101 @@ header{
 }
 .header-group {
   display: flex;
-  margin: 0 20px;
+  
   font-weight: 400;
  
   *{
-    margin:0 10px;
+    margin: 0 5px 0 10px;
   }
+}
+
+/*
+  Session Dropdown menu
+*/
+
+.dropdown{
+  // position: relative;
+  // display: inline-block;
+    
+}
+
+.dropdown-content{
+  
+  width: 220px;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  // transition-duration: 0.5s;
+  
+  
+}
+
+.dropdown-items{
+  
+  display: flex;
+  flex-direction: column;
+  margin:0;
+  border-radius:0;
+
+  *{
+    border-radius:0;
+    padding: 12px 5px;
+    margin:0;
+    color: #666!important;
+    display: block;
+    padding: .8rem 1rem;
+    position: relative;
+    font-weight: 300;
+    cursor: pointer;
+  }
+
+  *:hover{
+    z-index:1;
+    color: #333!important;
+    background: rgba(0,0,0,.03);
+  }
+}
+
+.show{
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  border-radius: 3px;
+  display: block;
+  box-shadow: 0 0 0 0 rgba(0,0,0,.15); 
+  top: 69px;
+  margin-left:-125px;
+  border: 1px solid #dddddd;
+  
+}
+
+.show:before{  
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 70px;
+  top: -6px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: #fff;
+  box-shadow: -1px -1px 0 0 rgba(0, 0, 0, .15);
+  transform: rotate(45deg);
+}
+
+.dropdown:active .dropdown-menu{
+  display: block;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 
@@ -69,7 +178,6 @@ header{
 */
 .main-bg{
   background-image: url('backgrounds/main-bg.jpg');
-  // background-size: 100%;
   background-size: 100% 370px;
   height: 370px;
   background-repeat: no-repeat;

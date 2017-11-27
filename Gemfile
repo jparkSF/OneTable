@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 
 gem 'font-awesome-sass'
 gem 'faker'
+gem "paperclip", "~> 5.0.0"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

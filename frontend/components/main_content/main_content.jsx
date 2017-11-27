@@ -17,11 +17,20 @@ class MainContent extends React.Component{
   }
 
   destructRestaurant(restaurant){
+    let style = {
+      opacity: 0.9,
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      backgroundImage: `url(${restaurant.image_url})`
+    };
+
+    
+    
     return(
-      <li className="list-item" key={`${restaurant.id}-${uniqueId()}`}>
+      <li className="list-item" style={style} key={`${restaurant.id}-${uniqueId()}`}>
         <h5>
           <Link to={`/restaurants/${restaurant.name}`}>
-          <p>  {restaurant.name}</p>
+          <p>{restaurant.name}</p>
           </Link>
         </h5>
       </li>
