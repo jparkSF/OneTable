@@ -18,8 +18,8 @@ class Main extends React.Component {
   render() {
     return (
     <Switch>
-        <Route exact path='/' component={MainContentContainer}/>
         <Route path='/restaurant/new' component={RestaurantsFormContainer} />
+        <Route path='/' component={MainContentContainer}/>
     </Switch>
      
     );
