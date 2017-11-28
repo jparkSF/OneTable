@@ -1,0 +1,128 @@
+.index-search-tool{
+  background-color: #f0f0f0;
+  padding:16px 20px;
+  
+}
+
+.inner-search-tool{
+  
+  height: 100%;
+
+
+}
+
+.tool-box-form{
+  width: 100%;
+  display: flex;
+}
+
+.search-tool-box{
+  background: white;
+  width: 100%;
+  
+  input[type]{
+    font-size:16px;
+    padding:12px;  
+  }
+
+  input[type="text"]{
+    text-align: left;
+  }
+
+  
+  input[name="where"]{
+    width: 80%;
+    border-left:1px solid #f0f0f0;
+    padding: 0 15px 0 43px;
+    height: 100%;
+    
+  }
+
+  input[type="submit"] {
+    text-align: center;
+    width: 15%;
+    background-color: #d5303b;
+    color: white;
+    font-weight: 600;
+    border-radius: 0 3px 3px 0;
+  }
+}
+
+/*
+  select tag style
+*/
+
+.styled-select {
+   height: 44px;
+   padding: 0 15px;
+   overflow: hidden;
+   width: 240px;
+   background-color: white;
+   -webkit-appearance: none;
+   font-size: 14px;
+  border:none;
+ 
+  }
+
+.styled-select:after {
+    
+    // opacity: 0;
+    
+    // padding: 12px 8px;
+    // position: absolute; right: 0; top: 0;
+    // background: red;
+    // z-index: 1;
+    // text-align: center;
+    // width: 10%;
+    // height: 100%;      
+    // pointer-events: none;
+    // box-sizing: border-box;   
+}
+
+.styled-select {
+   background: transparent;
+  
+   font-size: 14px;
+  
+   padding: 5px 10px; /* If you add too much padding here, the options won't show in IE */
+   
+  border-radius: 0;
+   height: 50px;
+}
+
+.styled-select.people {
+   width: 14%;
+   border-radius: 3px 0 0 3px;
+   
+  border-right:1px solid #f0f0f0;
+}
+
+.styled-select.time{
+  width: 13%;
+  border-left:1px solid #f0f0f0;
+  
+}
+
+.search-date{
+  width: 17%;
+}
+
+.search-text-input::placeholder{
+  font-size: 14px;
+  
+}
+
+.search-text-input-icon{
+  font-size: 20px !important;
+  color: #9d9d9d;
+   -webkit-text-stroke: 1px white;
+  margin: 16px 0 0 16px;
+  position: absolute;
+
+  
+}
+
+.search-text-wrapper{
+  flex:1;
+  display: flex;
+}

@@ -7,7 +7,7 @@ import Main from './main';
 
 const App = () => {
   return (
-    <div className="main">
+    <div className="main"> 
       <div className="main-head">
         <Logo />
       </div>

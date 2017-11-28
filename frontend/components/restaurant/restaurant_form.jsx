@@ -26,6 +26,27 @@ export default class RestaurantForm extends React.Component {
     this.afterOpenModal = this.afterOpenModal.bind(this);
   }
 
+  componentDidMount(){
+    $('body').addClass("fixed-body");
+    $('.main').addClass("fixed-main");
+    $('.header-location').addClass("header-location-fixed");
+    $('.header-search').addClass("header-search-fixed");
+    $('.logo').addClass("logo-fixed");
+    $('.header-name').addClass("header-name-fixed");
+    $('.main-head').addClass("fixed-main-head");
+  }
+
+  componentWillUnmount(){
+    $('body').removeClass("fixed-body");
+    $('.main').removeClass("fixed-main");
+    $('.header-location').removeClass("header-location-fixed");
+    $('.header-search').removeClass("header-search-fixed");
+    $('.logo').removeClass("logo-fixed");
+    $('.header-name').removeClass("header-name-fixed");
+    $('.main-head').removeClass("fixed-main-head");
+  }
+
+
   openModal() {
     this.setState({
       modalIsOpen: true,
@@ -57,7 +78,7 @@ export default class RestaurantForm extends React.Component {
 
   newRestaurantMessage() {
     return (
-      <div className="new-restaurant-message">
+      <div className="new-restaurant-message message-fixed">
         <h2>Grow Your Business with OneTable</h2>
         <p>
           Tell us a little about you and your restaurant,
@@ -80,7 +101,7 @@ export default class RestaurantForm extends React.Component {
   successMessage() {
     return (
       <div className="login-form-container">
-        <div className="login-form new-restaurant-message">
+        <div className="login-form new-restaurant-message-modal">
 
           <h2>Congrats!</h2>
           <p>You have successfully created a new restaurant!</p>
@@ -93,7 +114,7 @@ export default class RestaurantForm extends React.Component {
 
   mainForm() {
     return (
-      <div className="login-form">
+      <div className="login-form new-restaurant-form">
         <br />
         <input type="text" placeholder="Restaurant name *" value={this.state.name}
           onChange={this.update('name')} className="login-input" />
@@ -147,7 +168,7 @@ export default class RestaurantForm extends React.Component {
               {this.successMessage()}
             </Modal>
           </form>
-          <hr />
+          
         </div>
         <div className='footer'>
           <footer>

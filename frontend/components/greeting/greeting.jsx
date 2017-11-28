@@ -23,8 +23,8 @@ class Greeting extends React.Component{
     this.closeModal = this.closeModal.bind(this);
   }
 
-  componentWillMount(){
-    //  this.greeting(this.props);
+  componenDidMount(){
+    $('.dropdown-content').css('opacity',0).removeClass('show');
   }
 
   openModal(buttonType) {
@@ -85,7 +85,8 @@ class Greeting extends React.Component{
     if ($('.show').css('opacity') == 0) {
       $('.show').css('opacity', 1);
     } else {
-      $('.show').css('opacity', 0);
+      $('.show').css('opacity', 0).removeClass('show');
+      
     }
 
     window.onclick = function (event) {

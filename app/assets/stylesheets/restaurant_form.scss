@@ -1,0 +1,138 @@
+.new-restaurant-container{
+  margin-top:40px;
+}
+
+.restaurant-form{
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  padding: 20px 0 40px 0;
+  margin: 40px auto 30px auto;
+  height: 530px;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,.1);
+}
+
+.new-restaurant-message{
+  text-align: center;
+  color: white;
+ 
+  h2{
+    font-weight: 400
+  }
+
+  p{
+    font-size: 20px;
+  }
+}
+
+.new-restaurant-form{
+  
+  width: 382px;
+  margin: auto;
+  
+  input[type]{
+    border-radius:5px;
+    width: 350px;
+    padding: 5px 15px;
+    margin: 6px 0;
+  }
+}
+
+.footer{
+   margin-top: 70px;
+   margin-bottom:100px;
+}
+
+.footer-site-url{
+  color: #27a2c4;
+}
+
+footer{
+  font-size: 17px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5;
+  color:black;
+}
+
+
+
+/*
+  Success Message (Modal)
+*/
+.new-restaurant-message-modal{
+  text-align: center;
+  
+ 
+  h2{
+    font-weight: 400;
+    text-align: left;
+    font-size: 40px;
+  }
+
+  p{
+    font-size: 20px;
+    margin: 10px 0 40px 0;
+  }
+}
+
+
+
+
+
+
+
+/*
+  fixes (jquery)
+*/
+
+// body
+.fixed-body{
+  width: 100%;
+  background-color:none;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),  url(restaurants/rest-bg-02.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40rem;
+  margin-top:0;
+}
+
+
+//main in app.jsx
+.fixed-main{
+  width:50%;
+  margin: auto;
+  padding-top:20px;
+}
+
+.fixed-main-head{
+  background:none;
+}
+//location marker in header search
+.header-location-fixed{
+  display: none !important;
+}
+
+//search bar in header
+.header-search-fixed{
+  display: none;
+}
+
+//change logo
+.logo-fixed{
+  background-image: url(logo/one-table-logo-white.png);
+}
+
+//session toggle button right top corner
+.header-name-fixed{
+  border: none;
+  color: white;
+  font-weight: 700;
+
+  .fa{
+    color:white;
+  }
+}
+
+//messages in new restaurant form
+
