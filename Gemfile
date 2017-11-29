@@ -35,6 +35,7 @@ gem 'faker'
 gem "paperclip", "~> 5.0.0"
 gem 'figaro'
 gem 'aws-sdk'
+gem 'rails_12factor'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
