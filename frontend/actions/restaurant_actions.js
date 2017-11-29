@@ -28,6 +28,14 @@ export const requestAllRestaurants = () => dispatch => (
   ))
 );
 
+export const requestRestaurant = (restID) => dispatch => (
+  RESTAURANT_API_UTIL.fetchRestaurant(restID).then(restId => (
+    dispatch(receiveRestaurant(restId))
+  ), err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ))
+);
+
 export const createRestaurant = restaurant => dispatch => (
   RESTAURANT_API_UTIL.createRestaurant(restaurant)
     .then(newRestaurant => (dispatch(receiveRestaurant(newRestaurant))),

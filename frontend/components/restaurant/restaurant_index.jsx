@@ -12,7 +12,6 @@ export default class RestaurnantIndex extends React.Component {
   }
   componentWillMount() {
     this.props.fetchAllRestaurants();
-    
   }
   componentDidMount(){    
     $('.dropdown-content').css('opacity', 0).removeClass('show');

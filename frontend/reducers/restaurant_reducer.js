@@ -10,14 +10,16 @@ import {
 
 const RestaurantReducer = (state = {}, action) => {
   Object.freeze(state);
+
   switch (action.type) {
     case RECEIVE_ALL_RESTAURANTS:
       return action.restaurants;
+  
     
     case RECEIVE_RESTAURANT:
-    
+      
       const newState = { [action.restaurant.id]: action.restaurant };
-      return merge({}, state, newState);
+      return merge({}, newState);
 
     default:
       return state;

@@ -57,12 +57,17 @@ body {
   border:1px solid #a8a8a8;
   z-index: 1;
 }
-
+.search-result-lists{
+  max-height: 275px;
+  overflow-y: scroll;
+}
 .search-result-list{
   font-weight: 400;
+  
   font-size: 16px;
   padding: 5px 10px;
   // transition-duration: 0.1s;
+  
 }
 .search-result-list:hover{
   background-color: #d5303b;

@@ -18,6 +18,7 @@ class MainContent extends React.Component {
   }
 
   componentWillMount() {
+    $('.header-search-wrapper').removeClass('hidden');
     this.props.fetchAllRestaurants();
     
   }
@@ -42,7 +43,7 @@ class MainContent extends React.Component {
     return (
       <li className="list-item" style={style} key={`${restaurant.id}-${uniqueId()}`}>
         <h5>
-          <Link to={`/restaurants/${restaurant.name}`}>
+          <Link to={`/restaurant/${restaurant.id}`}>
             <p>{restaurant.name}</p>
           </Link>
         </h5>
@@ -87,7 +88,9 @@ class MainContent extends React.Component {
 
             <div className="main-contents">
               <div className="content-block">
-                <h1 className="content-block-header">Top Cuisines Near You</h1>
+                <Link to='/restaurants'>
+                  <h1 className="content-block-header">Top Cuisines Near You</h1>
+                </Link>
                 {this.scrollArrowButtons()}
                 <div className="content-block-body">
                   <ul className="restaurant-lists">

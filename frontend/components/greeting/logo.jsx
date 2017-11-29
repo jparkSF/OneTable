@@ -18,15 +18,21 @@ export default class Logo extends React.Component {
   }
 
   componentDidMount(){
-    $('.search-result').css('display', 'none');
+    $('.search-result').css('display','none');
+
   }
 
-  update(field) {
-    console.log('hit');
-    $('.search-result').removeClass('hidden').css('display', 'block');
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+  update(e) {
+
+
+    const search = 'search';
+    $('.search-result').css('display', 'block');
+
+    return (
+      this.setState({  
+      [search]: e.currentTarget.value
+      })
+    );
   }
 
   render() {
@@ -47,6 +53,7 @@ export default class Logo extends React.Component {
                   .indexOf(this.state.search.toLowerCase()) !== -1;
         }
       );
+
     }
 
     return (
@@ -58,15 +65,15 @@ export default class Logo extends React.Component {
 
           <div className="header-search-wrapper">
             <i className="fa fa-map-marker fa-lg header-location" aria-hidden="true"></i>
-            <input type="text" className="header-search" defaultValue={this.state.search}
-              onChange={() => this.update('search').bind(this)} placeholder="Find a restaurant" />
-            <div className="search-result hidden">
+            <input type="text" className="header-search " defaultValue={this.state.search}
+              onChange={this.update.bind(this)} placeholder="Find a restaurant" />
+            <div className="search-result">
               <ul className="search-result-lists">
                 {
                   filteredRestaurants.map((restaurant) => {
                     return (
                       <li className="search-result-list" key={restaurant.id}>
-                        <Link to={restaurant.name}>
+                        <Link to={`/restaurant/${restaurant.id}`}>
                           {restaurant.name}
                         </Link>
                       </li>
