@@ -88,7 +88,7 @@ export default class RestaurantForm extends React.Component {
             OneTable’s products and services.
             <br />
           Or, give us a ring at
-            <a className="phone-number-link"> (415) 317-5997</a>.
+            <a className="light-blue"> (415) 317-5997</a>.
           </p>
       </div>
     );
@@ -173,7 +173,7 @@ export default class RestaurantForm extends React.Component {
         <div className='footer'>
           <footer>
             OneTable, Inc <br />
-            <a href="onetable-jwp.herokuapp.com" className="footer-site-url">onetable-jwp.herokuapp.com</a><br />
+            <a href="onetable-jwp.herokuapp.com" className="light-blue">onetable-jwp.herokuapp.com</a><br />
             825 Battery St, 3rd Floor  <br />
             San Francisco, CA 94111 <br />
           </footer>

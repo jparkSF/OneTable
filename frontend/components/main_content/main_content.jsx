@@ -11,7 +11,7 @@ class MainContent extends React.Component {
   }
 
   componentDidMount(){
-    $('.dropdown-content').css('opacity',0).removeClass('show');
+    // $('.dropdown-content').css('opacity',0).removeClass('show');
   }
   
   componentWillMount() {

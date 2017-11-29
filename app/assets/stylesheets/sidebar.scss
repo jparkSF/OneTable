@@ -1,0 +1,71 @@
+.sidebar-wrapper{
+  // background: lightgray;
+  margin: 10px;
+  padding: 10px 10px;
+}
+
+.index-main-content{
+  width: 100%;
+  margin-right:40px;
+}
+
+
+.list-item{
+  height: 150px;
+  display: flex;
+  margin: 20px 10px;
+}
+
+.list-item-thumb{
+  min-width: 150px;
+}
+
+.list-item-info{
+  margin:auto auto auto 25px;
+  width: 100%;
+}
+
+.list-item-info i{
+  color: #ffa873;
+  font-size: 20px;
+  margin: 5px 2px;
+  -webkit-text-stroke: 1px #fa9c6a;
+  
+}
+.restaurant-name{
+  color:#007c96;
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.restaurant-cuisine{
+  font-size: 16px;
+  font-weight: 400;
+  color: #868686;
+
+}
+.list-item-time{
+  width: 100%;
+  // border: 1px solid black;
+}
+.listTime{
+    
+    border: 1px solid;
+    width: 17%;
+    line-height: 30px;
+    margin: 10px 12px 10px 0;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    background-color: #DA3743;
+    border-color: #b8222d;
+    font-weight: 400;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.listTime:hover{
+  background-color: #bb232e;
+  transition-duration: 0.2s;
+}

@@ -1,3 +1,29 @@
+/*
+  main content structure
+*/
+
+.restaurant-index-lists{
+ width: 90%; 
+ display: flex;
+ margin: auto;
+//  border: 1px solid black;
+
+}
+
+.index-sidebar{
+  min-width: 200px;
+  
+}
+
+.index-main-content{
+  width: auto;
+}
+
+
+
+
+
+
 .index-search-tool{
   background-color: #f0f0f0;
   padding:16px 20px;
@@ -126,3 +152,4 @@
   flex:1;
   display: flex;
 }
+
