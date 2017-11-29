@@ -9,7 +9,7 @@ class MainContent extends React.Component {
   constructor(props) {
     super(props);
   }
-  
+
   componentDidMount(){
     $('.dropdown-content').css('opacity',0).removeClass('show');
   }

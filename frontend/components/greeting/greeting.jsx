@@ -85,7 +85,7 @@ class Greeting extends React.Component{
     if ($('.show').css('opacity') == 0) {
       $('.show').css('opacity', 1);
     } else {
-      $('.show').css('opacity', 0).removeClass('show');
+      $('.show').css('opacity', 0);
       
     }
 

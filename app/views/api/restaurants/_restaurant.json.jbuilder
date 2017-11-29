@@ -7,5 +7,5 @@ json.extract! restaurant,
   :website,
   :description,
   :opening,
-  :closing,
-  :image_url
+  :closing
+  
