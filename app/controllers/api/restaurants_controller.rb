@@ -27,7 +27,7 @@ class Api::RestaurantsController < ApplicationController
       :name,
       :owner_id,
       :address,
-      :phone_number,
+      :phone,
       :website,
       :description,
       :opening,

@@ -1,7 +1,6 @@
 import React from 'react';
-import MainContentContainer from './main_content/main_content_container';
 import { Link, Switch } from 'react-router-dom';
-import Logo from './greeting/logo';
+import Logo from './greeting/logo_container';
 import Main from './main';
 
 

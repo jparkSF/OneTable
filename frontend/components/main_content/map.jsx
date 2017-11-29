@@ -29,7 +29,7 @@ class Map extends React.Component {
           lng: position.coords.longitude,
         });   
 
-        this.route_map.setZoom(18);
+        this.route_map.setZoom(14);
         
         const marker = new google.maps.Marker({
           position: {

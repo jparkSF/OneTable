@@ -8,7 +8,7 @@
 
 # Current Database tables are:
 # => User: first_name, last_name, email, password 
-# => Restaurant: name, owner_id, address, phone_number, 
+# => Restaurant: name, owner_id, address, phone, 
 # =>             website, description,opening, closing
 
 User.destroy_all
@@ -31,90 +31,462 @@ User.create!(
   )
 end 
 
-Restaurant.create!(
-  name: 'The American Grilled Cheese Kitchen',
-  owner_id: 1,
-  address: "799 Battery St., San Francisco, CA 94111",
-  phone_number: '(415) 872-9230',
-  website: 'theamericansf.com',
-  description: 'Counter spot for gourmet grilled cheese sandwiches & other comfort-food eats in a down-home space.',
-  opening: "07:30:00",
-  closing: "16:00:00"
-)
-Restaurant.create!(
-  name: 'SUBWAY ®Restaurants',
-  owner_id: 1,
-  address: "160 Broadway, San Francisco, CA 94111",
-  phone_number: '(415) 986-2884',
-  website: 'order.subway.com',
-  description: 'Casual counter-serve chain for build-your-own sandwiches & salads.',
-  opening: "07:00:00",
-  closing: "21:00:00"
-)
-Restaurant.create!(
-  name: 'Kokkari Estiatorio',
-  owner_id: 1,
-  address: "200 Jackson St, San Francisco, CA 94111",
-  phone_number: '(415) 981-0983',
-  website: 'kokkari.com',
-  description: 'Casual counter-serve chain for build-your-own sandwiches & salads.',
-  opening: "11:30:00",
-  closing: "23:00:00"
-)
-Restaurant.create!(
-  name: 'Wayfare Tavern',
-  owner_id: 1,
-  address: "558 Sacramento St, San Francisco, CA 94111",
-  phone_number: '(415) 772-9060',
-  website: 'http://www.wayfaretavern.com/',
-  description: "Chef Tyler Florence brings his passion for high quality and style to San Francisco with his new flagship restaurant, Wayfare Tavern. A classic San Francisco Tavern featuring authentic American dishes inspired by local cuisine at the turn of the 20th century, the menu ranges from classic comforts to rustic delicacies. The beverage menu features locally-sourced wines including a selection of Florence's own label, quality draft beers and organic root beer as well as classic Victorian-era cocktails.
+#####################################
+# Restaurants in Financial District #
+#####################################
 
-                All three floors of the restaurant have been designed keeping historical accuracy in mind making Wayfare Tavern reminiscent of a Victorian parlor and an Edwardian men's club, where anything goes from black-tie to blue jeans. Pull up a stool to the Chef's Counter at the open kitchen and look on as Chef prepares your lunch or head to the Library and Billiard Room for a game of pool. Wayfare Tavern is a truly unparalleled dining experience translated from a century ago. Photo: John Lee.",
-  opening: "11:00:00",
-  closing: "17:00:00"
-)
 Restaurant.create!(
-  name: "Leo's Oyster Bar",
-  owner_id: 1,
-  address: "568 Sacramento Street, San Francisco, CA 94111",
-  phone_number: '(415) 872-9982',
-  website: 'http://www.leossf.com/',
-  description: 'At Leo’s Oyster Bar, seafood and bar classics share the stage with craft cocktails and a wine list with special attention paid to Champagne and Rose. Leo’s is the BIG NIGHT GROUP’S first establishment with a bar focus. Centrally located in the financial district, Leo’s is the perfect place for a light lunch, after work drinks, dinner and late night supper. The décor by Ken Fulk and Jon de la Cruz reflects our obsession with the Mad Men era Oyster',
-  opening: "11:00:00",
-  closing: "20:00:00"
-)
-Restaurant.create!(
-  name: "Michael Mina - San Francisco",
-  owner_id: 1,
-  address: "252 California Street, San Francisco, CA 94111",
-  phone_number: '(415) 397-9222',
-  website: 'http://michaelmina.net/restaurants/locations/mmsf.php',
-  description: "Michelin-starred MICHAEL MINA is the crowning jewel that captures the core of Michael's philosophy: bold yet balanced flavors achieved through a combination of acidity, sweetness, spice and richness. At the helm, Executive Chef Raj Dixit achieves these bold, balanced flavors in a cuisine, which draws upon global influences, showcasing the highest quality authentic and seasonal ingredients. 
-
-The 5-course tasting menu invites guests to explore a dynamic expression of Chef Michael Mina’s vast culinary influences while also providing options within each course for the guest to define their ultimate dining experience. The tasting menu is offered for dinner only at $145 per person, with vegetarian options and supplements at an additional cost. A paired down 'a la carte' dinner menu is available at the bar. Lunch is served in the dining room featuring an à la carte menu and at the bar featuring an array of seasonal small plates, as well as salads.",
-  opening: "11:30:00",
-  closing: "17:30:00"
+  name: "KUSAKABE",
+  address: "584 Washington Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "FiDi",
+  postal_code: "94111",
+  country: "US",
+  phone: "4157570155",
+  lat: 37.795597,
+  lng: -122.402963,
+  price: 4,
+  website: "http://www.opentable.com/single.aspx?rid=149539"
 )
 
 Restaurant.create!(
-  name: "The Barrel Room - San Francisco",
-  owner_id: 1,
-  address: "415 Sansome Street, San Francisco, CA 94111",
-  phone_number: '(415) 956-6900',
-  website: 'http://www.barrelroomsf.com/',
-  description: "The Barrel Room Restaurant & Tavern is a restaurant with a quarterly rotating regional menu. We pour 50+ wines by the glass, organized into educational flights. Our cocktail list features unique regionally inspired recipes. Our lunch and dinner menus offer cuisine from the featured region.",
-  opening: "11:30:00",
-  closing: "17:30:00"
+  name: "Jai Yun",
+  address: "680 Clay Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "FiDi",
+  postal_code: "94111",
+  country: "US",
+  phone: "4159817438",
+  lat: 37.794505,
+  lng: -122.404505,
+  price: 4,
+  website: "http://mobile.opentable.com/opentable/?restId=37849"
 )
-
 
 Restaurant.create!(
-  name: "Brasserie S&P at Loews San Francisco Hotel",
-  owner_id: 1,
-  address: "222 Sansome St, San Francisco, CA 94104",
-  phone_number: '(415) 276-9620',
-  website: 'http://www.loewshotels.com/regency-san-francisco/dining/restaurant',
-  description: "Serving brasserie-style San Francisco cuisine and refined cocktails complemented with a diverse wine-program, Brasserie S&P, has unveiled to be a favorite in the local culinary scene. We offer all-day dining from a creative menu which incorporates the finest, seasonal ingredients found in California. The 90 seat restaurant blends seamlessly with our “gincentric” bar to offer a lively, sophisticated yet informal dining experience.",
-  opening: "11:30:00",
-  closing: "17:30:00"
+  name: "Mangia Tutti",
+  address: "635 Clay St.",
+  city: "San Francisco",
+  state: "CA",
+  area: "FiDi",
+  postal_code: "94111",
+  country: "US",
+  phone: "4157882088",
+  lat: 37.794437,
+  lng: -122.403751,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=4057"
 )
+Restaurant.create!(
+  name: "MICHAEL MINA",
+  address: "252 California Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "FiDi",
+  postal_code: "94111",
+  country: "US",
+  phone: "4153979222",
+  lat: 37.793267,
+  lng: -122.39965,
+  price: 4,
+  website: "http://www.opentable.com/single.aspx?rid=51049"
+)
+Restaurant.create!(
+  name: "Osha Thai Embarcadero",
+  address: "4 Embarcadero Center, Street Level",
+  city: "San Francisco",
+  state: "CA",
+  area: "FiDi",
+  postal_code: "94111",
+  country: "US",
+  phone: "4157886742",
+  lat: 37.795936,
+  lng: -122.400003,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=148651"
+)
+Restaurant.create!(    
+  name: "PABU",
+  address: "101 California Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "FiDi",
+  postal_code: "94111",
+  country: "US",
+  phone: "4156687228",
+  lat: 37.792778,
+  lng: -122.397778,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=145846"
+)
+
+#####################################
+#        Restaurants in SOMA        #
+#####################################
+
+Restaurant.create!(    
+  name: "Benu",
+  address: "22 Hawthorne Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94105",
+  country: "US",
+  phone: "4156854860",
+  lat: 37.785402,
+  lng: -122.399068,
+  price: 4,
+  website: "http://www.opentable.com/single.aspx?rid=45916"
+)
+Restaurant.create!(            
+  name: "Boulevard",
+  address: "1 Mission St.",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94105",
+  country: "US",
+  phone: "4155436084",
+  lat: 37.79332,
+  lng: -122.392761,
+  price: 3,
+  website: "http://www.opentable.com/single.aspx?rid=130"
+)
+Restaurant.create!(  
+  name: "Waterbar",
+  address: "399 The Embarcadero South",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94105",
+  country: "US",
+  phone: "4152849922",
+  lat: 37.790441,
+  lng: -122.388983,
+  price: 3,
+  website: "http://www.opentable.com/single.aspx?rid=17035"
+)
+Restaurant.create!(  
+  name: "Yank Sing - Rincon Center",
+  address: "101 Spear Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94105",
+  country: "US",
+  phone: "4157811111",
+  lat: 37.79255,
+  lng: -122.39337,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=149530"
+)
+Restaurant.create!(  
+  name: "Yank Sing - Stevenson Street",
+  address: "49 Stevenson Street",
+  city: "San Francisco",
+  state: "AL",
+  area: "Mission",
+  postal_code: "94105",
+  country: "US",
+  phone: "4155414949",
+  lat: 37.79828,
+  lng: -122.401549,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=149527"
+)
+Restaurant.create!(            
+  name: "Thirsty Bear",
+  address: "661 Howard St.",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94105",
+  country: "US",
+  phone: "4159740905",
+  lat: 37.78565,
+  lng: -122.399734,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=2"
+)
+Restaurant.create!(             
+  name: "Ame",
+  address: "689 Mission Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94105",
+  country: "US",
+  phone: "4152844040",
+  lat: 37.786449,
+  lng: -122.401818,
+  price: 4,
+  website: "http://www.opentable.com/single.aspx?rid=5546"
+)
+Restaurant.create!(  
+  name: "Garden Court",
+  address: "2 New Montgomery St.",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94105",
+  country: "US",
+  phone: "4155465089",
+  lat: 37.787941,
+  lng: -122.401934,
+  price: 4,
+  website: "http://www.opentable.com/single.aspx?rid=2657"
+)
+  
+#####################################
+#      Restaurants in MISSION       #
+#####################################
+
+Restaurant.create!(  
+  name: "Blue Plate",
+  address: "3218 Mission Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94110",
+  country: "US",
+  phone: "4152826777",
+  lat: 37.745275,
+  lng: -122.420435,
+  price: 3,
+  website: "http://www.opentable.com/single.aspx?rid=23521"
+)
+
+Restaurant.create!(  
+  id: 117262,
+  name: "Ichi Sushi & Ni Bar",
+  address: "3282 Mission Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94110",
+  country: "US",
+  phone: "4155254750",
+  lat: 37.742681,
+  lng: -122.421542,
+  price: 3,
+  website: "http://www.opentable.com/single.aspx?rid=117262"
+)
+Restaurant.create!(  
+  name: "Garcon",
+  address: "1101 Valencia Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94110",
+  country: "US",
+  phone: "4154018959",
+  lat: 37.755294,
+  lng: -122.420972,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=5188"
+)        
+Restaurant.create!(   
+  name: "Aslam's Rasoi",
+  address: "1037 Valencia St",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94110",
+  country: "US",
+  phone: "4156950599",
+  lat: 37.756342,
+  lng: -122.420926,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=66832"
+)
+Restaurant.create!(              
+  name: "Urban Putt", 
+  address: "1096 South Van Ness Avenue",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94110",
+  country: "US",
+  phone: "4153411080",
+  lat: 37.755706,
+  lng: -122.416879,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=117271"
+)
+Restaurant.create!(  
+  name: "Foreign Cinema",
+  address: "2534 Mission St.",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94110",
+  country: "US",
+  phone: "4156487600",
+  lat: 37.756301,
+  lng: -122.418858,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=1906"
+)
+Restaurant.create!(   
+  name: "El Techo de Lolinda",
+  address: "2518 Mission Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94110",
+  country: "US",
+  phone: "4155506970",
+  lat: 37.756664,
+  lng: -122.419086,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=135892"
+)
+Restaurant.create!(  
+  name: "Manos Nouveau",
+  address: "3115 22nd Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94110",
+  country: "US",
+  phone: "4156386109",
+  lat: 37.755402,
+  lng: -122.417115,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=144853"
+)
+Restaurant.create!(                      
+  name: "Farina",
+  address: "3560 18th St",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94110",
+  country: "US",
+  phone: "4155650360",
+  lat: 37.761835,
+  lng: -122.422917,
+  price: 3,
+  website: "http://www.opentable.com/single.aspx?rid=7656"
+)
+Restaurant.create!(             
+  name: "Saison",
+  address: "178 Townsend St.",
+  city: "San Francisco",
+  state: "CA",
+  area: "Mission",
+  postal_code: "94110",
+  country: "US",
+  phone: "4158287990",
+  lat: 37.779487,
+  lng: -122.392203,
+  price: 4,
+  website: "http://www.opentable.com/single.aspx?rid=37594"
+)
+
+
+#####################################
+#     Restaurants in JAPANTOWN      #
+#####################################
+
+Restaurant.create!(
+  name: "1300 on Fillmore",
+  address: "1300 Fillmore Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Japantown",
+  postal_code: "94115",
+  country: "US",
+  phone: "4157717100",
+  lat: 37.781596,
+  lng: -122.432067,
+  price: 3,
+  website: "http://www.opentable.com/single.aspx?rid=16609"
+)
+Restaurant.create!(           
+  name: "Fresca - Fillmore",
+  address: "2114 Fillmore St",
+  city: "San Francisco",
+  state: "CA",
+  area: "Japantown",
+  postal_code: "94115",
+  country: "US",
+  phone: "4154472668",
+  lat: 37.789329,
+  lng: -122.433903,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=10870"
+)
+Restaurant.create!(            
+  name: "Seoul Garden",
+  address: "1655 Post Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Japantown",
+  postal_code: "94115",
+  country: "US",
+  phone: "4155637664",
+  lat: 37.785664,
+  lng: -122.429033,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=151789"
+)
+Restaurant.create!(     
+  name: "Jackson Fillmore Trattoria",
+  address: "2506 Fillmore St",
+  city: "San Francisco",
+  state: "CA",
+  area: "Japantown",
+  postal_code: "94115",
+  country: "US",
+  phone: "4153465288",
+  lat: 37.792706,
+  lng: -122.43429,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=15406"
+)
+Restaurant.create!(     
+  name: "Izakaya Kou",
+  address: "1560 Fillmore Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Japantown",
+  postal_code: "94115",
+  country: "US",
+  phone: "4154419294",
+  lat: 37.784144,
+  lng: -122.432581,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=117721"
+)
+Restaurant.create!(             
+  name: "Nico",
+  address: "3228 Sacramento Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Japantown",
+  postal_code: "94115",
+  country: "US",
+  phone: "4153591000",
+  lat: 37.788515,
+  lng: -122.446159,
+  price: 3,
+  website: "http://www.opentable.com/single.aspx?rid=114151"
+)
+Restaurant.create!(  
+  name: "Florio",
+  address: "1915 Fillmore Street",
+  city: "San Francisco",
+  state: "CA",
+  area: "Japantown",
+  postal_code: "94115",
+  country: "US",
+  phone: "4157754300",
+  lat: 37.787513,
+  lng: -122.433822,
+  price: 2,
+  website: "http://www.opentable.com/single.aspx?rid=3377"
+)
+            

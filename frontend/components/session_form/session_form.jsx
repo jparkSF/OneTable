@@ -32,7 +32,7 @@ class SessionForm extends React.Component {
   }
 
   resetForm(){
-    console.log('inside');
+    
     let loginState = { email: '', password: '' };
     let signUpState = { first_name: '', last_name: '' };
     let state =

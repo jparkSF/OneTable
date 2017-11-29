@@ -1,9 +1,13 @@
 /*
   main content structure
 */
-
+// .restaurant-index{
+//   width: 70%;
+//   margin: auto;
+// }
 .restaurant-index-lists{
  width: 90%; 
+ max-width: 1000px;
  display: flex;
  margin: auto;
 //  border: 1px solid black;
@@ -16,6 +20,7 @@
 }
 
 .index-main-content{
+
   width: auto;
 }
 
@@ -31,10 +36,9 @@
 }
 
 .inner-search-tool{
-  
+  margin: auto;
   height: 100%;
-
-
+  max-width: 950px;
 }
 
 .tool-box-form{
@@ -153,3 +157,11 @@
   display: flex;
 }
 
+.search-bar-back-padding{
+  z-index: -1;
+  height: 82px;
+  background: #f0f0f0;
+  width: 95%;
+  position: absolute;
+  left: 42px;
+}

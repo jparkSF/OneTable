@@ -3,19 +3,26 @@ import { Link, withRouter } from 'react-router-dom';
 import isEmpty from 'lodash/isEmpty';
 import uniqueId from '../../utils/id_gen';
 import Map from './map';
+import MainSearchTool from './main_search_tool';
 
 
 class MainContent extends React.Component {
   constructor(props) {
     super(props);
+    
   }
 
-  componentDidMount(){
+  componentDidMount() {
     // $('.dropdown-content').css('opacity',0).removeClass('show');
+    
   }
-  
+
   componentWillMount() {
     this.props.fetchAllRestaurants();
+    
+  }
+  componentWillReceiveProps(){
+    
   }
 
   destructRestaurant(restaurant) {
@@ -56,6 +63,8 @@ class MainContent extends React.Component {
     );
   }
 
+
+
   render() {
     const restaurants = this.props.restaurants;
     if (isEmpty(restaurants)) {
@@ -65,6 +74,17 @@ class MainContent extends React.Component {
         <div>
           <div className="main-bg"></div>
           <div className="main-body">
+            <div className="main-content">
+              <div className="search-wrapper">
+                <h1 className="content-block-header search-title">
+                  Make restaurant reservations the easy way
+                </h1>
+                <div className="content-search">
+                  <MainSearchTool />
+                </div>
+              </div>
+            </div>
+
             <div className="main-contents">
               <div className="content-block">
                 <h1 className="content-block-header">Top Cuisines Near You</h1>
@@ -77,12 +97,11 @@ class MainContent extends React.Component {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> 
           </div>
           <div className="main-side">
             <Map />
           </div>
-          
         </div>
       );
     }

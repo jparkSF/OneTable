@@ -67,7 +67,9 @@ export default class RestaurnantIndex extends React.Component {
     let restaurants = this.props.restaurants;
     return (
       <div className="restaurant-index">
+        
         <div className="index-search-tool">
+        
           <SearchTool />
         </div>
 

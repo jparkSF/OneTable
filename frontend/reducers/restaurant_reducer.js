@@ -15,7 +15,7 @@ const RestaurantReducer = (state = {}, action) => {
       return action.restaurants;
     
     case RECEIVE_RESTAURANT:
-    console.log(action.restaurant);
+    
       const newState = { [action.restaurant.id]: action.restaurant };
       return merge({}, state, newState);
 

@@ -18,8 +18,6 @@ export default class IndexSideBar extends React.Component{
         <input type="radio" name="region"  defaultValue="downtown"/> Downtown / FiDi<br />
         <input type="radio" name="region" defaultValue="soma"/> SOMA<br />
         <input type="radio" name="region" defaultValue="mission" /> Mission<br />
-        <input type="radio" name="region" defaultValue="sunset" /> Sunset<br />
-        <input type="radio" name="region" defaultValue="chinatown" /> Chinatown<br />
         <input type="radio" name="region" defaultValue="japantown" /> Japantown<br />
       </form> 
     );

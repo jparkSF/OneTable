@@ -2,17 +2,27 @@
 #
 # Table name: restaurants
 #
-#  id           :integer          not null, primary key
-#  name         :string           not null
-#  owner_id     :integer
-#  address      :string
-#  phone_number :string           not null
-#  website      :string
-#  description  :text             not null
-#  opening      :string
-#  closing      :string
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
+#  id                 :integer          not null, primary key
+#  name               :string           not null
+#  owner_id           :integer
+#  address            :string
+#  city               :string           not null
+#  postal_code        :integer          not null
+#  area               :string
+#  country            :string
+#  phone              :string
+#  website            :string
+#  opening            :string           default("11:30:00")
+#  closing            :string           default("17:30:00")
+#  price              :integer
+#  lat                :float
+#  lng                :float
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  image_file_name    :string
+#  image_content_type :string
+#  image_file_size    :integer
+#  image_updated_at   :datetime
 #
 
 require 'test_helper'

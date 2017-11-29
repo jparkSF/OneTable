@@ -14,7 +14,7 @@ export default class RestaurantForm extends React.Component {
     this.state = {
       name: "",
       owner_id: this.currentUser.id,
-      phone_number: "",
+      phone: "",
       address: "",
       website: "",
       description: "",
@@ -118,8 +118,8 @@ export default class RestaurantForm extends React.Component {
         <br />
         <input type="text" placeholder="Restaurant name *" value={this.state.name}
           onChange={this.update('name')} className="login-input" />
-        <input type="text" placeholder="Phone number *" value={this.state.phone_number}
-          onChange={this.update('phone_number')} className="login-input" />
+        <input type="text" placeholder="Phone number *" value={this.state.phone}
+          onChange={this.update('phone')} className="login-input" />
         <br />
         <input type="text" placeholder="Restaurant address " value={this.state.address}
           onChange={this.update('address')} className="login-input" />

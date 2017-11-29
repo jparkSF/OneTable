@@ -11,7 +11,6 @@ export default class SearchTool extends React.Component{
       location: ""
     };
 
-    console.log(props);
   }
 
   update(field) {
@@ -22,36 +21,10 @@ export default class SearchTool extends React.Component{
 
   handleSubmit(e) {
     e.preventDefault();
-    // const user = this.state;
-    // this.props.processForm(user).then(() => this.closeModal());
+  
   }
 
   
-
-  // num_of_people(){
-  //   const N = 20;
-  //   const numberArray = Array.apply(null, {length: N}).map(Number.call, Number);
-  //   console.log(numberArray);
-  //   let select = document.createElement('select');
-    
-  //   select.name = 'drop1';
-  //   select.value = 'Select1';
-
-    
-
-  //   let options_str = "";
-
-  //   numberArray.forEach( num => {
-  //     options_str += '<option value="' + num + '">' + num + '</option>';
-  //   });
-
-  //   select.innerHTML = options_str;
-
-
-  //   window.onload = function () {
-  //     document.body.appendChild(select);
-  //   };
-  // }
   
   render(){
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
