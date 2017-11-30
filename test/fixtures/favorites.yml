@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: favorites
+#
+#  id            :integer          not null, primary key
+#  customer_id   :integer          not null
+#  restaurant_id :integer          not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  restaurant_id: 1
+
+two:
+  customer_id: 1
+  restaurant_id: 1

@@ -22,9 +22,16 @@ class User < ApplicationRecord
 
   has_many :restaurants,
     foreign_key: :owner_id,
-    primary_key: :id,
     class_name: :Restaurant,
     validate: false
+
+  has_many :favorites,
+    foreign_key: :customer_id,
+    class_name: :Favorite
+
+  has_many :favorite_restaurants,
+    through: :favorites,
+    source: :restaurant
 
   def self.generate_session_token
     SecureRandom::urlsafe_base64(16)
