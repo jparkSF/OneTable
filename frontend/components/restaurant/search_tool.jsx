@@ -39,7 +39,7 @@ export default class SearchTool extends React.Component{
     return(
       <div className="inner-search-tool">
         <div className="search-tool-box">
-          <form className="tool-box-form" id="tool-box-form" action="">
+          <form className="tool-box-form border" id="tool-box-form" action="">
             <select name="num_of_people" className="styled-select people">
               <option value="1">1 Person</option>
               <option value="2">2 People</option>

@@ -3,6 +3,7 @@ import * as RESTAURANT_API_UTIL from '../utils/restaurants';
 export const RECEIVE_ALL_RESTAURANTS = 'RECEIVE_ALL_RESTAURANTS';
 export const RECEIVE_ALL_RESTAURANT = 'RECEIVE_ALL_RESTAURANT';
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
+export const RECEIVE_RESTAURANT_ERRORS = 'RECEIVE_RESTAURANT_ERRORS';
 
 export const receiveAllRestaurants = (restaurants) => ({
   type: RECEIVE_ALL_RESTAURANTS,
@@ -16,7 +17,7 @@ export const receiveRestaurant = restaurant => ({
 
 
 export const receiveErrors = errors => ({
-  type: RECEIVE_RESTAURANT,
+  type: RECEIVE_RESTAURANT_ERRORS,
   errors
 });
 

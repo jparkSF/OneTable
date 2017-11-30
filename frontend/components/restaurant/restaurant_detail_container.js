@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestRestaurant } from '../../actions/restaurant_actions';
+import { requestRestaurant, requestAllRestaurants } from '../../actions/restaurant_actions';
 import RestaurantDetail from './restaurant_detail';
 import { withRouter } from 'react-router-dom';
 
@@ -12,7 +12,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchRestaurant: restID => dispatch(requestRestaurant(restID))
+  fetchRestaurant: restID => dispatch(requestRestaurant(restID)),
+  fetchAllRestaurants: () => dispatch(requestAllRestaurants())
 });
 
 export default withRouter(connect(

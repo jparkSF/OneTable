@@ -1,0 +1,194 @@
+// restaurant detail view main wrapper
+.detail-main{
+  width: 100%;
+}
+
+// restaurant detail view header starts
+.detail-header{
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 220px;
+  background-image: url('restaurants/detail/rest-view-bg-01.png');
+  
+}
+
+.detail-header-wrapper{
+  padding: 100px 27px 27px 27px;
+  width: 92%;
+  margin: auto;
+  display: flex;
+
+}
+
+.detail-header-image-thumb{
+  width: 180px;
+}
+
+.detail-restaurant-name{
+  color: white;
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.detail-header-rest-info{
+  width: 100%;
+  margin-left:20px;
+}
+
+.detail-item-favorite{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.tool-box-form{
+  border-radius: 5px !important;
+  border: 1px solid #f0f0f0 !important;
+}
+
+.body-main-left-title{
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+
+// restaurant detail view body starts
+.detail-body{
+  display: flex;
+  height: 500px;
+}
+
+.detail-body-side{
+  width: 250px;
+  
+}
+
+.detail-body-main{
+  
+  display: flex;
+  width: 100%;
+}
+
+.detail-body-main-left{
+  
+  width: 100%;
+
+}
+
+.detail-body-main-right{
+  // margin: auto;
+  width: auto;
+  margin-right:35px;
+  max-width: 350px;
+
+  
+}
+
+.body-side-wrapper{
+  margin-top: 40%;
+  margin-left: 25%;
+  
+  a{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2.2;
+  }
+}
+
+.body-main-left-inner-wrapper{
+    border-radius: 5px;
+    background-color: white;
+    width: 80%;
+    margin: 25px 0 25px 45px;
+    padding: 25px 50px 30px 50px;
+}
+
+.main-right-inner-wrapper{
+    
+    width: 80%;
+    margin:15px;
+    padding-right:46px;
+    padding-left:25px;
+    margin-top: 25px;
+    margin-left: 30px;
+    
+}
+.side-bar-detail{
+  
+}
+
+/*
+  customer search toolbar style
+*/
+
+.width-27p{
+  width:27% !important;
+}
+
+.width-16p{
+  width:16% !important;
+}
+
+.restaurant-detail-favorite{
+  font-size: 12px;
+  padding: 5px 5px;
+  
+  border: 1px solid white;
+  border-radius: 3px;
+  
+  color:white;
+}
+#empty-heart{
+  margin-right:5px;
+  color:white;
+    font-size: 13px;
+  -webkit-text-stroke: 0px;
+}
+
+.favorite-toggle{
+  cursor: pointer;
+}
+
+.restaurant-detail-favorite{
+  padding: 5px 15px 5px 15px;
+  margin-top: -25px;
+}
+
+
+/*
+  sidebar-detail
+*/
+
+.sidebar-details{
+  font-size: 15px;
+  color:#555;
+    li{
+      margin: 20px 0;
+      padding-left: 40px;
+    }
+}
+
+.sidebar-detail-title{
+  font-weight: 600;
+}
+
+
+
+
+
+
+// restaurant detail view footer starts
+.detail-footer{
+  margin-top: 600px;
+  margin-bottom: 20px;
+  
+  height: 150px;
+    background-color: lightblue;
+    width: 100%;
+
+}
+

@@ -27,11 +27,11 @@ class Api::RestaurantsController < ApplicationController
       :name,
       :owner_id,
       :address,
+      :city,
+      :area,
       :phone,
       :website,
-      :description,
-      :opening,
-      :closing
+      :postal_code
     )
   end
 

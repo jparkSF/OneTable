@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import customStyles from '../../utils/modal_style';
+import isEmpty from 'lodash/isEmpty';
 
 export default class RestaurantForm extends React.Component {
   constructor(props) {
@@ -17,16 +18,16 @@ export default class RestaurantForm extends React.Component {
       phone: "",
       address: "",
       website: "",
-      description: "",
-      opening: "",
-      closing: ""
+      city: "",
+      area: "",
+      postal_code: ""
     };
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     $('body').addClass("fixed-body");
     $('.main').addClass("fixed-main");
     $('.header-location').addClass("header-location-fixed");
@@ -36,7 +37,7 @@ export default class RestaurantForm extends React.Component {
     $('.main-head').addClass("fixed-main-head");
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     $('body').removeClass("fixed-body");
     $('.main').removeClass("fixed-main");
     $('.header-location').removeClass("header-location-fixed");
@@ -120,20 +121,17 @@ export default class RestaurantForm extends React.Component {
           onChange={this.update('name')} className="login-input" />
         <input type="text" placeholder="Phone number *" value={this.state.phone}
           onChange={this.update('phone')} className="login-input" />
-        <br />
         <input type="text" placeholder="Restaurant address " value={this.state.address}
           onChange={this.update('address')} className="login-input" />
+        <input type="text" placeholder="City" value={this.state.city}
+          onChange={this.update('city')} className="login-input" />
+        <input type="text" placeholder="Postal code" value={this.state.postal_code}
+          onChange={this.update('postal_code')} className="login-input" />
+        <input type="text" placeholder="Area" value={this.state.area}
+          onChange={this.update('area')} className="login-input" />
         <input type="text" placeholder="Website" value={this.state.website}
           onChange={this.update('website')} className="login-input" />
-        <br />
-        <input type="text" placeholder="Opening time *" value={this.state.opening}
-          onChange={this.update('opening')} className="login-input" />
-        <input type="text" placeholder="Closing time *" value={this.state.closing}
-          onChange={this.update('closing')} className="login-input" />
-        <br />
-        <input type="text" placeholder="Description *" value={this.state.description}
-          onChange={this.update('description')} className="login-input input-description" />
-        <br />
+
         <input type="submit" value="SUBMIT" />
       </div>
     );
@@ -141,15 +139,20 @@ export default class RestaurantForm extends React.Component {
 
   renderErrors() {
     const errors = this.props.errors;
-    return (
-      <ul className="error-lists">
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+    console.log(this.props.errors);
+    if (isEmpty(errors)) {
+      return (<div></div>);
+    } else {
+      return (
+        <ul className="error-lists">
+          {errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
+    }
   }
 
   render() {
@@ -157,8 +160,12 @@ export default class RestaurantForm extends React.Component {
       <div className="new-restaurant-container">
         {this.newRestaurantMessage()}
         <div className="restaurant-form">
+          <div className="restaurant-form-errors">
+            {this.renderErrors()}
+
+          </div>
           <form onSubmit={this.handleSubmit} className="restaurant-form-box">
-            {/* {this.renderErrors()} */}
+            
             {this.mainForm()}
 
             <Modal
@@ -168,7 +175,7 @@ export default class RestaurantForm extends React.Component {
               {this.successMessage()}
             </Modal>
           </form>
-          
+
         </div>
         <div className='footer'>
           <footer>

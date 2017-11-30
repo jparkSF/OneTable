@@ -37,6 +37,7 @@ end
 
 Restaurant.create!(
   name: "KUSAKABE",
+  owner_id: 1,
   address: "584 Washington Street",
   city: "San Francisco",
   state: "CA",
@@ -52,6 +53,7 @@ Restaurant.create!(
 
 Restaurant.create!(
   name: "Jai Yun",
+  owner_id: 1,
   address: "680 Clay Street",
   city: "San Francisco",
   state: "CA",
@@ -67,6 +69,7 @@ Restaurant.create!(
 
 Restaurant.create!(
   name: "Mangia Tutti",
+  owner_id: 1,
   address: "635 Clay St.",
   city: "San Francisco",
   state: "CA",
@@ -81,6 +84,7 @@ Restaurant.create!(
 )
 Restaurant.create!(
   name: "MICHAEL MINA",
+  owner_id: 1,
   address: "252 California Street",
   city: "San Francisco",
   state: "CA",
@@ -95,6 +99,7 @@ Restaurant.create!(
 )
 Restaurant.create!(
   name: "Osha Thai Embarcadero",
+  owner_id: 1,
   address: "4 Embarcadero Center, Street Level",
   city: "San Francisco",
   state: "CA",
@@ -109,6 +114,7 @@ Restaurant.create!(
 )
 Restaurant.create!(    
   name: "PABU",
+  owner_id: 1,
   address: "101 California Street",
   city: "San Francisco",
   state: "CA",
@@ -128,6 +134,7 @@ Restaurant.create!(
 
 Restaurant.create!(    
   name: "Benu",
+  owner_id: 1,
   address: "22 Hawthorne Street",
   city: "San Francisco",
   state: "CA",
@@ -142,6 +149,7 @@ Restaurant.create!(
 )
 Restaurant.create!(            
   name: "Boulevard",
+  owner_id: 1,
   address: "1 Mission St.",
   city: "San Francisco",
   state: "CA",
@@ -156,6 +164,7 @@ Restaurant.create!(
 )
 Restaurant.create!(  
   name: "Waterbar",
+  owner_id: 1,
   address: "399 The Embarcadero South",
   city: "San Francisco",
   state: "CA",
@@ -170,6 +179,7 @@ Restaurant.create!(
 )
 Restaurant.create!(  
   name: "Yank Sing - Rincon Center",
+  owner_id: 1,
   address: "101 Spear Street",
   city: "San Francisco",
   state: "CA",
@@ -184,6 +194,7 @@ Restaurant.create!(
 )
 Restaurant.create!(  
   name: "Yank Sing - Stevenson Street",
+  owner_id: 1,
   address: "49 Stevenson Street",
   city: "San Francisco",
   state: "AL",
@@ -198,6 +209,7 @@ Restaurant.create!(
 )
 Restaurant.create!(            
   name: "Thirsty Bear",
+  owner_id: 1,
   address: "661 Howard St.",
   city: "San Francisco",
   state: "CA",
@@ -212,6 +224,7 @@ Restaurant.create!(
 )
 Restaurant.create!(             
   name: "Ame",
+  owner_id: 1,
   address: "689 Mission Street",
   city: "San Francisco",
   state: "CA",
@@ -226,6 +239,7 @@ Restaurant.create!(
 )
 Restaurant.create!(  
   name: "Garden Court",
+  owner_id: 1,
   address: "2 New Montgomery St.",
   city: "San Francisco",
   state: "CA",
@@ -245,6 +259,7 @@ Restaurant.create!(
 
 Restaurant.create!(  
   name: "Blue Plate",
+  owner_id: 1,
   address: "3218 Mission Street",
   city: "San Francisco",
   state: "CA",
@@ -261,6 +276,7 @@ Restaurant.create!(
 Restaurant.create!(  
   id: 117262,
   name: "Ichi Sushi & Ni Bar",
+  owner_id: 1,
   address: "3282 Mission Street",
   city: "San Francisco",
   state: "CA",
@@ -275,6 +291,7 @@ Restaurant.create!(
 )
 Restaurant.create!(  
   name: "Garcon",
+  owner_id: 1,
   address: "1101 Valencia Street",
   city: "San Francisco",
   state: "CA",
@@ -289,6 +306,7 @@ Restaurant.create!(
 )        
 Restaurant.create!(   
   name: "Aslam's Rasoi",
+  owner_id: 1,
   address: "1037 Valencia St",
   city: "San Francisco",
   state: "CA",
@@ -303,6 +321,7 @@ Restaurant.create!(
 )
 Restaurant.create!(              
   name: "Urban Putt", 
+  owner_id: 1,
   address: "1096 South Van Ness Avenue",
   city: "San Francisco",
   state: "CA",
@@ -317,6 +336,7 @@ Restaurant.create!(
 )
 Restaurant.create!(  
   name: "Foreign Cinema",
+  owner_id: 1,
   address: "2534 Mission St.",
   city: "San Francisco",
   state: "CA",
@@ -331,6 +351,7 @@ Restaurant.create!(
 )
 Restaurant.create!(   
   name: "El Techo de Lolinda",
+  owner_id: 1,
   address: "2518 Mission Street",
   city: "San Francisco",
   state: "CA",
@@ -345,6 +366,7 @@ Restaurant.create!(
 )
 Restaurant.create!(  
   name: "Manos Nouveau",
+  owner_id: 1,
   address: "3115 22nd Street",
   city: "San Francisco",
   state: "CA",
@@ -359,6 +381,7 @@ Restaurant.create!(
 )
 Restaurant.create!(                      
   name: "Farina",
+  owner_id: 1,
   address: "3560 18th St",
   city: "San Francisco",
   state: "CA",
@@ -373,6 +396,7 @@ Restaurant.create!(
 )
 Restaurant.create!(             
   name: "Saison",
+  owner_id: 1,
   address: "178 Townsend St.",
   city: "San Francisco",
   state: "CA",
@@ -393,6 +417,7 @@ Restaurant.create!(
 
 Restaurant.create!(
   name: "1300 on Fillmore",
+  owner_id: 1,
   address: "1300 Fillmore Street",
   city: "San Francisco",
   state: "CA",
@@ -407,6 +432,7 @@ Restaurant.create!(
 )
 Restaurant.create!(           
   name: "Fresca - Fillmore",
+  owner_id: 1,
   address: "2114 Fillmore St",
   city: "San Francisco",
   state: "CA",
@@ -421,6 +447,7 @@ Restaurant.create!(
 )
 Restaurant.create!(            
   name: "Seoul Garden",
+  owner_id: 1,
   address: "1655 Post Street",
   city: "San Francisco",
   state: "CA",
@@ -435,6 +462,7 @@ Restaurant.create!(
 )
 Restaurant.create!(     
   name: "Jackson Fillmore Trattoria",
+  owner_id: 1,
   address: "2506 Fillmore St",
   city: "San Francisco",
   state: "CA",
@@ -449,6 +477,7 @@ Restaurant.create!(
 )
 Restaurant.create!(     
   name: "Izakaya Kou",
+  owner_id: 1,
   address: "1560 Fillmore Street",
   city: "San Francisco",
   state: "CA",
@@ -463,6 +492,7 @@ Restaurant.create!(
 )
 Restaurant.create!(             
   name: "Nico",
+  owner_id: 1,
   address: "3228 Sacramento Street",
   city: "San Francisco",
   state: "CA",
@@ -477,6 +507,7 @@ Restaurant.create!(
 )
 Restaurant.create!(  
   name: "Florio",
+  owner_id: 1,
   address: "1915 Fillmore Street",
   city: "San Francisco",
   state: "CA",

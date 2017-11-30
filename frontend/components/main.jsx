@@ -20,9 +20,9 @@ class Main extends React.Component {
   render() {
     return (
     <Switch>
+        <Route exact path='/restaurant/new' component={RestaurantsFormContainer} />
         <Route exact path='/restaurant/:restID' component={RestaurantsDetailContainer} />
         <Route exact path='/restaurants' component={RestaurantsIndexContainer} />
-        <Route exact path='/restaurant/new' component={RestaurantsFormContainer} />
 
         <Route path='/' component={MainContentContainer}/>
     </Switch>
