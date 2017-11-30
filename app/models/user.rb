@@ -20,6 +20,11 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :restaurants,
+    foreign_key: :owner_id,
+    primary_key: :id,
+    class_name: :Restaurant,
+    validate: false
 
   def self.generate_session_token
     SecureRandom::urlsafe_base64(16)

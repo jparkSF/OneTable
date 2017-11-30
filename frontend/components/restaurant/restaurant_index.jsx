@@ -36,7 +36,7 @@ export default class RestaurnantIndex extends React.Component {
       <li className="list-item" style={style} key={`${restaurant.id}-${uniqueId()}`}>
         <div className="list-item-thumb" ></div>
         <div className="list-item-info">
-          <Link to={`/restaurants/${restaurant.name}`}>
+          <Link to={`/restaurant/${restaurant.id}`}>
             <p className="restaurant-name">{restaurant.name}</p>
             <p>
               <i className="fa fa-star" aria-hidden="true"></i>

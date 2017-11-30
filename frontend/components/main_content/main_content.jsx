@@ -78,7 +78,11 @@ class MainContent extends React.Component {
             <div className="main-content">
               <div className="search-wrapper">
                 <h1 className="content-block-header search-title">
-                  Make restaurant reservations the easy way
+                  Make restaurant reservations the easy way, or...
+                  <br />
+                  <a href='/#/restaurants' className="strong-text">
+                  Click here to see all restaurants!
+                  </a>
                 </h1>
                 <div className="content-search">
                   <MainSearchTool />

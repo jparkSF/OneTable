@@ -175,7 +175,9 @@ export default class RestaurantDetail extends React.Component {
 
                         </div>
                         <div className="sidebar-detail-value">
+                          <a href={this.restaurant.website}>
                           {this.restaurant.website}
+                          </a>
                         </div>
                       </li>
                     </ul>
