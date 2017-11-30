@@ -9,7 +9,6 @@ export const fetchRestaurant = restID => (
   $.ajax({
     method: 'GET',
     url: `api/restaurants/${restID}`,
-    
   })
 );
 

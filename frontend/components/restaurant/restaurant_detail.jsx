@@ -19,9 +19,14 @@ export default class RestaurantDetail extends React.Component {
     this.fetchRestaurant = props.fetchRestaurant;
     this.fetchAllRestaurants = props.fetchAllRestaurants;
     this.restId = props.match.params.restID;
+    this.fetchCurrentUser = props.fetchCurrentUser;
+
+    
   }
 
-
+  componentDidMount(){
+    this.fetchCurrentUser(this.currentUser.id);
+  }
   componentWillMount() {
     
     this.fetchAllRestaurants();
@@ -29,6 +34,8 @@ export default class RestaurantDetail extends React.Component {
 
     this.checkCurrentFavState(); 
   }
+
+
 
 handleFavorite() {
   // this.setState({
@@ -42,27 +49,35 @@ handleFavorite() {
     }
   };
 
-
+  let currentRestaurantObj = this.props.restaurants[this.restId];
   if (!this.state.favorite) {
-    console.log('inside');
-    console.log(data);
+    
     createFavorite(data);
-    this.setState({ favorite: true });
+    
     $('.restaurant-detail-favorite').addClass('favorite-active');
     $('.favorite-wording').text('Favorited');
     $('.favorite-icon').removeClass('fa-heart');
     $('.favorite-icon').removeClass('fa-heart-o').addClass('fa-heart');
+    
+    this.setState({ favorite: true }, () => this.fetchCurrentUser(this.currentUser.id));
   } else {
-    console.log('outside');
-    console.log(data);
+
     deleteFavorite(data);
+    
     this.setState({ favorite: false });
     $('.restaurant-detail-favorite').removeClass('favorite-active');
     $('.favorite-wording').text('Add to Favorite');
     $('.favorite-icon').addClass('fa-heart-o').removeClass('fa-heart');
+    
+    this.setState({ favorite: false }, () => this.fetchCurrentUser(this.currentUser.id));
   }
   
-  this.fetchAllRestaurants();
+  
+  
+  
+  
+  
+  
 }
 checkCurrentFavState(){
   if (this.currentUser) {
@@ -142,6 +157,8 @@ destructRestaurant() {
 
 render() {
   
+  
+  console.log(this.props.favoriteRestaurants);
   
   const stateEmpty = isEmpty(this.props.restaurants);
   if (stateEmpty) {

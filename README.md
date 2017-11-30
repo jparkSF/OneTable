@@ -11,37 +11,25 @@ is a web service application that allows users to browse local restaurants and m
 ![OneTable](gif image goes here)
 
 W8D4
+* Added new account creation, login, and guest/demo login
+
+W8D6
+* Hosted on Heroku
+
+W9D2
+* Added and search restaurants
+
+W9D4
+* Added Production README
+
+W9D5
+* Added Favorites feature
+
+
+To be developed...
+
+* Ratings/reviews
+* Reservations
 
 
 
-
-1. New account creation, login, and guest/demo login
-
-2. A Production README
-
-3. Hosting on Heroku
-
-4. Create and search restaurants
-
-Users can search restaurants by location, type of food, etc
-Adequate Styling
-Smooth, bug-free navigation
-Adequate and appropriate seeds to demonstrate the feature
-5. Reservations
-
-Users can make reservations from the result of the search
-Adequate Styling
-Smooth, bug-free navigation
-Adequate and appropriate seeds to demonstrate the feature
-6. Ratings/reviews
-
-Users can rate each restaurants and leave short comments as review
-Adequate Styling
-Smooth, bug-free navigation
-Adequate and appropriate seeds to demonstrate the feature
-7. Favorites
-
-Users can store multiple restaurants as their favorites
-Adequate Styling
-Smooth, bug-free navigation
-Adequate and appropriate seeds to demonstrate the feature

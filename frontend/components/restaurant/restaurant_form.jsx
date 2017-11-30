@@ -143,7 +143,7 @@ export default class RestaurantForm extends React.Component {
 
   renderErrors() {
     const errors = this.props.errors;
-    console.log(this.props.errors);
+    
     if (isEmpty(errors)) {
       return (<div></div>);
     } else {

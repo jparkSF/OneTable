@@ -56,7 +56,7 @@ class MainContent extends React.Component {
   scrollArrowButtons() {
     return (
       <div className="paddles">
-        <a className="left-arrow paddle hidden">
+        <a className="left-arrow paddle hidn">
           <i className="fa fa-angle-left" aria-hidden="true"></i>
         </a>
         <a className="right-arrow paddle">

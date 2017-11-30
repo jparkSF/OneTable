@@ -5,6 +5,7 @@ class Api::FavoritesController < ApplicationController
     
   end
 
+  
   def create
     @favorite = Favorite.new(favorite_params)
     checked = Favorite.exists?(:customer_id => params[:favorite][:customer_id],

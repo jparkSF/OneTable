@@ -34,3 +34,9 @@ export const logout = () => dispatch => (
     dispatch(receiveCurrentUser(null))
   ))
 );
+
+export const getUserInfo = (userId) => dispatch => (
+  APIUtil.getUserInfo(userId).then(user => (
+    dispatch(receiveCurrentUser(user))
+  ))
+);
