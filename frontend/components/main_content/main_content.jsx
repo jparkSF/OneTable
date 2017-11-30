@@ -13,12 +13,14 @@ class MainContent extends React.Component {
   }
 
   componentDidMount() {
-    // $('.dropdown-content').css('opacity',0).removeClass('show');
+    // $('.dropdown-content').removeClass('show');
     
   }
 
   componentWillMount() {
     $('.header-search-wrapper').removeClass('hidden');
+    
+    
     this.props.fetchAllRestaurants();
     
   }

@@ -273,8 +273,7 @@ Restaurant.create!(
   website: "http://www.opentable.com/single.aspx?rid=23521"
 )
 
-Restaurant.create!(  
-  id: 117262,
+Restaurant.create!(
   name: "Ichi Sushi & Ni Bar",
   owner_id: 1,
   address: "3282 Mission Street",

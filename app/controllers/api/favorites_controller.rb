@@ -2,14 +2,19 @@ class Api::FavoritesController < ApplicationController
   def index
     @favorite = Favorite.find_by(customer_id: params[:customer_id],
                                 restaurant_id: params[:restaurant_id])
+    
   end
 
   def create
     @favorite = Favorite.new(favorite_params)
-    if @favorite.save
-      render json: "added to favorites"
+    checked = Favorite.exists?(:customer_id => params[:favorite][:customer_id],
+                        :restaurant_id => params[:favorite][:restaurant_id])
+    
+    if checked
+      render json: ['Already favorited'], status: 422
     else
-      render json: @user.errors.full_messages, status: 422
+      @favorite.save
+      render json: "added to favorites"
     end
 
   end

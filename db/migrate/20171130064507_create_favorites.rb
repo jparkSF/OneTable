@@ -6,5 +6,6 @@ class CreateFavorites < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+     add_index :favorites, :customer_id, :restaurant_id, unique: true
   end
 end

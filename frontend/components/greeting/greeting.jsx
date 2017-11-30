@@ -24,7 +24,10 @@ class Greeting extends React.Component{
   }
 
   componenDidMount(){
+    
     $('.dropdown-content').css('opacity',0).removeClass('show');
+    // $('.dropdown-content').css('z-index','-1');
+    
   }
 
   openModal(buttonType) {
@@ -83,21 +86,25 @@ class Greeting extends React.Component{
 
   sessionMenuToggle(){
     if ($('.show').css('opacity') == 0) {
-      $('.show').css('opacity', 1);
+      // $('.show').css('opacity', 1);
+      $('.show').css('z-index', 1).css('opacity',1);
     } else {
-      $('.show').css('opacity', 0).removeClass('.show');
+      // $('.show').css('opacity', 0).removeClass('.show');
+      $('.show').css('z-index','-1').css('opacity',0);
       
     }
 
     window.onclick = function (event) {
       if (!event.target.matches('.drop-button')){
-        $('.show').css('opacity', 0);
+        // $('.show').css('opacity', 0);
+        $('.show').css('z-index', '-1').css('opacity',0);
       }
     };
   } 
 
 
   render() {
+    
     return (
       <div className="header-sessions">
         {this.greeting(this.props)}

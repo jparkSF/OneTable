@@ -14,7 +14,8 @@ export default class RestaurnantIndex extends React.Component {
     this.props.fetchAllRestaurants();
   }
   componentDidMount(){    
-    $('.dropdown-content').css('opacity', 0).removeClass('show');
+    
+    // $('.dropdown-content').css('opacity', 0).removeClass('show');
   }
 
   destructRestaurant(restaurant) {
@@ -64,6 +65,7 @@ export default class RestaurnantIndex extends React.Component {
 
   render() {
     let restaurants = this.props.restaurants;
+
     return (
       <div className="restaurant-index">
         

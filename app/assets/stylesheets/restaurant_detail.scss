@@ -136,7 +136,7 @@
 .restaurant-detail-favorite{
   font-size: 12px;
   padding: 5px 5px;
-  
+  transition-duration: 0.2s;
   border: 1px solid white;
   border-radius: 3px;
   
@@ -192,3 +192,18 @@
 
 }
 
+/*
+  favorite toggle switch
+*/
+
+.favorite-active{
+  transition-duration: 0.2s;
+  color: #d5303b;
+  border: 1px solid #d5303b;
+  width: 86px;
+  padding-right:25px;
+  text-align: center;
+  i{
+    color: #d5303b !important;
+  }
+}

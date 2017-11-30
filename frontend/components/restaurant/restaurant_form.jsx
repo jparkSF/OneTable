@@ -99,6 +99,10 @@ export default class RestaurantForm extends React.Component {
     this.props.history.push('/');
   }
 
+  navigateToRestaurantDetail(){
+    this.setState({ modalIsOpen: false });
+    this.props.history.push('/restaurants');
+  }
   successMessage() {
     return (
       <div className="login-form-container">
@@ -106,8 +110,8 @@ export default class RestaurantForm extends React.Component {
 
           <h2>Congrats!</h2>
           <p>You have successfully created a new restaurant!</p>
-          <input type="button" className="return-to-main" onClick={() => this.closeModal()}
-            value="RETURN TO MAIN PAGE" />
+          <input type="button" className="return-to-main" onClick={() => this.navigateToRestaurantDetail()}
+            value="GO TO RESTAURANTS" />
         </div>
       </div>
     );
