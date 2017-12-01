@@ -1,6 +1,6 @@
 # README
 
-## October, 2017 App Academy Cohort
+## OneTable Fullstack
 ### [OneTable Live (OpenTable Clone)](https://onetable-jwp.herokuapp.com/)
 
 is a web service application that allows users to browse local restaurants and make reservations.
@@ -9,6 +9,27 @@ is a web service application that allows users to browse local restaurants and m
 
 ## Site Preview
 ![OneTable](https://s3-us-west-1.amazonaws.com/one-table-dev/gif/onetable_demo.gif)
+
+## Technologies in this project
+
+* Ruby on Rails 
+* Javascript
+* React 
+* Redux
+  * Redux cycle heavily invloved to provide maximum user experience
+  * Fully implented sing page app(SPA)
+
+* Goodle Maps API
+* Paperclip/ImageMagick
+
+
+## Key Features
+
+* user can create restaurants as an owner
+* user can 'Favorite' or 'Un-favorite' each restaurants and keep in the profile page
+
+
+## Dev Schedule
 
 W8D4
 * Added new account creation, login, and guest/demo login
@@ -25,8 +46,7 @@ W9D4
 W9D5
 * Added Production README 
 
-
-To be developed...
+## Future Dev
 
 * Ratings/reviews
 * Reservations
