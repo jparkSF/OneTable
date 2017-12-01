@@ -521,7 +521,8 @@ Restaurant.create!(
 )
             
 temp_variable = Restaurant.find(1)
-temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/LCsJpWReEtIDRjPI7eyXgA/o.jpg"
+# temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/LCsJpWReEtIDRjPI7eyXgA/o.jpg"
+temp_variable.image = File.open('app/assets/images/restaurants/temp/kusakabe.jpg');
 temp_variable.save!
 
 temp_variable = Restaurant.find(2)
