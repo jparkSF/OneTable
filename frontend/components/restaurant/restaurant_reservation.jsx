@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Modal from 'react-modal';
+import customStyles from '../../utils/modal_style';
 
 export default class RestraurantReservation extends React.Component {
   constructor(props) {
@@ -8,14 +10,48 @@ export default class RestraurantReservation extends React.Component {
       numPeople: "",
       date: "",
       time: "",
-      location: ""
+      location: "",
+      modalIsOpen: false
     };
 
 
   }
 
+  openModal() {
+    this.setState({
+      modalIsOpen: true,
+    });
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
+    // this.props.history.push('/');
+  }
+
+  afterOpenModal() {
+  }
+
+  reservationErrorMessage() {
+    return (
+      <div className="login-form-container">
+        <div className="login-form new-restaurant-message-modal">
+
+          <h2>Oops...</h2>
+          <p>
+            Reservation is not available right now<br />
+            Please try again later!
+          </p>
+
+          <input type="button" className="return-to-main" onClick={() => this.closeModal()}
+            value="RETURN" />
+        </div>
+      </div>
+    );
+  }
+
   handleSubmit(e) {
     e.preventDefault();
+    this.openModal();
     // const user = this.state;
     // this.props.processForm(user).then(() => this.closeModal());
   }
@@ -35,7 +71,7 @@ export default class RestraurantReservation extends React.Component {
     return (
       <div className="main-content-search-tool">
         <div className="search-tool-box">
-          <form className="tool-box-form" id="tool-box-form" action="">
+          <form className="tool-box-form" id="tool-box-form" onClick={e => this.handleSubmit(e)}>
             <select name="num_of_people" className="styled-select people width-27p">
               <option defaultValue="1">1 Person</option>
               <option defaultValue="2">2 People</option>
@@ -58,6 +94,13 @@ export default class RestraurantReservation extends React.Component {
             <input type="submit" defaultValue="Find a Table" className="width-16p"/>
           </form>
         </div>
+
+        <Modal
+          isOpen={this.state.modalIsOpen} onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal} style={customStyles}
+        >
+          {this.reservationErrorMessage()}
+        </Modal>
       </div>
     );
   }

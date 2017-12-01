@@ -164,14 +164,20 @@ render() {
   if (stateEmpty) {
     return (<div></div>);
   } else {
-
     this.restaurant = this.props.restaurants[this.restId];
+    let fixedImageUrl = this.restaurant.image_url;
+    
+    if (this.restaurant.image_url.includes('one-table-dev/')) {
+      fixedImageUrl = this.restaurant.image_url.replace('one-table-dev/', '');
+    }
+   
+
     return (
       <div className="detail-main">
         <div className="detail-header">
           <div className="detail-header-wrapper">
             <div className="detail-header-image-thumb">
-              <img src={this.restaurant.image_url} alt="" />
+              <img src={fixedImageUrl} alt="" />
             </div>
             <div className="detail-header-rest-info">
               {this.destructRestaurant()}

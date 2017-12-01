@@ -22,8 +22,16 @@
 }
 
 .detail-header-image-thumb{
-  width: 180px;
+  width: 225px;
+  height: 180px;
+  padding-right: 30px;
+  margin-left: -25px;
+
+  img{
+    height: 100%;
+  }
 }
+
 
 .detail-restaurant-name{
   color: white;

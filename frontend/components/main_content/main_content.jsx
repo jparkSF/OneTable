@@ -5,27 +5,15 @@ import uniqueId from '../../utils/id_gen';
 import Map from './map';
 import MainSearchTool from './main_search_tool';
 
-
 class MainContent extends React.Component {
   constructor(props) {
-    super(props);
-    
-  }
-
-  componentDidMount() {
-    // $('.dropdown-content').removeClass('show');
-    
+    super(props);    
   }
 
   componentWillMount() {
     $('.header-search-wrapper').removeClass('hidden');
-    
-    
     this.props.fetchAllRestaurants();
-    
-  }
-  componentWillReceiveProps(){
-    
+
   }
 
   destructRestaurant(restaurant) {
@@ -37,7 +25,7 @@ class MainContent extends React.Component {
 
     let style = {
       opacity: 0.9,
-      backgroundSize: 'contain',
+      backgroundSize: '210px 210px',
       backgroundRepeat: 'no-repeat',
       backgroundImage: `url(${fixedImageUrl})`
     };
@@ -66,13 +54,12 @@ class MainContent extends React.Component {
     );
   }
 
-
-
   render() {
     const restaurants = this.props.restaurants;
     if (isEmpty(restaurants)) {
       return null;
     } else {
+      console.log(restaurants);
       return (
         <div>
           <div className="main-bg"></div>
@@ -92,6 +79,7 @@ class MainContent extends React.Component {
               </div>
             </div>
 
+            {/* TOP CUISINES NEAR YOU */}
             <div className="main-contents">
               <div className="content-block">
                 <Link to='/restaurants'>
@@ -107,6 +95,157 @@ class MainContent extends React.Component {
                 </div>
               </div>
             </div> 
+            
+            {/* FEATURED AREAS */}
+            <div className="main-contents">
+              <div className="content-block">
+                <Link to='/restaurants'>
+                  <h1 className="content-block-header">Featured Local Areas</h1>
+                </Link>
+                
+                <div className="content-block-body">
+                  <div className="content-block-body featured-area">
+
+                    <div id="fidi" className="featured-area-items fidi">
+                      <div className="area-items-outer-box">
+                        <a href="/#/restaurants">
+                          <div className="area-items-inner-box">
+                            <h1>Downtown / FIDI</h1>
+                            <p>123 restaurants</p>
+                          </div>
+                        </a> 
+                      </div>
+                    </div>
+
+                    <div id="soma" className="featured-area-items soma">   
+                      <div className="area-items-outer-box">
+                        <a href="/#/restaurants">
+                          <div className="area-items-inner-box">
+                            <h1>SOMA</h1>
+                            <p>123 restaurants</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div id="mission" className="featured-area-items mission">   
+                      <div className="area-items-outer-box">
+                        <a href="/#/restaurants">
+                          <div className="area-items-inner-box">
+                            <h1>Mission</h1>
+                            <p>123 restaurants</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div id="japantown" className="featured-area-items japantown">
+                      <div className="area-items-outer-box">
+                        <a href="/#/restaurants">
+                          <div className="area-items-inner-box">
+                            <h1>Japantown</h1>
+                            <p>123 restaurants</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+
+
+            {/* Popular Cuisines */}
+            <div className="main-contents">
+              <div className="content-block">
+                <Link to='/restaurants'>
+                  <h1 className="content-block-header">Popular Cuisines</h1>
+                </Link>
+
+                <div className="content-block-body">
+                  <div className="content-block-body popular-cuisine">
+                    <ul>
+                      <li>
+                        <div id="" className="featured-area-items popular-list-item korean">
+                          <div className="area-items-outer-box popular-inner-wrapper">
+                            <a href="/#/restaurants">
+                              <div className="area-items-inner-box">
+                                <h1>Korean</h1>
+                                <p>123 restaurants</p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div id="" className="featured-area-items popular-list-item american">
+                          <div className="area-items-outer-box popular-inner-wrapper">
+                            <a href="/#/restaurants">
+                              <div className="area-items-inner-box">
+                                <h1>American</h1>
+                                <p>123 restaurants</p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div id="" className="featured-area-items popular-list-item italian">
+                          <div className="area-items-outer-box popular-inner-wrapper">
+                            <a href="/#/restaurants">
+                              <div className="area-items-inner-box">
+                                <h1>Itanlian</h1>
+                                <p>123 restaurants</p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div id="" className="featured-area-items popular-list-item steakhouse">
+                          <div className="area-items-outer-box popular-inner-wrapper">
+                            <a href="/#/restaurants">
+                              <div className="area-items-inner-box">
+                                <h1>Steakhouse</h1>
+                                <p>123 restaurants</p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div id="" className="featured-area-items popular-list-item seafood">
+                          <div className="area-items-outer-box popular-inner-wrapper">
+                            <a href="/#/restaurants">
+                              <div className="area-items-inner-box">
+                                <h1>Seafood</h1>
+                                <p>123 restaurants</p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div id="" className="featured-area-items popular-list-item japanese">
+                          <div className="area-items-outer-box popular-inner-wrapper">
+                            <a href="/#/restaurants">
+                              <div className="area-items-inner-box">
+                                <h1>Japanese</h1>
+                                <p>123 restaurants</p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                      
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> 
+
+
           </div>
           <div className="main-side">
             <Map />

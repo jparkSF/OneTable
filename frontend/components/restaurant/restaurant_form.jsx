@@ -21,6 +21,7 @@ export default class RestaurantForm extends React.Component {
       city: "",
       area: "",
       postal_code: ""
+      
     };
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -48,24 +49,11 @@ export default class RestaurantForm extends React.Component {
   }
 
 
-  openModal() {
-    this.setState({
-      modalIsOpen: true,
-    });
-  }
-
-  closeModal() {
-    this.props.history.push('/');
-    this.setState({ modalIsOpen: false });
-  }
-
-  afterOpenModal() {
-  }
-
   handleSubmit(e) {
     e.preventDefault();
     const restaurant = this.state;
     this.props.createRestaurant(restaurant).then(() => this.openModal());
+    
   }
 
   update(field) {
@@ -158,6 +146,7 @@ export default class RestaurantForm extends React.Component {
       );
     }
   }
+
 
   render() {
     return (

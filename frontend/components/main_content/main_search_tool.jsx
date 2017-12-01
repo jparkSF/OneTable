@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Modal from 'react-modal';
+import customStyles from '../../utils/modal_style';
 
 export default class SearchTool extends React.Component {
   constructor(props) {
@@ -8,10 +10,13 @@ export default class SearchTool extends React.Component {
       numPeople: "",
       date: "",
       time: "",
-      location: ""
+      location: "",
+      modalIsOpen: false
     };
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.afterOpenModal = this.afterOpenModal.bind(this);
 
-  
   }
 
   update(field) {
@@ -22,12 +27,45 @@ export default class SearchTool extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.openModal();
     // const user = this.state;
     // this.props.processForm(user).then(() => this.closeModal());
   }
 
+  openModal() {
+    this.setState({
+      modalIsOpen: true,
+    });
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
+    // this.props.history.push('/');
+  }
+
+  afterOpenModal() {
+  }
+
+  reservationErrorMessage() {
+    return (
+      <div className="login-form-container">
+        <div className="login-form new-restaurant-message-modal">
+
+          <h2>Oops...</h2>
+          <p>
+            Reservation is not available right now<br />
+            Please try again later!
+          </p>
+
+          <input type="button" className="return-to-main" onClick={() => this.closeModal()}
+            value="RETURN" />
+        </div>
+      </div>
+    );
+  }
+
   render() {
-    
+
 
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -41,7 +79,7 @@ export default class SearchTool extends React.Component {
     return (
       <div className="main-content-search-tool">
         <div className="search-tool-box">
-          <form className="tool-box-form" id="tool-box-form" action="">
+          <form className="tool-box-form" id="tool-box-form" onClick={(e) => this.handleSubmit(e)}>
             <select name="num_of_people" className="styled-select people">
               <option defaultValue="1">1 Person</option>
               <option defaultValue="2">2 People</option>
@@ -73,6 +111,12 @@ export default class SearchTool extends React.Component {
             <input type="submit" defaultValue="Find a Table" />
           </form>
         </div>
+        <Modal
+          isOpen={this.state.modalIsOpen} onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal} style={customStyles}
+        >
+          {this.reservationErrorMessage()}
+        </Modal>
       </div>
     );
   }

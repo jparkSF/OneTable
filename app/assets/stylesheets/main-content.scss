@@ -26,6 +26,7 @@
   padding: 30px 30px 10px 30px;
   border-radius: 5px;
   margin: 15px 35px;
+  width: 100%;
   	
 
 }
@@ -41,6 +42,7 @@
 }
 
 .content-block-body{
+  height: auto !important;
   margin: 20px 0;
   overflow-y: hidden;
   overflow-x: hidden;  
@@ -150,6 +152,133 @@
   width: 100%;
 }
 
+/*
+  Featured Local Areas
+*/
+
+.featured-area{
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  img{
+    width: 400px;
+    height: 200px;
+  }
+}
+.featured-area-items{
+  
+  width: 50%;
+  min-width: 250px !important;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.fidi{
+  background: image-url('areas/fidi.jpg');
+  background-size: 100%;
+  background-position-y: -40px;
+  
+}
+.soma{
+  background: image-url('areas/soma.jpg');
+  background-size: 100%;
+  
+}
+.mission{
+  background: image-url('areas/mission.jpg');
+  background-position-y: -100px;
+  background-size: 100%;
+}
+.japantown{
+  background: image-url('areas/japantown.jpg');
+  background-position-y: -55px;
+  background-size: 100%;
+}
+
+.area-items-outer-box{
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+  transition-duration: 0.1s;
+}
+.area-items-outer-box:hover{
+  background-color: rgba(0,0,0,0);
+  position: relative;
+  transition-duration: 0.1s;
+}
+
+
+.area-items-inner-box{
+  width: 100%;
+  text-align: center;
+  padding: 75px 0;
+  h1{
+    color: white;
+    font-size: 25px;
+    text-shadow: black 0 4px 4px;
+  }
+  p{
+    display: inline;
+    text-shadow: none;
+    font-weight: 400;
+    font-size: 17px;
+  }
+}
+
+.popular-cuisine{
+  ul{
+    flex-wrap: wrap;
+  }
+  li{
+    margin:0;
+    min-width: 250px;
+    width: 33.3%;
+  }
+}
+
+.popular-list-item{
+  min-width: 300px !important;
+  width: 100%;
+  height: 100%;
+}
+.popular-inner-wrapper{
+  height: 210px !important;
+}
+
+.korean{
+  // background-position-y: -100px;
+  background: image-url('cuisine/korean.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+}
+.steakhouse{
+  background: image-url('cuisine/steakhouse.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+}
+.italian{
+background: image-url('cuisine/italian.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.seafood{
+background: image-url('cuisine/seafood.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.japanese{
+background: image-url('cuisine/japanese.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.american{
+background: image-url('cuisine/american.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 @media screen and (max-width: 1390px) {
   .main-body{
     display: block;

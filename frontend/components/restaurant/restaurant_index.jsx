@@ -27,7 +27,7 @@ export default class RestaurnantIndex extends React.Component {
 
     let style = {
       opacity: 0.9,
-      backgroundSize: 'contain',
+      backgroundSize: '150px 150px',
       backgroundRepeat: 'no-repeat',
       backgroundImage: `url(${fixedImageUrl})`,
       imageWidth: '250' 
