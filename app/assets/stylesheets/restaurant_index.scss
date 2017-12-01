@@ -165,3 +165,22 @@
   position: absolute;
   left: 42px;
 }
+
+.list-item-thumb{
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.list-item-thumb:hover{
+  background-color: rgba(0,0,0,0.3);
+  transition-duration: 0.2s;
+}
+
+.list-item-thumb:hover:after{
+  content:'\00a0\00a0\00a0\00a0\00a0\00a0\00a0 click to enlarge';
+  color: white;
+  font-weight:400;
+  display: flex;
+  padding: 63px 0;
+  
+}

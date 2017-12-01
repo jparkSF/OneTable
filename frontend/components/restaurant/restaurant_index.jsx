@@ -3,39 +3,82 @@ import { Link, withRouter } from 'react-router-dom';
 import uniqueId from '../../utils/id_gen';
 import SearchTool from './search_tool';
 import IndexSideBar from './restaurant_index_sidebar';
+import Modal from 'react-modal';
+import customStyles from '../../utils/modal_style';
+import restImageStyle from '../../utils/rest_image_modal_style';
 
 export default class RestaurnantIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      modalIsOpen: false
+    };
     
     this.currentUser = props.currentUser;
+    
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.afterOpenModal = this.afterOpenModal.bind(this);
   }
   componentWillMount() {
-    this.props.fetchAllRestaurants();
+    this.props.fetchAllRestaurants().then(() =>{
+      // console.log('in mount sync');
+      // // this.imageUrl = this.props.restaurants[this.restaurant.id].image_url;
+      // console.log(this.props.restaurants);
+      // console.log(this.restaurant);
+    });
   }
   componentDidMount(){    
     
     // $('.dropdown-content').css('opacity', 0).removeClass('show');
   }
 
-  destructRestaurant(restaurant) {
-    let fixedImageUrl = restaurant.image_url;
+  handleImageClick(e, restaurant) {
+    e.preventDefault();
     
+    // console.log(restaurant.image_url);
+    this.restImage = restaurant.image_url.replace('one-table-dev.', '');
+    // this.restaurant.image_url = restaurant.image_url.replace('one-table-dev.', '');
+    
+    this.openModal();
+  }
+
+
+  openModal() {
+    this.setState({
+      modalIsOpen: true,
+    });
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
+    // this.props.history.push('/');
+  }
+
+  afterOpenModal() {
+  }
+
+  destructRestaurant(restaurant) {
+    
+    this.fixedImageUrl = restaurant.image_url;
+  
     if (restaurant.image_url.includes('one-table-dev/')) {
-      fixedImageUrl = restaurant.image_url.replace('one-table-dev/', '');
+      this.fixedImageUrl = restaurant.image_url.replace('one-table-dev/', '');
     }
 
     let style = {
       opacity: 0.9,
       backgroundSize: '150px 150px',
       backgroundRepeat: 'no-repeat',
-      backgroundImage: `url(${fixedImageUrl})`,
+      backgroundImage: `url(${this.fixedImageUrl})`,
       imageWidth: '250' 
     };
 
     return (
       <li className="list-item" style={style} key={`${restaurant.id}-${uniqueId()}`}>
-        <div className="list-item-thumb" ></div>
+        <div className="list-item-thumb" onClick={(e) => this.handleImageClick(e, restaurant)}>
+        <p className="thumb-click"></p>
+        </div> 
         <div className="list-item-info">
           <Link to={`/restaurant/${restaurant.id}`}>
             <p className="restaurant-name">{restaurant.name}</p>
@@ -87,6 +130,14 @@ export default class RestaurnantIndex extends React.Component {
           </div>
           
         </div>
+        <Modal
+          isOpen={this.state.modalIsOpen} onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal} style={restImageStyle}
+        >
+          
+          <img src={this.restImage ? this.restImage : ""} alt=""/>
+          {/* {this.restaurant. ? console.log(this.restaurant.image_url) : ""} */}
+        </Modal>
       </div>
     );
   }
