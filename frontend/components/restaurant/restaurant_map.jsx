@@ -5,35 +5,35 @@ export default class RestaurantMap extends React.Component {
     super(props);
     console.log('in props');
     console.log(props);
-    this.restaurantLng = props.position.restaurantLng.bind(this);
-    this.restaurantLat = props.position.restaurantLat.bind(this);
+    this.restaurantLng = props.position.restaurantLng;
+    this.restaurantLat = props.position.restaurantLat;
   }
 
   componentDidMount() {
-    const mapOptions = {
+    const restaurant = {
       // San Francisco coordinates
       center: {
-        lat: 37.787956,
-        lng: -122.407515
+        lat: this.restaurantLat,
+        lng: this.restaurantLng
       },
-      zoom: 12
+      zoom: 18
     };
 
 
 
     const mapElement = this.refs.map;
-    this.route_map = new google.maps.Map(mapElement, mapOptions);
+    this.route_map = new google.maps.Map(mapElement, restaurant);
 
 
     if (navigator.geolocation) {
      
 
-        this.route_map.setCenter({
-          lat: mapOptions.center.lat,
-          lng: mapOptions.center.lng
-        });
+        // this.route_map.setCenter({
+        //   lat: restaurant.center.lat,
+        //   lng: restaurant.center.lng
+        // });
 
-        this.route_map.setZoom(14);
+      
       console.log('inside maps');
       console.log(this.restaurantLat);
       console.log(this.restaurantLng);

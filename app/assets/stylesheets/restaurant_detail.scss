@@ -77,20 +77,21 @@
 .detail-body-main{
   
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .detail-body-main-left{
   
-  width: 100%;
+  width: 75%;
 
 }
 
 .detail-body-main-right{
   // margin: auto;
   width: auto;
-  margin-right:35px;
-  max-width: 350px;
+  margin-left: -82px;
+  max-width: 377px;
 
   
 }
@@ -183,6 +184,48 @@
 .sidebar-detail-title{
   font-weight: 600;
 }
+.sidebar-detail-content{
+  position: relative;
+  
+}
+/*
+  right side bar icons
+*/
+.icons{
+  position: absolute;
+  left: 7px;
+  top:8px;
+  width: 22px;
+  height: 20px;
+
+}
+.bell {
+  background: image-url('icons/bell.png');
+}
+
+.time {
+  background: image-url('icons/time.png');
+}
+.phone {
+  background: image-url('icons/phone.png');
+}
+.website {
+  background: image-url('icons/website.png');
+  width: 25px;
+  height: 27px;
+  background-repeat: no-repeat;
+}
+.url-link-color{
+  color: #d5303b;
+}
+.icons{
+ padding-left:3px;
+}
+.cutlery{
+  color: #84b5cd;
+  font-size: 1.3rem !important;
+}
+
 
 
 
@@ -194,8 +237,8 @@
   margin-top: 600px;
   margin-bottom: 20px;
   
-  height: 150px;
-    background-color: lightblue;
+  height: 350px;
+    
     width: 100%;
 
 }
@@ -214,4 +257,12 @@
   i{
     color: #d5303b !important;
   }
+}
+
+/*
+  restaurant google map
+*/
+
+.map{
+  width: 100%;
 }

@@ -4,6 +4,7 @@ import uniqueId from '../../utils/id_gen';
 import SearchTool from './search_tool';
 import IndexSideBar from './restaurant_index_sidebar';
 import RestaurantReservation from './restaurant_reservation';
+import RestaurantMap from './restaurant_map';
 import isEmpty from 'lodash/isEmpty';
 import { createFavorite, deleteFavorite } from '../../utils/favorites';
 
@@ -213,8 +214,14 @@ render() {
 
                 <hr />
                 <p>
-                  lat: {this.restaurant.lat}<br />
-                  lng: {this.restaurant.lng}
+                  <div className="restaurant-map">
+                    <RestaurantMap position={
+                      {
+                        restaurantLat: this.restaurant.lat,        
+                        restaurantLng: this.restaurant.lng
+                      }
+                    }/>
+                  </div>
                 </p>
                 <br /><br /><br /><br /><br /><br /><br />
 
@@ -241,7 +248,9 @@ render() {
                 <div className="sidebar-details">
                   <ul>
                     <li className="sidebar-detail-content">
+                      <div className="bell icons"></div>
                       <div className="sidebar-detail-title">
+                        
                         Dining Style:
                         </div>
                       <div className="sidebar-detail-value">
@@ -249,6 +258,7 @@ render() {
                         </div>
                     </li>
                     <li className="sidebar-detail-content">
+                      <div className="time icons"></div>
                       <div className="sidebar-detail-title">
                         Hours of Operation:
                         </div>
@@ -257,7 +267,9 @@ render() {
                         </div>
                     </li>
                     <li className="sidebar-detail-content">
+                      <div className="phone icons"></div>
                       <div className="sidebar-detail-title">
+                        
                         Phone Number:
                         </div>
                       <div className="sidebar-detail-value">
@@ -267,7 +279,11 @@ render() {
                       </div>
                     </li>
                     <li className="sidebar-detail-content">
+                      <div className="cuisine icons">
+                        <i className="fa fa-cutlery cutlery" aria-hidden="true"></i>
+                      </div>
                       <div className="sidebar-detail-title">
+                        
                         Cuisine:
                         </div>
                       <div className="sidebar-detail-value">
@@ -275,12 +291,13 @@ render() {
                         </div>
                     </li>
                     <li className="sidebar-detail-content">
+                      <div className="website icons"></div>
                       <div className="sidebar-detail-title">
                         Website:
 
                         </div>
                       <div className="sidebar-detail-value">
-                        <a href={this.restaurant.website}>
+                        <a className="url-link-color" href={this.restaurant.website}>
                           {this.restaurant.website}
                         </a>
                       </div>
@@ -293,8 +310,8 @@ render() {
         </div>
         <div className="detail-footer">
           <div>
-            footer
-            </div>
+            
+          </div>
 
         </div>
 
