@@ -157,8 +157,8 @@ destructRestaurant() {
 
 render() {
   
+  this.fetchCurrentUser(this.currentUser.id);
   
-  console.log(this.props.favoriteRestaurants);
   
   const stateEmpty = isEmpty(this.props.restaurants);
   if (stateEmpty) {
@@ -187,13 +187,10 @@ render() {
         <div className="detail-body">
           <div className="detail-body-side">
             <div className="body-side-wrapper">
-              
-              <a href="#reservation">Reservations</a><br />
-              <a href="#about">About</a><br />
-              <a href="#review">Reviews</a><br />
-        
-              <Link to={'/restaurant/'+this.restId+"#photo"}>Photos</Link>
-              
+              <Link to={`/restaurant/${this.restId}/#reservations`}>Reservations</Link><br/>
+              <Link to={`/restaurant/${this.restId}/#about`}>About</Link><br />
+              <Link to={`/restaurant/${this.restId}/#reviews`}>Reviews</Link><br />
+              <Link to={`/restaurant/${this.restId}/#photos`}>Photos</Link><br />
             </div>
           </div>
 
