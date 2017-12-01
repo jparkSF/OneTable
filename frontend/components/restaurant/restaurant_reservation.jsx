@@ -13,7 +13,9 @@ export default class RestraurantReservation extends React.Component {
       location: "",
       modalIsOpen: false
     };
-
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.afterOpenModal = this.afterOpenModal.bind(this);
 
   }
 
@@ -57,7 +59,6 @@ export default class RestraurantReservation extends React.Component {
   }
 
   render() {
-
 
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

@@ -157,7 +157,8 @@ destructRestaurant() {
 
 render() {
   
-  this.fetchCurrentUser(this.currentUser.id);
+ console.log('activate fetchCurrentUser');
+  // this.fetchCurrentUser(this.currentUser.id);
   
   
   const stateEmpty = isEmpty(this.props.restaurants);

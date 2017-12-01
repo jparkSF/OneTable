@@ -40,8 +40,8 @@ export default class SearchTool extends React.Component{
   }
 
   closeModal() {
-    this.props.history.push('/');
     this.setState({ modalIsOpen: false });
+    this.props.history.push('/');
   }
 
   afterOpenModal() {
@@ -53,8 +53,8 @@ export default class SearchTool extends React.Component{
         <div className="login-form new-restaurant-message-modal">
 
           <h2>Oops!</h2>
-          <p>Reservation is currently unavailable</p><br />
-          <p>Please try again later!</p>
+          <p>Reservation is currently unavailable<br />
+          Please try again later!</p>
           <input type="button" className="return-to-main" onClick={() => this.closeModal()}
             value="RETURN" />
         </div>
@@ -75,7 +75,7 @@ export default class SearchTool extends React.Component{
     return(
       <div className="inner-search-tool">
         <div className="search-tool-box">
-          <form className="tool-box-form border" id="tool-box-form" onclick={this.handleSubmit}>
+          <form className="tool-box-form border" id="tool-box-form" onClick={e => this.handleSubmit(e).bind(this)}>
             <select name="num_of_people" className="styled-select people">
               <option value="1">1 Person</option>
               <option value="2">2 People</option>
