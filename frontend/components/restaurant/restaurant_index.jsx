@@ -22,10 +22,6 @@ export default class RestaurnantIndex extends React.Component {
   }
   componentWillMount() {
     this.props.fetchAllRestaurants().then(() =>{
-      // console.log('in mount sync');
-      // // this.imageUrl = this.props.restaurants[this.restaurant.id].image_url;
-      // console.log(this.props.restaurants);
-      // console.log(this.restaurant);
     });
   }
   componentDidMount(){    
@@ -36,9 +32,9 @@ export default class RestaurnantIndex extends React.Component {
   handleImageClick(e, restaurant) {
     e.preventDefault();
     
-    // console.log(restaurant.image_url);
+    
     this.restImage = restaurant.image_url.replace('one-table-dev.', '');
-    // this.restaurant.image_url = restaurant.image_url.replace('one-table-dev.', '');
+    
     
     this.openModal();
   }
@@ -134,9 +130,7 @@ export default class RestaurnantIndex extends React.Component {
           isOpen={this.state.modalIsOpen} onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal} style={restImageStyle}
         >
-          
-          <img src={this.restImage ? this.restImage : ""} alt=""/>
-          {/* {this.restaurant. ? console.log(this.restaurant.image_url) : ""} */}
+          <img src={this.restImage ? this.restImage : ""} alt=""/>  
         </Modal>
       </div>
     );

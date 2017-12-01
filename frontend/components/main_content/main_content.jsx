@@ -59,7 +59,6 @@ class MainContent extends React.Component {
     if (isEmpty(restaurants)) {
       return null;
     } else {
-      console.log(restaurants);
       return (
         <div>
           <div className="main-bg"></div>

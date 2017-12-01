@@ -5,8 +5,6 @@ import RestaurantDetail from './restaurant_detail';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state) => {
-  console.log('in state');
-  console.log(state);
   return {
     currentUser: state.session.currentUser,
     errors: state.errors.restaurant,

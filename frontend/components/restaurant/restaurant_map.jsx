@@ -3,8 +3,6 @@ import React from 'react';
 export default class RestaurantMap extends React.Component {
   constructor(props) {
     super(props);
-    console.log('in props');
-    console.log(props);
     this.restaurantLng = props.position.restaurantLng;
     this.restaurantLat = props.position.restaurantLat;
   }
@@ -33,10 +31,7 @@ export default class RestaurantMap extends React.Component {
         //   lng: restaurant.center.lng
         // });
 
-      
-      console.log('inside maps');
-      console.log(this.restaurantLat);
-      console.log(this.restaurantLng);
+    
         const marker = new google.maps.Marker({
           position: {
             lat: this.restaurantLat,
