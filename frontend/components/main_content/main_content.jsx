@@ -70,7 +70,7 @@ class MainContent extends React.Component {
                   Make restaurant reservations the easy way, or...
                   <br />
                   <a href='/#/restaurants' className="strong-text">
-                  Click here to see all restaurants!
+                  <b>Click here</b> to see all restaurants!
                   </a>
                 </h1>
                 <div className="content-search">

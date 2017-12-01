@@ -8,7 +8,7 @@ is a web service application that allows users to browse local restaurants and m
 
 
 ## Site Preview
-![OneTable](gif image goes here)
+![OneTable](https://s3-us-west-1.amazonaws.com/one-table-dev/gif/onetable_demo.gif)
 
 W8D4
 * Added new account creation, login, and guest/demo login
@@ -20,10 +20,10 @@ W9D2
 * Added and search restaurants
 
 W9D4
-* Added Production README
+* Added Favorites feature 
 
 W9D5
-* Added Favorites feature
+* Added Production README 
 
 
 To be developed...
