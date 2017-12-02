@@ -521,56 +521,56 @@ Restaurant.create!(
   website: "http://www.opentable.com/single.aspx?rid=3377"
 )
             
-temp_variable = Restaurant.find(1)
-temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/LCsJpWReEtIDRjPI7eyXgA/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(1)
+# temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/LCsJpWReEtIDRjPI7eyXgA/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(2)
-temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/jktegRL7dFs04t9E4zk7TQ/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(2)
+# temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/jktegRL7dFs04t9E4zk7TQ/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(3)
-temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/Q7s5KxDWJlkAA9J3pxiVAg/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(3)
+# temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/Q7s5KxDWJlkAA9J3pxiVAg/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(4)
-temp_variable.image = "https://s3-media1.fl.yelpcdn.com/bphoto/sFqkeaicCljOYhnbdAhgFg/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(4)
+# temp_variable.image = "https://s3-media1.fl.yelpcdn.com/bphoto/sFqkeaicCljOYhnbdAhgFg/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(5)
-temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/ViwMJWPReRulv3OsAkE6CA/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(5)
+# temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/ViwMJWPReRulv3OsAkE6CA/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(6)
-temp_variable.image = "https://s3-media3.fl.yelpcdn.com/bphoto/Qhzn_d7VfptRVSGEA_TAig/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(6)
+# temp_variable.image = "https://s3-media3.fl.yelpcdn.com/bphoto/Qhzn_d7VfptRVSGEA_TAig/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(7)
-temp_variable.image = "https://s3-media3.fl.yelpcdn.com/bphoto/In-vjjK5yNQhz9JfodrJVA/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(7)
+# temp_variable.image = "https://s3-media3.fl.yelpcdn.com/bphoto/In-vjjK5yNQhz9JfodrJVA/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(8)
-temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/xsiUiuq-m0VUxktgxzpLxg/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(8)
+# temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/xsiUiuq-m0VUxktgxzpLxg/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(9)
-temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/g8kVSt0OuIGmQ_xrfzAc1Q/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(9)
+# temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/g8kVSt0OuIGmQ_xrfzAc1Q/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(10)
-temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/EcawajvUsw_Tuvnd730zYQ/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(10)
+# temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/EcawajvUsw_Tuvnd730zYQ/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(11)
-temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/sll8oMas-7F5Bgb-RKO2KQ/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(11)
+# temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/sll8oMas-7F5Bgb-RKO2KQ/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(12)
-temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/YotHpkRqjlv-TStDMuadtQ/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(12)
+# temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/YotHpkRqjlv-TStDMuadtQ/o.jpg"
+# temp_variable.save!
 
-temp_variable = Restaurant.find(13)
-temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/pVqa-rqPYurf1vZdmf88eQ/o.jpg"
-temp_variable.save!
+# temp_variable = Restaurant.find(13)
+# temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/pVqa-rqPYurf1vZdmf88eQ/o.jpg"
+# temp_variable.save!
 
 
