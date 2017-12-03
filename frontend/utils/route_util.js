@@ -7,8 +7,8 @@ const mSTP = state => {
   return {
 
   loggedIn: Boolean(state.session.currentUser)
-  }
-}
+  };
+};
 
 const Auth = ({ loggedIn, path, component: Component }) => {
   
@@ -18,7 +18,7 @@ const Auth = ({ loggedIn, path, component: Component }) => {
       loggedIn ? <Redirect to="/" /> : <Component {...props} />
     )}
   />
-  )
+  );
   };
 
 const Protected = ({ loggedIn, path, component: Component }) => (

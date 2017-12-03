@@ -33,7 +33,7 @@ export default class RestaurnantIndex extends React.Component {
     e.preventDefault();
     
     
-    this.restImage = restaurant.image_url.replace('one-table-dev.', '');
+    this.restImage = restaurant.image_url.replace('one-table.', '');
     
     
     this.openModal();
@@ -58,10 +58,14 @@ export default class RestaurnantIndex extends React.Component {
     
     this.fixedImageUrl = restaurant.image_url;
   
-    if (restaurant.image_url.includes('one-table-dev/')) {
-      this.fixedImageUrl = restaurant.image_url.replace('one-table-dev/', '');
+    if (restaurant.image_url.includes('/one-table.')) {
+      
+      
+      this.fixedImageUrl = restaurant.image_url.replace('/one-table.', '/');
+      
+      
     }
-
+    
     let style = {
       opacity: 0.9,
       backgroundSize: '150px 150px',
@@ -104,7 +108,7 @@ export default class RestaurnantIndex extends React.Component {
 
   render() {
     let restaurants = this.props.restaurants;
-
+    console.log('3');
     return (
       <div className="restaurant-index">
         
@@ -130,7 +134,7 @@ export default class RestaurnantIndex extends React.Component {
           isOpen={this.state.modalIsOpen} onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal} style={restImageStyle}
         >
-          <img src={this.restImage ? this.restImage : ""} alt=""/>  
+          <img src={this.restImage} alt=""/> 
         </Modal>
       </div>
     );

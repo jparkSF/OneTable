@@ -41,12 +41,13 @@
  
 }
 
+
 .content-block-body{
   height: auto !important;
   margin: 20px 0;
   overflow-y: hidden;
   overflow-x: hidden;  
-  height: 226px; //hide scroll bar
+  // height: 235px; //hide scroll bar
 
 
 
@@ -150,6 +151,17 @@
 
 .main-content-search-tool{
   width: 100%;
+}
+
+
+
+
+/*
+  Top Cuisines near you
+*/
+
+.top-cuisines{
+  height: 235px !important; //hide scroll bar
 }
 
 /*
@@ -279,6 +291,12 @@ background: image-url('cuisine/american.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
 }
+
+
+
+
+
+
 @media screen and (max-width: 1390px) {
   .main-body{
     display: block;

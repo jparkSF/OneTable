@@ -18,6 +18,7 @@ class MainContent extends React.Component {
 
   destructRestaurant(restaurant) {
 
+
     let fixedImageUrl = restaurant.image_url;
     
     if (restaurant.image_url.includes('one-table.')) {
@@ -31,6 +32,7 @@ class MainContent extends React.Component {
       backgroundImage: `url(${fixedImageUrl})`
     };
 
+
     return (
       <li className="list-item" style={style} key={`${restaurant.id}-${uniqueId()}`}>
         <h5>
@@ -43,12 +45,47 @@ class MainContent extends React.Component {
   }
 
   scrollArrowButtons() {
+    const element = $('.restaurant-lists');
+    let currentScrollPosition = 0;
+    
+    $('#right-arrow').click(function () {
+      event.preventDefault();
+      currentScrollPosition = element.scrollLeft();
+      let newPosition = currentScrollPosition + 768;
+      element.animate({
+        scrollLeft: newPosition
+      }, 400);
+    });
+
+    $('#left-arrow').click(function () {
+      event.preventDefault();
+      currentScrollPosition = element.scrollLeft();
+      let newPosition = currentScrollPosition - 768;
+      element.animate({
+        scrollLeft: newPosition
+      }, 400);
+    });
+    // $('#left-arrow').click(function () {
+    //   event.preventDefault();
+    //   $('.restaurant-lists').animate({
+    //     marginLeft: "+=768px"
+    //   }, 600);
+    // });
+
+    // $('#right-arrow').click(function () {
+    //   event.preventDefault();
+    //   $('.restaurant-lists').animate({
+    //     marginLeft: "-=768px"
+    //   }, 600);
+    // });
+
+
     return (
       <div className="paddles">
-        <a className="left-arrow paddle hidn">
+        <a id="left-arrow" className="left-arrow paddle">
           <i className="fa fa-angle-left" aria-hidden="true"></i>
         </a>
-        <a className="right-arrow paddle">
+        <a id="right-arrow" className="right-arrow paddle">
           <i className="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       </div>
@@ -56,6 +93,7 @@ class MainContent extends React.Component {
   }
 
   render() {
+
     const restaurants = this.props.restaurants;
     if (isEmpty(restaurants)) {
       return null;
@@ -86,7 +124,7 @@ class MainContent extends React.Component {
                   <h1 className="content-block-header">Top Cuisines Near You</h1>
                 </Link>
                 {this.scrollArrowButtons()}
-                <div className="content-block-body">
+                <div className="content-block-body top-cuisines">
                   <ul className="restaurant-lists">
                     {
                       Object.keys(restaurants).map((index) => this.destructRestaurant(restaurants[index]))
