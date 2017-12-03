@@ -12,4 +12,4 @@
 .byebug_history
 bundle.js
 # Ignore application configuration
-# /config/application.yml
+/config/application.yml
