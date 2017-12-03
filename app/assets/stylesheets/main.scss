@@ -59,7 +59,7 @@ body {
 }
 .search-result-lists{
   max-height: 275px;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .search-result-list{
   font-weight: 400;
