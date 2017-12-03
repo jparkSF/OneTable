@@ -98,10 +98,10 @@ Rails.application.configure do
         :bucket => ENV["s3_bucket"],
         :access_key_id => ENV["s3_access_key_id"],
         :secret_access_key => ENV["s3_secret_access_key"],
+        :s3_host_name => ENV["s3_endpoint"],
         :s3_region => ENV["s3_region"],
-        :aws_region => ENV["s3_region"],
-        :AWS_REGION => ENV["s3_region"],
-        :s3_host_name => ENV["s3_endpoint"]
       }
+      :s3_region => ENV["s3_region"],
+      :s3_permissions => 'public-read'
     }
 end
