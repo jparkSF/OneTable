@@ -215,7 +215,7 @@ render() {
 
 
                 <hr />
-                <p>
+                
                   <div className="restaurant-map">
                     <RestaurantMap position={
                       {
@@ -224,7 +224,7 @@ render() {
                       }
                     }/>
                   </div>
-                </p>
+                
                 <br /><br /><br /><br /><br /><br /><br />
 
               </div>

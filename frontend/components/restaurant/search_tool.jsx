@@ -86,7 +86,7 @@ export default class SearchTool extends React.Component{
             </select>
             
             {/* {this.num_of_people()} */}
-            <input type="date" name="date" className='search-date' id="date" value="2017-11-28"/>
+            <input type="date" name="date" className='search-date' id="date" defaultValue="2017-11-28"/>
 
             <select name="time" className="styled-select time" name='time'>
               <option value="17:00">5:00 PM</option>

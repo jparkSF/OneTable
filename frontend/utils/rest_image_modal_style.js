@@ -4,8 +4,8 @@ const restImageStyle = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
-    width: '500',
-    height: '420',
+    width: '500px',
+    height: '420px',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
 

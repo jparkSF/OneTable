@@ -75,7 +75,7 @@ export default class RestaurnantIndex extends React.Component {
       backgroundSize: '150px 150px',
       backgroundRepeat: 'no-repeat',
       backgroundImage: `url(${this.fixedImageUrl})`,
-      imageWidth: '250' 
+      imageWidth: '250px' 
     };
 
     return (
@@ -112,7 +112,7 @@ export default class RestaurnantIndex extends React.Component {
 
   render() {
     let restaurants = this.props.restaurants;
-    console.log('3');
+  
     return (
       <div className="restaurant-index">
         
