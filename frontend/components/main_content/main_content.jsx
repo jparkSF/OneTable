@@ -21,8 +21,8 @@ class MainContent extends React.Component {
 
     let fixedImageUrl = restaurant.image_url;
     
-    if (restaurant.image_url.includes('s3.')) {
-      fixedImageUrl = restaurant.image_url.replace('s3.', 's3-us-west-1.');
+    if (restaurant.image_url.includes('://s3.')) {
+      fixedImageUrl = restaurant.image_url.replace('://s3.', 's://s3-us-west-1.');
     }
     // if (restaurant.image_url.includes('one-table.')) {
     //   fixedImageUrl = restaurant.image_url.replace('one-table.', '');

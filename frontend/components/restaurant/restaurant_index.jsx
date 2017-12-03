@@ -33,7 +33,7 @@ export default class RestaurnantIndex extends React.Component {
     e.preventDefault();
     
     
-    this.restImage = restaurant.image_url.replace('s3.', 's3-us-west-1.');
+    this.restImage = restaurant.image_url.replace('://s3.', 's://s3-us-west-1.');
     
     
     this.openModal();
@@ -58,8 +58,8 @@ export default class RestaurnantIndex extends React.Component {
     
     this.fixedImageUrl = restaurant.image_url;
   
-    if (restaurant.image_url.includes('s3.')) {
-      this.fixedImageUrl = restaurant.image_url.replace('s3.', 's3-us-west-1.');
+    if (restaurant.image_url.includes('://s3.')) {
+      this.fixedImageUrl = restaurant.image_url.replace('://s3.', 's://s3-us-west-1.');
     }
 
     // if (restaurant.image_url.includes('/one-table.')) {
