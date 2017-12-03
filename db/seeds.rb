@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Current Database tables are:
-# => User: first_name, last_name, email, password 
-# => Restaurant: name, owner_id, address, phone, 
+# => User: first_name, last_name, email, password
+# => Restaurant: name, owner_id, address, phone,
 # =>             website, description,opening, closing
 
 User.destroy_all
@@ -22,14 +22,14 @@ User.create!(
     password: "password"
 )
 
-10.times do 
+10.times do
   User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     password: 'password'
   )
-end 
+end
 
 #####################################
 # Restaurants in Financial District #
@@ -49,7 +49,7 @@ Restaurant.create!(
   lng: -122.402963,
   price: 4,
   website: "http://www.opentable.com/single.aspx?rid=149539",
-  
+
 )
 
 Restaurant.create!(
@@ -113,7 +113,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=148651"
 )
-Restaurant.create!(    
+Restaurant.create!(
   name: "PABU",
   owner_id: 1,
   address: "101 California Street",
@@ -133,7 +133,7 @@ Restaurant.create!(
 #        Restaurants in SOMA        #
 #####################################
 
-Restaurant.create!(    
+Restaurant.create!(
   name: "Benu",
   owner_id: 1,
   address: "22 Hawthorne Street",
@@ -148,7 +148,7 @@ Restaurant.create!(
   price: 4,
   website: "http://www.opentable.com/single.aspx?rid=45916"
 )
-Restaurant.create!(            
+Restaurant.create!(
   name: "Boulevard",
   owner_id: 1,
   address: "1 Mission St.",
@@ -163,7 +163,7 @@ Restaurant.create!(
   price: 3,
   website: "http://www.opentable.com/single.aspx?rid=130"
 )
-Restaurant.create!(  
+Restaurant.create!(
   name: "Waterbar",
   owner_id: 1,
   address: "399 The Embarcadero South",
@@ -178,7 +178,7 @@ Restaurant.create!(
   price: 3,
   website: "http://www.opentable.com/single.aspx?rid=17035"
 )
-Restaurant.create!(  
+Restaurant.create!(
   name: "Yank Sing - Rincon Center",
   owner_id: 1,
   address: "101 Spear Street",
@@ -193,7 +193,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=149530"
 )
-Restaurant.create!(  
+Restaurant.create!(
   name: "Yank Sing - Stevenson Street",
   owner_id: 1,
   address: "49 Stevenson Street",
@@ -208,7 +208,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=149527"
 )
-Restaurant.create!(            
+Restaurant.create!(
   name: "Thirsty Bear",
   owner_id: 1,
   address: "661 Howard St.",
@@ -223,7 +223,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=2"
 )
-Restaurant.create!(             
+Restaurant.create!(
   name: "Ame",
   owner_id: 1,
   address: "689 Mission Street",
@@ -238,7 +238,7 @@ Restaurant.create!(
   price: 4,
   website: "http://www.opentable.com/single.aspx?rid=5546"
 )
-Restaurant.create!(  
+Restaurant.create!(
   name: "Garden Court",
   owner_id: 1,
   address: "2 New Montgomery St.",
@@ -253,12 +253,12 @@ Restaurant.create!(
   price: 4,
   website: "http://www.opentable.com/single.aspx?rid=2657"
 )
-  
+
 #####################################
 #      Restaurants in MISSION       #
 #####################################
 
-Restaurant.create!(  
+Restaurant.create!(
   name: "Blue Plate",
   owner_id: 1,
   address: "3218 Mission Street",
@@ -289,7 +289,7 @@ Restaurant.create!(
   price: 3,
   website: "http://www.opentable.com/single.aspx?rid=117262"
 )
-Restaurant.create!(  
+Restaurant.create!(
   name: "Garcon",
   owner_id: 1,
   address: "1101 Valencia Street",
@@ -303,8 +303,8 @@ Restaurant.create!(
   lng: -122.420972,
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=5188"
-)        
-Restaurant.create!(   
+)
+Restaurant.create!(
   name: "Aslam's Rasoi",
   owner_id: 1,
   address: "1037 Valencia St",
@@ -319,8 +319,8 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=66832"
 )
-Restaurant.create!(              
-  name: "Urban Putt", 
+Restaurant.create!(
+  name: "Urban Putt",
   owner_id: 1,
   address: "1096 South Van Ness Avenue",
   city: "San Francisco",
@@ -334,7 +334,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=117271"
 )
-Restaurant.create!(  
+Restaurant.create!(
   name: "Foreign Cinema",
   owner_id: 1,
   address: "2534 Mission St.",
@@ -349,7 +349,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=1906"
 )
-Restaurant.create!(   
+Restaurant.create!(
   name: "El Techo de Lolinda",
   owner_id: 1,
   address: "2518 Mission Street",
@@ -364,7 +364,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=135892"
 )
-Restaurant.create!(  
+Restaurant.create!(
   name: "Manos Nouveau",
   owner_id: 1,
   address: "3115 22nd Street",
@@ -379,7 +379,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=144853"
 )
-Restaurant.create!(                      
+Restaurant.create!(
   name: "Farina",
   owner_id: 1,
   address: "3560 18th St",
@@ -394,7 +394,7 @@ Restaurant.create!(
   price: 3,
   website: "http://www.opentable.com/single.aspx?rid=7656"
 )
-Restaurant.create!(             
+Restaurant.create!(
   name: "Saison",
   owner_id: 1,
   address: "178 Townsend St.",
@@ -430,7 +430,7 @@ Restaurant.create!(
   price: 3,
   website: "http://www.opentable.com/single.aspx?rid=16609"
 )
-Restaurant.create!(           
+Restaurant.create!(
   name: "Fresca - Fillmore",
   owner_id: 1,
   address: "2114 Fillmore St",
@@ -445,7 +445,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=10870"
 )
-Restaurant.create!(            
+Restaurant.create!(
   name: "Seoul Garden",
   owner_id: 1,
   address: "1655 Post Street",
@@ -460,7 +460,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=151789"
 )
-Restaurant.create!(     
+Restaurant.create!(
   name: "Jackson Fillmore Trattoria",
   owner_id: 1,
   address: "2506 Fillmore St",
@@ -475,7 +475,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=15406"
 )
-Restaurant.create!(     
+Restaurant.create!(
   name: "Izakaya Kou",
   owner_id: 1,
   address: "1560 Fillmore Street",
@@ -490,7 +490,7 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=117721"
 )
-Restaurant.create!(             
+Restaurant.create!(
   name: "Nico",
   owner_id: 1,
   address: "3228 Sacramento Street",
@@ -505,7 +505,7 @@ Restaurant.create!(
   price: 3,
   website: "http://www.opentable.com/single.aspx?rid=114151"
 )
-Restaurant.create!(  
+Restaurant.create!(
   name: "Florio",
   owner_id: 1,
   address: "1915 Fillmore Street",
@@ -520,7 +520,11 @@ Restaurant.create!(
   price: 2,
   website: "http://www.opentable.com/single.aspx?rid=3377"
 )
-            
+
+#####################################
+#            Adding Images          #
+#####################################
+
 temp_variable = Restaurant.find(1)
 temp_variable.image = File.open('app/assets/images/restaurants/temp/kusakabe.jpg')
 temp_variable.save!
@@ -573,4 +577,24 @@ temp_variable = Restaurant.find(13)
 temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/pVqa-rqPYurf1vZdmf88eQ/o.jpg"
 temp_variable.save!
 
+#####################################
+#              Review               #
+#####################################
 
+Review.create(author_id: 2,
+              restaurant_id: 2,
+              rating: 4,
+              comment: "It's been a while since I've had fish that I've never had before as well as tasted food that were completely new! Sake list is also incredible.",
+              )
+
+Review.create(author_id: 3,
+              restaurant_id: 2,
+              rating: 2,
+              comment: "I am not a foodie. This was the most amazing meal of my life.",
+              )
+
+Review.create(author_id: 4,
+              restaurant_id: 2,
+              comment: "Great food but expensive. First course was a little slimy and totally turned off the girlfriend.",
+              rating: 5,
+              )

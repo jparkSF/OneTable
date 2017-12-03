@@ -33,6 +33,10 @@ class User < ApplicationRecord
     through: :favorites,
     source: :restaurant
 
+  has_many :reviews,
+    foreign_key: :author_id,
+    class_name: :Review
+
   def self.generate_session_token
     SecureRandom::urlsafe_base64(16)
   end

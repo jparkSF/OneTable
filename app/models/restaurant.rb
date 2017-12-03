@@ -45,6 +45,10 @@ class Restaurant < ApplicationRecord
     foreign_key: :restaurant_id,
     class_name: :Favorite
 
+  has_many :reviews,
+    foreign_key: :restaurant_id,
+    class_name: :Review
+
 
   def image_url
      ActionController::Base.helpers.asset_path(image.url)
