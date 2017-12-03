@@ -521,13 +521,13 @@ Restaurant.create!(
   website: "http://www.opentable.com/single.aspx?rid=3377"
 )
             
-# temp_variable = Restaurant.find(1)
-# temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/LCsJpWReEtIDRjPI7eyXgA/o.jpg"
-# temp_variable.save!
+temp_variable = Restaurant.find(1)
+temp_variable.image = File.open('app/assets/images/restaurants/temp/kusakabe.jpg')
+temp_variable.save!
 
-# temp_variable = Restaurant.find(2)
-# temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/jktegRL7dFs04t9E4zk7TQ/o.jpg"
-# temp_variable.save!
+temp_variable = Restaurant.find(2)
+temp_variable.image = File.open('app/assets/images/restaurants/temp/jai_yun.jpg')
+temp_variable.save!
 
 # temp_variable = Restaurant.find(3)
 # temp_variable.image = "https://s3-media2.fl.yelpcdn.com/bphoto/Q7s5KxDWJlkAA9J3pxiVAg/o.jpg"
