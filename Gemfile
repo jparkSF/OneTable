@@ -34,7 +34,7 @@ gem 'font-awesome-sass'
 gem 'faker'
 gem "paperclip", "~> 5.0.0"
 gem 'figaro'
-gem 'aws-sdk'
+gem 'aws-sdk', '~>2.3'
 gem 'rails_12factor'
 
 # Use Capistrano for deployment

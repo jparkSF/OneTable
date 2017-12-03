@@ -167,8 +167,8 @@ render() {
     this.restaurant = this.props.restaurants[this.restId];
     let fixedImageUrl = this.restaurant.image_url;
     
-    if (this.restaurant.image_url.includes('one-table-dev/')) {
-      fixedImageUrl = this.restaurant.image_url.replace('one-table-dev/', '');
+    if (this.restaurant.image_url.includes('/one-table.')) {
+      fixedImageUrl = this.restaurant.image_url.replace('/one-table.', '/');
     }
    
 
