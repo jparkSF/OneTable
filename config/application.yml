@@ -1,0 +1,14 @@
+#configuration for aws 'one-table'
+
+development:
+  s3_bucket: "one-table"
+
+production:
+  s3_bucket: "one-table"
+  s3_permissions: "public-read"
+  s3_region: "us"
+  s3_endpoint: "one-table.s3-us-west-1.amazonaws.com"
+  s3_access_key_id: "AKIAJWMJSAQUEXJDOTQA"
+  s3_secret_access_key: "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"
+  s3_permissions: "public-read",
+  AWS_REGION: "us"
