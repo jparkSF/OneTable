@@ -6,6 +6,7 @@ import IndexSideBar from './restaurant_index_sidebar';
 import Modal from 'react-modal';
 import customStyles from '../../utils/modal_style';
 import restImageStyle from '../../utils/rest_image_modal_style';
+import isEmpty from 'lodash/isEmpty';
 
 export default class RestaurnantIndex extends React.Component {
   constructor(props) {
@@ -50,8 +51,24 @@ export default class RestaurnantIndex extends React.Component {
     this.setState({ modalIsOpen: false });
     // this.props.history.push('/');
   }
+  afterOpenModal(){
 
-  afterOpenModal() {
+  }
+
+  renderStars(averRating){
+    let target = $('#list-item-rating-star');
+    let domArray = [];
+    if (averRating > 0) {
+      for (let i = 0; i < averRating; i++) {
+        domArray.push(<i className='fa fa-star' key={i} aria-hidden='true'></i>);
+      }
+    } else {
+      for (let i = 0; i < 5; i++) {
+        domArray.push(<i className="fa fa-star-o" key={i} aria-hidden="true"></i>);
+      }
+    }
+
+    return domArray;
   }
 
   destructRestaurant(restaurant) {
@@ -63,13 +80,23 @@ export default class RestaurnantIndex extends React.Component {
     }
 
     // if (restaurant.image_url.includes('/one-table.')) {
-      
-      
     //   this.fixedImageUrl = restaurant.image_url.replace('/one-table.', '/');
-      
-      
     // }
     
+    // calculate the restaurant's average rating
+    const reducer = (acc, currentValue) => acc + currentValue;
+    let keys = Object.keys(restaurant.reviews);
+    let ratings = [];
+    let averRating;
+
+    if (isEmpty(keys)){
+      averRating = 0;
+    } else {
+      keys.forEach(key => ratings.push(restaurant.reviews[key].rating));
+      let totalRate = ratings.reduce(reducer);
+      averRating = Math.round(totalRate/ratings.length);
+    }
+
     let style = {
       opacity: 0.9,
       backgroundSize: '150px 150px',
@@ -86,10 +113,10 @@ export default class RestaurnantIndex extends React.Component {
         <div className="list-item-info">
           <Link to={`/restaurant/${restaurant.id}`}>
             <p className="restaurant-name">{restaurant.name}</p>
-            <p>
-              <i className="fa fa-star" aria-hidden="true"></i>
-              <i className="fa fa-star" aria-hidden="true"></i>
-              <i className="fa fa-star" aria-hidden="true"></i>
+            
+            <p id="list-item-rating-star"className="list-item-rating">
+              {this.renderStars(averRating)}
+              <span className="total-reviews">&nbsp;&nbsp;{restaurant.reviews.length} Reviews</span>
             </p>
             <p className="restaurant-cuisine">American</p>
             

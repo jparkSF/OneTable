@@ -7,6 +7,7 @@ import RestaurantReservation from './restaurant_reservation';
 import RestaurantMap from './restaurant_map';
 import isEmpty from 'lodash/isEmpty';
 import { createFavorite, deleteFavorite } from '../../utils/favorites';
+import ReviewFormContainer from '../review/review_form_container';
 
 export default class RestaurantDetail extends React.Component {
   constructor(props) {
@@ -108,6 +109,23 @@ deactiveFav(){
   );
 }
 
+  renderStars(averRating) {
+    let target = $('#list-item-rating-star');
+    let domArray = [];
+    if (averRating > 0 ){
+      for (let i = 0; i < averRating; i++) {
+        domArray.push(<i className='fa fa-star' key={i} aria-hidden='true'></i>);
+      }
+    } else {
+      for (let i = 0; i < 5; i++) {
+        domArray.push(<i className="fa fa-star-o" key={i} aria-hidden="true"></i>);
+      }
+    }
+    
+
+    return domArray;
+  }
+
 activeFav(){
   return(
     <div className="restaurant-detail-favorite favorite-active">
@@ -120,8 +138,19 @@ activeFav(){
 }
 
 
-destructRestaurant() {
+destructRestaurant(restaurant) {
+  const reducer = (acc, currentValue) => acc + currentValue;
+  let keys = Object.keys(restaurant.reviews);
+  let ratings = [];
+  let averRating;
 
+  if (isEmpty(keys)) {
+    averRating = 0;
+  } else {
+    keys.forEach(key => ratings.push(restaurant.reviews[key].rating));
+    let totalRate = ratings.reduce(reducer);
+    averRating = Math.round(totalRate / ratings.length);
+  }
 
   if (this.restaurant === undefined) {
     return (<div></div>);
@@ -134,9 +163,7 @@ destructRestaurant() {
          
           <p className="detail-restaurant-name">{this.restaurant.name}</p>
           <p>
-            <i className="fa fa-star" aria-hidden="true"></i>
-            <i className="fa fa-star" aria-hidden="true"></i>
-            <i className="fa fa-star" aria-hidden="true"></i>
+            {this.renderStars(averRating)}
           </p>
           <div className="detail-item-favorite">
             <p className="restaurant-cuisine">American</p>
@@ -157,7 +184,9 @@ destructRestaurant() {
 }
 
 render() {
-  this.fetchCurrentUser(this.currentUser.id);
+
+
+  // this.fetchCurrentUser(this.currentUser.id);
   
   
   const stateEmpty = isEmpty(this.props.restaurants);
@@ -184,7 +213,7 @@ render() {
               <img src={fixedImageUrl} alt="" />
             </div>
             <div className="detail-header-rest-info">
-              {this.destructRestaurant()}
+              {this.destructRestaurant(this.restaurant)}
             </div>
           </div>
         </div>
@@ -225,15 +254,17 @@ render() {
                     }/>
                   </div>
                 
-                <br /><br /><br /><br /><br /><br /><br />
+            
 
               </div>
               <div id="rating" className="body-main-left-inner-wrapper">
                 <h1 className="body-main-left-title">
-                  Ratings / Reviews
+                  Leave a Feedback
                   </h1>
                 <hr />
-                <br /><br /><br /><br /><br /><br /><br />
+
+                <ReviewFormContainer props={this.props}/>
+                
               </div>
               <div id="photo" name="photo" className="body-main-left-inner-wrapper">
                 <h1 className="body-main-left-title">

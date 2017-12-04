@@ -171,6 +171,19 @@
   transition-duration: 0.2s;
 }
 
+.list-item-info{
+  
+
+  .total-reviews{
+    display: block;
+    margin: auto 0 auto 40px;
+  }
+}
+
+.list-item-rating{
+  display: flex;
+}
+
 .list-item-thumb:hover{
   background-color: rgba(0,0,0,0.3);
   transition-duration: 0.2s;

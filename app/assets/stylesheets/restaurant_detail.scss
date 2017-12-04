@@ -131,6 +131,52 @@
 }
 
 /*
+  ratings
+*/
+
+.rating-button{
+  margin-right: 6px;
+}
+
+
+.rating-form{
+  display: flex;
+
+  label{
+    margin-top:6px;
+    margin-right: 8px;
+    font-weight: 300;
+    font-size: 0.9em;
+  }
+}
+.rating-buttons{
+  margin-top:8px;
+  display: flex;
+  
+}
+
+.review-submit-button{
+  text-align: center;
+    width: 22%;
+    background-color: #d5303b;
+    color: white;
+    font-weight: 600;
+    border-radius: 0 3px 3px 0;
+    padding: 5px 10px;
+  
+    
+}
+
+.review-input{
+  flex:1;
+  border: 1px solid #f0f0f0;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+
+
+/*
   customer search toolbar style
 */
 

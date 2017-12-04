@@ -49,3 +49,4 @@ export const editRestaurant = restaurant => dispatch => (
     .then(newRestaurant => (dispatch(receiveRestaurant(newRestaurant))),
     err => (dispatch(receiveErrors(err.responseJSON))))
 );
+

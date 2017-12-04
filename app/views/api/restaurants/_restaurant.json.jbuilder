@@ -14,6 +14,6 @@ json.extract! restaurant,
   :closing,
   :lat,
   :lng,
+  :reviews,
   :image_url,
   :created_at
-  

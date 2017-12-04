@@ -55,13 +55,13 @@ export default class RestaurantForm extends React.Component {
     this.props.createRestaurant(restaurant).then(() => this.openModal());
     
   }
-
   update(field) {
     return (e => this.setState({
       [field]: e.currentTarget.value
     })
     );
   }
+
 
 
 

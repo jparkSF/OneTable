@@ -13,7 +13,7 @@
 
 class Review < ApplicationRecord
   validates :author_id, :restaurant_id, :rating, :comment, presence: true
-  validates_uniqueness_of :author_id, scope: :restaurant_id
+  # validates_uniqueness_of :author_id, scope: :restaurant_id
 
   belongs_to :author,
   foreign_key: :author_id,
