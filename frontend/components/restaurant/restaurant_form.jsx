@@ -28,6 +28,21 @@ export default class RestaurantForm extends React.Component {
     this.afterOpenModal = this.afterOpenModal.bind(this);
   }
 
+
+  openModal() {
+    this.setState({
+      modalIsOpen: true,
+    });
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
+    this.props.history.push('/');
+  }
+
+  afterOpenModal() {
+  }
+
   componentDidMount() {
     $('body').addClass("fixed-body");
     $('.main').addClass("fixed-main");
