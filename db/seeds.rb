@@ -619,43 +619,43 @@ I think the worst part was that the host made some lame excuse as to why we were
 Such a shame because the food was exceptional. Will definitely not be going back.",
               )
 
-Review.create(author_id: 2,
+Review.create!(author_id: 2,
               restaurant_id: 2,
               rating: 4,
               comment: "It's been a while since I've had fish that I've never had before as well as tasted food that were completely new! Sake list is also incredible.",
               )
 
-Review.create(author_id: 3,
+Review.create!(author_id: 3,
               restaurant_id: 2,
               rating: 2,
               comment: "I am not a foodie. This was the most amazing meal of my life.",
               )
 
-Review.create(author_id: 8,
+Review.create!(author_id: 8,
               restaurant_id: 2,
               comment: "Great food but expensive. First course was a little slimy and totally turned off the girlfriend.",
               rating: 5,
               )
 
               
-Review.create(author_id: 1,
+Review.create!(author_id: 1,
               restaurant_id: 3,
               rating: 4,
               comment: "They were very helpful accommodating our two kids and stroller, and had berry pancakes that were the bomb.",
               )
-Review.create(author_id: 8,
+Review.create!(author_id: 8,
               restaurant_id: 3,
               rating: 4,
               comment: "It's been a while since I've had fish that I've never had before as well as tasted food that were completely new! Sake list is also incredible.",
               )
 
-Review.create(author_id: 2,
+Review.create!(author_id: 2,
               restaurant_id: 3,
               rating: 2,
               comment: "I am not a foodie. This was the most amazing meal of my life.",
               )
 
-Review.create(author_id: 4,
+Review.create!(author_id: 4,
               restaurant_id: 3,
               comment: "Great food but expensive. First course was a little slimy and totally turned off the girlfriend.",
               rating: 5,
