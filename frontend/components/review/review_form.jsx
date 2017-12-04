@@ -44,7 +44,8 @@ class ReviewForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const review = this.state;
-    this.props.createReview(review).then(() => this.fetchAllRestaurants());
+    this.props.createReview(review).then(() => this.fetchAllRestaurants())
+    .then(() => this.fetchRestaurant(this.restId));
 
 
   }
@@ -54,8 +55,8 @@ class ReviewForm extends React.Component {
 
 
   render() {
-    
 
+    // this.fetchAllRestaurants();
     if (isEmpty(this.props.restaurants)) {
       // console.log("empty");
 
