@@ -30,7 +30,6 @@ class ReviewForm extends React.Component {
     this.reversedReview = this.restaurant.reviews.reverse();
   }
 
- 
 
   update(field) {
 
@@ -45,8 +44,12 @@ class ReviewForm extends React.Component {
     e.preventDefault();
     const review = this.state;
     this.props.createReview(review).then(() => this.fetchAllRestaurants())
-    .then(() => this.fetchRestaurant(this.restId));
+    .then(() => this.fetchRestaurant(this.restId)).then(() => this.setState({
+      rating: '',
+      comment:''
+    }));
 
+    $('.rating-button').attr('checked', false);
 
   }
 
@@ -55,7 +58,7 @@ class ReviewForm extends React.Component {
 
 
   render() {
-
+    // this.fetchRestaurant(this.restId);
     // this.fetchAllRestaurants();
     if (isEmpty(this.props.restaurants)) {
       // console.log("empty");

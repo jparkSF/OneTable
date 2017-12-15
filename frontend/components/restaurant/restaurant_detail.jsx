@@ -186,7 +186,7 @@ destructRestaurant(restaurant) {
 render() {
 
 
-  this.fetchCurrentUser(this.currentUser.id);
+  // this.fetchCurrentUser(this.currentUser.id);
   
   
   const stateEmpty = isEmpty(this.props.restaurants);
@@ -262,7 +262,7 @@ render() {
                   Leave a Feedback
                   </h1>
                 <hr />
-
+                    
                 <ReviewFormContainer props={this.props}/>
                 
               </div>
