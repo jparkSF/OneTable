@@ -1,6 +1,6 @@
 # README
 
-## OneTable Fullstack
+## OneTable Full Stack
 ### [OneTable Live (OpenTable Clone)](https://onetable-jwp.herokuapp.com/)
 
 is a web service application that allows users to browse local restaurants and make reservations.
