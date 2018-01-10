@@ -106,7 +106,7 @@ class SessionForm extends React.Component {
             {this.passwordForm()}<br /> 
             <input type="submit" value={button} />
             {/* <Link to='/demo'> */}
-              <input type="button" onClick={() => this.demoUser()} value="TAKE A TOUR" />
+              <input type="button" onClick={() => this.demoUser()} value="Demo Login" />
             {/* </Link> */}
           </div>
         );  
@@ -121,22 +121,22 @@ class SessionForm extends React.Component {
             {this.passwordForm()}<br />
             <input type="submit" value={button} />
             {/* <Link to='/demo'> */}
-              <input type="button" onClick={() => this.demoUser()} value="TAKE A TOUR"/>
+              <input type="button" onClick={() => this.demoUser()} value="Demo Login"/>
             {/* </Link> */}
           </div>
         );
       
         default:
-          return (
-            <div className="login-form">
-              <br />
-              {this.demoEmail()}<br />
-              {this.demoPassword()}<br />
-              <input type="button" onClick={() => this.demoUser()}  value="Demo sign in" />
-              {/* <button onclick="{}"> Demo sign in</button>
-              <input type="button"  value="Demo sign in" /> */}
-            </div>
-          );
+          // return (
+          //   // <div className="login-form">
+          //   //   <br />
+          //   //   {this.demoEmail()}<br />
+          //   //   {this.demoPassword()}<br />
+          //   //   <input type="button" onClick={() => this.demoUser()}  value="Demo sign in" />
+          //   //   {/* <button onclick="{}"> Demo sign in</button>
+          //   //   <input type="button"  value="Demo sign in" /> */}
+          //   // </div>
+          // );
         
     }
   }

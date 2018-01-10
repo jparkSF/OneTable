@@ -77,11 +77,11 @@ class ReviewForm extends React.Component {
             <label>Rating:</label>
 
             <div className="rating-buttons">
-              <input type="radio" onChange={this.update('rating')} name='rating' value='1' className="rating-button" />
-              <input type="radio" onChange={this.update('rating')} name='rating' value='2' className="rating-button" />
-              <input type="radio" onChange={this.update('rating')} name='rating' value='3' className="rating-button" />
-              <input type="radio" onChange={this.update('rating')} name='rating' value='4' className="rating-button" />
-              <input type="radio" onChange={this.update('rating')} name='rating' value='5' className="rating-button" />
+              1&nbsp;<input type="radio" onChange={this.update('rating')} name='rating' value='1' className="rating-button" />
+              2&nbsp;<input type="radio" onChange={this.update('rating')} name='rating' value='2' className="rating-button" />
+              3&nbsp;<input type="radio" onChange={this.update('rating')} name='rating' value='3' className="rating-button" />
+              4&nbsp;<input type="radio" onChange={this.update('rating')} name='rating' value='4' className="rating-button" />
+              5&nbsp;<input type="radio" onChange={this.update('rating')} name='rating' value='5' className="rating-button" />
             </div>
 
             <input type="text" value={this.state.comment} placeholder="Comments:"
