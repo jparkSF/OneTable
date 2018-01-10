@@ -188,7 +188,7 @@ export default class RestaurantForm extends React.Component {
         <div className='footer'>
           <footer>
             OneTable, Inc <br />
-            <a href="onetable-jwp.herokuapp.com" className="light-blue">onetable-jwp.herokuapp.com</a><br />
+            <a href="http://onetable-jwp.herokuapp.com" className="light-blue">onetable-jwp.herokuapp.com</a><br />
             825 Battery St, 3rd Floor  <br />
             San Francisco, CA 94111 <br />
           </footer>

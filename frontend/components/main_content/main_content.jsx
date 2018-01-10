@@ -152,7 +152,7 @@ class MainContent extends React.Component {
                         <a href="/#/restaurants">
                           <div className="area-items-inner-box">
                             <h1>Downtown / FIDI</h1>
-                            <p>123 restaurants</p>
+                            {/* <p>123 restaurants</p> */}
                           </div>
                         </a> 
                       </div>
@@ -163,7 +163,7 @@ class MainContent extends React.Component {
                         <a href="/#/restaurants">
                           <div className="area-items-inner-box">
                             <h1>SOMA</h1>
-                            <p>123 restaurants</p>
+                            {/* <p>123 restaurants</p> */}
                           </div>
                         </a>
                       </div>
@@ -174,7 +174,7 @@ class MainContent extends React.Component {
                         <a href="/#/restaurants">
                           <div className="area-items-inner-box">
                             <h1>Mission</h1>
-                            <p>123 restaurants</p>
+                            {/* <p>123 restaurants</p> */}
                           </div>
                         </a>
                       </div>
@@ -185,7 +185,7 @@ class MainContent extends React.Component {
                         <a href="/#/restaurants">
                           <div className="area-items-inner-box">
                             <h1>Japantown</h1>
-                            <p>123 restaurants</p>
+                            {/* <p>123 restaurants</p> */}
                           </div>
                         </a>
                       </div>
@@ -212,7 +212,7 @@ class MainContent extends React.Component {
                             <a href="/#/restaurants">
                               <div className="area-items-inner-box">
                                 <h1>Korean</h1>
-                                <p>123 restaurants</p>
+                                {/* <p>123 restaurants</p> */}
                               </div>
                             </a>
                           </div>
@@ -224,7 +224,7 @@ class MainContent extends React.Component {
                             <a href="/#/restaurants">
                               <div className="area-items-inner-box">
                                 <h1>American</h1>
-                                <p>123 restaurants</p>
+                                {/* <p>123 restaurants</p> */}
                               </div>
                             </a>
                           </div>
@@ -236,7 +236,7 @@ class MainContent extends React.Component {
                             <a href="/#/restaurants">
                               <div className="area-items-inner-box">
                                 <h1>Itanlian</h1>
-                                <p>123 restaurants</p>
+                                {/* <p>123 restaurants</p> */}
                               </div>
                             </a>
                           </div>
@@ -248,7 +248,7 @@ class MainContent extends React.Component {
                             <a href="/#/restaurants">
                               <div className="area-items-inner-box">
                                 <h1>Steakhouse</h1>
-                                <p>123 restaurants</p>
+                                {/* <p>123 restaurants</p> */}
                               </div>
                             </a>
                           </div>
@@ -260,7 +260,7 @@ class MainContent extends React.Component {
                             <a href="/#/restaurants">
                               <div className="area-items-inner-box">
                                 <h1>Seafood</h1>
-                                <p>123 restaurants</p>
+                                {/* <p>123 restaurants</p> */}
                               </div>
                             </a>
                           </div>
@@ -272,7 +272,7 @@ class MainContent extends React.Component {
                             <a href="/#/restaurants">
                               <div className="area-items-inner-box">
                                 <h1>Japanese</h1>
-                                <p>123 restaurants</p>
+                                {/* <p>123 restaurants</p> */}
                               </div>
                             </a>
                           </div>
