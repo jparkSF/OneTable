@@ -138,9 +138,13 @@ activeFav(){
 }
 
 getPhotos(){
+  // http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/10.jpg
   return(
-    <div>
-      
+    <div className="restaurant-photos-inner">
+      <img src="http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/10.jpg"/>
+      <img src="http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/1.jpg"/>
+      <img src="http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/2.jpg"/>
+      <img src="http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/4.jpg"/>
     </div>
   )
 
@@ -279,7 +283,7 @@ render() {
                   Restaurant Photos
                   </h1>
                 <hr />
-                <div class="restaurant-photos">
+                <div className="restaurant-photos">
                   {this.getPhotos()}
 
                 </div>

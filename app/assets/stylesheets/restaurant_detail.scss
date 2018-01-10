@@ -312,3 +312,30 @@
 .map{
   width: 100%;
 }
+
+/*
+  Restaurant Photos
+*/
+
+.restaurant-photos-outter{
+  
+}
+
+
+.restaurant-photos-inner{
+  flex-wrap: wrap;
+  img:nth-child(odd){
+    margin-left: 3%;
+    margin-right:3%;
+  }
+  img:nth-child(even){
+    
+    margin-right:3%;
+  }
+  img{
+    display: inline-block;
+    width: 45%;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+}
