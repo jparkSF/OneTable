@@ -104,7 +104,9 @@ class ReviewForm extends React.Component {
 
             {isEmpty(this.restaurant.reviews) ? "im empty" :
               this.reversedReview.map(review => (
+                
                 <li key={review.id}>
+                  {console.log(this.props)}
                   {review.comment}
                   <br />
                   <hr/>

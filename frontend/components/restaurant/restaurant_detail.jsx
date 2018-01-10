@@ -137,6 +137,14 @@ activeFav(){
   );
 }
 
+getPhotos(){
+  return(
+    <div>
+      hello
+    </div>
+  )
+
+}
 
 destructRestaurant(restaurant) {
   const reducer = (acc, currentValue) => acc + currentValue;
@@ -271,7 +279,11 @@ render() {
                   Restaurant Photos
                   </h1>
                 <hr />
-                <br /><br /><br /><br /><br /><br /><br />
+                <div class="restaurant-photos">
+                  {this.getPhotos()}
+
+                </div>
+                
 
               </div>
 

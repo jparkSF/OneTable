@@ -577,12 +577,13 @@ temp_variable = Restaurant.find(13)
 temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/pVqa-rqPYurf1vZdmf88eQ/o.jpg"
 temp_variable.save!
 
-basedir = 'app/assets/images/restaurants/photos'
-photos = Dir.glob("*.jpg")
+Dir.chdir('app/assets/images/restaurants/photos')
+photos = Dir["*.jpg"]
 
 (14..Restaurant.count).each do |i|
-  temp_variable = Restaurnt.find(i)
-  temp_variable.image = "app/assets/images/restaurants/photos/#{photos.sample}"  
+  temp_variable = Restaurant.find(i)
+  file_path = Dir.pwd + "/" +photos.sample
+  temp_variable.image = File.open(file_path)
   temp_variable.save!
 end 
 
@@ -590,82 +591,58 @@ end
 #              Review               #
 #####################################
 
-Review.create(author_id: 1,
-              restaurant_id: 1,
+(1..Restaurant.count).each do |i|
+  Review.create!(author_id: 1,
+              restaurant_id: i,
               rating: 4,
               comment: "First, the quality of the sushi was fantastic. So was the waitress that served us. Why the bad rating then? We were absolutely treated like second class citizens by the host for some unknown reason.
-Despite arriving early and requesting bar seats (it is a sushi bar with 12 bar seats and only 2 tables) we were ignored for 20 minutes then told we had to sit at a table... being seated last and about 30 minutes after our reservation despite the restaurant having a policy of 2 nightly seatings (5:30 and 8:30)
-We missed out on getting to see the chefs work, talk to them, and have interaction with other patrons.
-I think the worst part was that the host made some lame excuse as to why we were relegated to the table, which was clearly BS.
-Such a shame because the food was exceptional. Will definitely not be going back.",
+                        Despite arriving early and requesting bar seats (it is a sushi bar with 12 bar seats and only 2 tables) we were ignored for 20 minutes then told we had to sit at a table... being seated last and about 30 minutes after our reservation despite the restaurant having a policy of 2 nightly seatings (5:30 and 8:30)
+                        We missed out on getting to see the chefs work, talk to them, and have interaction with other patrons.
+                        I think the worst part was that the host made some lame excuse as to why we were relegated to the table, which was clearly BS.
+                        Such a shame because the food was exceptional. Will definitely not be going back.",
               )
+  Review.create!(author_id: 2,
+                restaurant_id: i,
+                rating: 4,
+                comment: "It's been a while since I've had fish that I've never had before as well as tasted food that were completely new! Sake list is also incredible.",
+                )
 
-Review.create(author_id: 6,
-              restaurant_id: 1,
-              rating: 4,
-              comment: "It's been a while since I've had fish that I've never had before as well as tasted food that were completely new! Sake list is also incredible.",
-              )
+  Review.create!(author_id: 3,
+                restaurant_id: i,
+                rating: 2,
+                comment: "I am not a foodie. This was the most amazing meal of my life.",
+                )
 
-Review.create(author_id: 7,
-              restaurant_id: 1,
-              rating: 2,
-              comment: "I am not a foodie. This was the most amazing meal of my life.",
-              )
+  Review.create!(author_id: 8,
+                restaurant_id: i,
+                comment: "Great food but expensive. First course was a little slimy and totally turned off the girlfriend.",
+                rating: 5,
+                )
 
-Review.create(author_id: 8,
-              restaurant_id: 1,
-              comment: "Great food but expensive. First course was a little slimy and totally turned off the girlfriend.",
-              rating: 5,
-              )
+                
+  Review.create!(author_id: 1,
+                restaurant_id: i,
+                rating: 4,
+                comment: "They were very helpful accommodating our two kids and stroller, and had berry pancakes that were the bomb.",
+                )
+  Review.create!(author_id: 8,
+                restaurant_id: i,
+                rating: 4,
+                comment: "It's been a while since I've had fish that I've never had before as well as tasted food that were completely new! Sake list is also incredible.",
+                )
 
-Review.create(author_id: 1,
-              restaurant_id: 2,
-              rating: 4,
-              comment: "First, the quality of the sushi was fantastic. So was the waitress that served us. Why the bad rating then? We were absolutely treated like second class citizens by the host for some unknown reason.
-Despite arriving early and requesting bar seats (it is a sushi bar with 12 bar seats and only 2 tables) we were ignored for 20 minutes then told we had to sit at a table... being seated last and about 30 minutes after our reservation despite the restaurant having a policy of 2 nightly seatings (5:30 and 8:30)
-We missed out on getting to see the chefs work, talk to them, and have interaction with other patrons.
-I think the worst part was that the host made some lame excuse as to why we were relegated to the table, which was clearly BS.
-Such a shame because the food was exceptional. Will definitely not be going back.",
-              )
+  Review.create!(author_id: 2,
+                restaurant_id: i,
+                rating: 2,
+                comment: "I am not a foodie. This was the most amazing meal of my life.",
+                )
 
-Review.create!(author_id: 2,
-              restaurant_id: 2,
-              rating: 4,
-              comment: "It's been a while since I've had fish that I've never had before as well as tasted food that were completely new! Sake list is also incredible.",
-              )
+  Review.create!(author_id: 4,
+                restaurant_id: i,
+                comment: "Great food but expensive. First course was a little slimy and totally turned off the girlfriend.",
+                rating: 5,
+                )
+end 
 
-Review.create!(author_id: 3,
-              restaurant_id: 2,
-              rating: 2,
-              comment: "I am not a foodie. This was the most amazing meal of my life.",
-              )
 
-Review.create!(author_id: 8,
-              restaurant_id: 2,
-              comment: "Great food but expensive. First course was a little slimy and totally turned off the girlfriend.",
-              rating: 5,
-              )
 
-              
-Review.create!(author_id: 1,
-              restaurant_id: 3,
-              rating: 4,
-              comment: "They were very helpful accommodating our two kids and stroller, and had berry pancakes that were the bomb.",
-              )
-Review.create!(author_id: 8,
-              restaurant_id: 3,
-              rating: 4,
-              comment: "It's been a while since I've had fish that I've never had before as well as tasted food that were completely new! Sake list is also incredible.",
-              )
-
-Review.create!(author_id: 2,
-              restaurant_id: 3,
-              rating: 2,
-              comment: "I am not a foodie. This was the most amazing meal of my life.",
-              )
-
-Review.create!(author_id: 4,
-              restaurant_id: 3,
-              comment: "Great food but expensive. First course was a little slimy and totally turned off the girlfriend.",
-              rating: 5,
-              )
