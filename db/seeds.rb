@@ -577,6 +577,15 @@ temp_variable = Restaurant.find(13)
 temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/pVqa-rqPYurf1vZdmf88eQ/o.jpg"
 temp_variable.save!
 
+basedir = 'app/assets/images/restaurants/photos'
+photos = Dir.glob("*.jpg")
+
+(14..Restaurant.count).each do |i|
+  temp_variable = Restaurnt.find(i)
+  temp_variable.image = "app/assets/images/restaurants/photos/#{photos.sample}"  
+  temp_variable.save!
+end 
+
 #####################################
 #              Review               #
 #####################################
