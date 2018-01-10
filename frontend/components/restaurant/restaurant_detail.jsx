@@ -140,7 +140,7 @@ activeFav(){
 getPhotos(){
   return(
     <div>
-      hello
+      
     </div>
   )
 
