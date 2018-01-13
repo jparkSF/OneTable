@@ -23,6 +23,7 @@ export default class RestaurnantIndex extends React.Component {
   }
   componentWillMount() {
     this.props.fetchAllRestaurants().then(() =>{
+      console.log(this.props)
     });
   }
   componentDidMount(){    
@@ -142,9 +143,7 @@ export default class RestaurnantIndex extends React.Component {
   
     return (
       <div className="restaurant-index">
-        
         <div className="index-search-tool">
-        
           <SearchTool />
         </div>
 

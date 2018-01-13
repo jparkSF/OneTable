@@ -6,19 +6,24 @@ import uniqueId from '../../utils/id_gen';
 export default class IndexSideBar extends React.Component{
   constructor(props){
     super(props);
+    // console.log(props)
   }
 
   componentDidMount(){
 
   }
+  filterRegion(region){
+    
+    console.log(region)
+  }
 
   regionSelector(){
     return(
       <form>
-        <input type="radio" name="region"  defaultValue="downtown"/> Downtown / FiDi<br />
-        <input type="radio" name="region" defaultValue="soma"/> SOMA<br />
-        <input type="radio" name="region" defaultValue="mission" /> Mission<br />
-        <input type="radio" name="region" defaultValue="japantown" /> Japantown<br />
+        <input type="radio" name="region" onClick={() => this.filterRegion("fidi")}  defaultValue="downtown"/> Downtown / FiDi<br />
+        <input type="radio" name="region" onClick={() => this.filterRegion("soma")} defaultValue="soma"/> SOMA<br />
+        <input type="radio" name="region" onClick={() => this.filterRegion("mission")} defaultValue="mission" /> Mission<br />
+        <input type="radio" name="region" onClick={() => this.filterRegion("japantown")} defaultValue="japantown" /> Japantown<br />
       </form> 
     );
   }
