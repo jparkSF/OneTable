@@ -112,8 +112,7 @@ class ReviewForm extends React.Component {
                   <hr/>
                   <br />
                 </li> 
-              ))              
-
+              ))             
             }
 
           </ul>
