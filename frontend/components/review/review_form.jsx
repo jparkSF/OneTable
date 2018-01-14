@@ -115,8 +115,6 @@ class ReviewForm extends React.Component {
 
           </ul>
         </div>
-
-
       </div>
 
     );
