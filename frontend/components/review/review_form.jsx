@@ -85,8 +85,6 @@ class ReviewForm extends React.Component {
             <input type="text" value={this.state.comment} placeholder="Comments:"
               onChange={this.update('comment')} className="review-input" />
 
-
-
             <input type="submit" value="Submit Review" className="review-submit-button" />
 
           </div>
