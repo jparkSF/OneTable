@@ -50,11 +50,6 @@ class ReviewForm extends React.Component {
     $('.rating-button').attr('checked', false);
 
   }
-
-
-
-
-
   render() {
     // this.fetchRestaurant(this.restId);
     // this.fetchAllRestaurants();
