@@ -136,15 +136,18 @@ activeFav(){
   </div>
   );
 }
+getRandomNumber(n){
+  return Math.floor(Math.random() * Math.floor(n-1)) + 1;
+}
 
 getPhotos(){
-  // http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/10.jpg
+  const n = 40;
   return(
     <div className="restaurant-photos-inner">
-      <img src="http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/10.jpg"/>
-      <img src="http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/1.jpg"/>
-      <img src="http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/2.jpg"/>
-      <img src="http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/4.jpg"/>
+      <img src={`http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/${this.getRandomNumber(n)}.jpg`} />
+      <img src={`http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/${this.getRandomNumber(n)}.jpg`} />
+      <img src={`http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/${this.getRandomNumber(n)}.jpg`} />
+      <img src={`http://res.cloudinary.com/jpark830/image/upload/v1515623333/onetable/restaurants/photos/${this.getRandomNumber(n)}.jpg`} />
     </div>
   )
 
@@ -215,11 +218,14 @@ render() {
     // if (this.restaurant.image_url.includes('/one-table.')) {
     //   fixedImageUrl = this.restaurant.image_url.replace('/one-table.', '/');
     // }
-   
+   let style = {
+     backgroundImage: "url(" + fixedImageUrl + ")",
+    //  opacity: "0"
+   };
 
     return (
       <div className="detail-main">
-        <div className="detail-header">
+        <div className="detail-header" style={style}>  
           <div className="detail-header-wrapper">
             <div className="detail-header-image-thumb">
               <img src={fixedImageUrl} alt="" />
