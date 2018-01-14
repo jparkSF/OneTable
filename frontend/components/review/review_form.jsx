@@ -6,7 +6,6 @@ class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
 
-
     this.fetchAllRestaurants = props.fetchAllRestaurants;
     this.restId = props.match.params.restID;
     this.createReview = props.createReview;
