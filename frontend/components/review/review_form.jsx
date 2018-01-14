@@ -30,8 +30,6 @@ class ReviewForm extends React.Component {
 
 
   update(field) {
-
-
     return (e => this.setState({
       [field]: e.currentTarget.value
     })
@@ -50,7 +48,7 @@ class ReviewForm extends React.Component {
     $('.rating-button').attr('checked', false);
 
   }
-  
+
   render() {
     // this.fetchRestaurant(this.restId);
     // this.fetchAllRestaurants();
