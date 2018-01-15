@@ -151,6 +151,7 @@ class MainContent extends React.Component {
                       <div className="area-items-outer-box">
                         <a href="/#/restaurants">
                           <div className="area-items-inner-box">
+                            <p>&nbsp;</p>
                             <h1>Downtown / FIDI</h1>
                             {/* <p>123 restaurants</p> */}
                           </div>
@@ -162,6 +163,7 @@ class MainContent extends React.Component {
                       <div className="area-items-outer-box">
                         <a href="/#/restaurants">
                           <div className="area-items-inner-box">
+                            <p>&nbsp;</p>
                             <h1>SOMA</h1>
                             {/* <p>123 restaurants</p> */}
                           </div>
@@ -173,6 +175,7 @@ class MainContent extends React.Component {
                       <div className="area-items-outer-box">
                         <a href="/#/restaurants">
                           <div className="area-items-inner-box">
+                            <p>&nbsp;</p>
                             <h1>Mission</h1>
                             {/* <p>123 restaurants</p> */}
                           </div>
@@ -184,6 +187,7 @@ class MainContent extends React.Component {
                       <div className="area-items-outer-box">
                         <a href="/#/restaurants">
                           <div className="area-items-inner-box">
+                            <p>&nbsp;</p>
                             <h1>Japantown</h1>
                             {/* <p>123 restaurants</p> */}
                           </div>
