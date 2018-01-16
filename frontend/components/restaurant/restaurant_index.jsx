@@ -22,7 +22,6 @@ export default class RestaurnantIndex extends React.Component {
   }
   componentWillMount() {
     this.props.fetchAllRestaurants().then(() =>{
-      // console.log(this.props)
     });
   }
   componentDidMount(){    
