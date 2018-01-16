@@ -14,6 +14,7 @@ export default class RestaurnantIndex extends React.Component {
     this.state = {
       modalIsOpen: false
     };
+    // console.log(this.props)
     
     this.currentUser = props.currentUser;
     
@@ -23,24 +24,18 @@ export default class RestaurnantIndex extends React.Component {
   }
   componentWillMount() {
     this.props.fetchAllRestaurants().then(() =>{
-      console.log(this.props)
+      // console.log(this.props)
     });
   }
   componentDidMount(){    
-    
     // $('.dropdown-content').css('opacity', 0).removeClass('show');
   }
 
   handleImageClick(e, restaurant) {
     e.preventDefault();
-    
-    
     this.restImage = restaurant.image_url.replace('://s3.', 's://s3-us-west-1.');
-    
-    
     this.openModal();
   }
-
 
   openModal() {
     this.setState({
@@ -149,7 +144,10 @@ export default class RestaurnantIndex extends React.Component {
 
         <div className="restaurant-index-lists">
           <div className="index-sidebar">
-            <IndexSideBar />
+          {
+            isEmpty(restaurants) ? "" : <IndexSideBar restaurants={restaurants}/>
+          }
+            
           </div>
           <div className="index-main-content">
             <ul className="index-lists-ul">

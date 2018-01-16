@@ -6,14 +6,13 @@ import uniqueId from '../../utils/id_gen';
 export default class IndexSideBar extends React.Component{
   constructor(props){
     super(props);
-    // console.log(props)
+    console.log(props)
   }
 
   componentDidMount(){
 
   }
   filterRegion(region){
-    
     console.log(region)
   }
 
