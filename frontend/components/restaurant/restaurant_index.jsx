@@ -127,7 +127,6 @@ export default class RestaurnantIndex extends React.Component {
     );
   }
 
-
   render() {
     let restaurants = this.props.restaurants;
   
