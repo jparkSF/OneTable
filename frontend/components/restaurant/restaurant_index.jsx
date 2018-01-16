@@ -47,7 +47,6 @@ export default class RestaurnantIndex extends React.Component {
     // this.props.history.push('/');
   }
   afterOpenModal(){
-
   }
 
   renderStars(averRating){
