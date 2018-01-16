@@ -120,8 +120,6 @@ export default class RestaurnantIndex extends React.Component {
               <input className="listTime" type="button" defaultValue="8:00 pm"/>
               <input className="listTime" type="button" defaultValue="9:00 pm"/>
             </div>
-            
-
           </Link>
         </div>
         <hr />
