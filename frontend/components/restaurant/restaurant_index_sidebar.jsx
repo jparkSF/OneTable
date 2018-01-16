@@ -9,8 +9,8 @@ export default class IndexSideBar extends React.Component{
   }
 
   componentDidMount(){
-
   }
+  
   filterRegion(region){
     console.log(region)
   }
