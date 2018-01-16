@@ -106,8 +106,7 @@ export default class RestaurnantIndex extends React.Component {
         </div> 
         <div className="list-item-info">
           <Link to={`/restaurant/${restaurant.id}`}>
-            <p className="restaurant-name">{restaurant.name}</p>
-            
+            <p className="restaurant-name">{restaurant.name}</p>  
             <p id="list-item-rating-star"className="list-item-rating">
               {this.renderStars(averRating)}
               <span className="total-reviews">&nbsp;&nbsp;{restaurant.reviews.length} Reviews</span>
