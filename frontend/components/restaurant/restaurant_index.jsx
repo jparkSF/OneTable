@@ -14,7 +14,6 @@ export default class RestaurnantIndex extends React.Component {
     this.state = {
       modalIsOpen: false
     };
-    // console.log(this.props)
     
     this.currentUser = props.currentUser;
     this.closeModal = this.closeModal.bind(this);
