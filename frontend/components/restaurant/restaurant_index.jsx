@@ -44,6 +44,7 @@ export default class RestaurnantIndex extends React.Component {
     this.setState({ modalIsOpen: false });
     // this.props.history.push('/');
   }
+  
   afterOpenModal(){
   }
 
