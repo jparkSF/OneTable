@@ -149,8 +149,7 @@ export default class RestaurnantIndex extends React.Component {
                 Object.keys(restaurants).map((index) => this.destructRestaurant(restaurants[index]))
               }
             </ul>
-          </div>
-          
+          </div>      
         </div>
         <Modal
           isOpen={this.state.modalIsOpen} onAfterOpen={this.afterOpenModal}
