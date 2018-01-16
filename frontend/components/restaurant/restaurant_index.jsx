@@ -17,7 +17,6 @@ export default class RestaurnantIndex extends React.Component {
     // console.log(this.props)
     
     this.currentUser = props.currentUser;
-    
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
