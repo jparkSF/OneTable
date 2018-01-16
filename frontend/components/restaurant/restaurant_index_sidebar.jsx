@@ -15,7 +15,6 @@ export default class IndexSideBar extends React.Component{
   filterRegion(region){
     console.log(region)
   }
-
   regionSelector(){
     return(
       <form>
@@ -26,7 +25,6 @@ export default class IndexSideBar extends React.Component{
       </form> 
     );
   }
-
   cuisineSelector() {
     return (
       <form>
