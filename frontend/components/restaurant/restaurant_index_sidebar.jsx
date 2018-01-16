@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import uniqueId from '../../utils/id_gen';
 
-
 export default class IndexSideBar extends React.Component{
   constructor(props){
     super(props);
