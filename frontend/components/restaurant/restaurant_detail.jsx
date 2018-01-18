@@ -260,7 +260,7 @@ render() {
                   About {this.restaurant.name}
                 </h1>
               
-          
+        
         
                 <hr />
                 
