@@ -260,7 +260,6 @@ render() {
                   About {this.restaurant.name}
                 </h1>
 
-
                 <hr />
                 
                   <div className="restaurant-map">
