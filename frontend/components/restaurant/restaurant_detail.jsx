@@ -267,8 +267,6 @@ render() {
 
 
 
-
-
                 <hr />
                 
                   <div className="restaurant-map">
