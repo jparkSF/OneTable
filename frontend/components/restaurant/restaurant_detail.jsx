@@ -259,7 +259,7 @@ render() {
                 <h1 className="body-main-left-title">
                   About {this.restaurant.name}
                 </h1>
-        
+ 
                 <hr />
                 
                   <div className="restaurant-map">
