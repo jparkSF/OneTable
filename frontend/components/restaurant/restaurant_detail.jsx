@@ -292,7 +292,7 @@ render() {
                   {this.getPhotos()}
 
                 </div>
-    
+  
 
               </div>
 
