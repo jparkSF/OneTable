@@ -293,6 +293,8 @@ render() {
 
                 </div>
               </div>
+
+              
             </div>
             <div className="detail-body-main-right">
               <div className="body-main-left-inner-wrapper main-right-inner-wrapper">
