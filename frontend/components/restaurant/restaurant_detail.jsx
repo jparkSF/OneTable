@@ -320,7 +320,6 @@ render() {
                     <li className="sidebar-detail-content">
                       <div className="phone icons"></div>
                       <div className="sidebar-detail-title">
-                        
                         Phone Number:
                         </div>
                       <div className="sidebar-detail-value">
