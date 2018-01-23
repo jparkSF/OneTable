@@ -344,7 +344,7 @@ render() {
                       <div className="website icons"></div>
                       <div className="sidebar-detail-title">
                         Website:
-                         
+                          
                         </div>
                       <div className="sidebar-detail-value">
                         <a className="url-link-color" href={this.restaurant.website}>
