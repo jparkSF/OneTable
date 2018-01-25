@@ -358,7 +358,7 @@ render() {
           </div>
         </div>
         <div className="detail-footer">
-        <div>
+         <div>
         
           </div>
         </div>
