@@ -31,6 +31,7 @@ export default class SearchTool extends React.Component{
     this.openModal();
 
   }
+  
 
   openModal() {
     this.setState({
