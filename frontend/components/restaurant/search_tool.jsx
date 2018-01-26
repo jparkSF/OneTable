@@ -32,6 +32,7 @@ export default class SearchTool extends React.Component{
 
   }
 
+
   openModal() {
     this.setState({
       modalIsOpen: true,
