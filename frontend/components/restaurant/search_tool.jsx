@@ -102,6 +102,7 @@ export default class SearchTool extends React.Component{
                     placeholder="Restaurant"/>
               <i className="fa fa-search search-text-input-icon" aria-hidden="true"></i>
             </div>
+            
              
             
             <input type="submit" value="Find a Table"/>
