@@ -119,7 +119,6 @@ export default class SearchTool extends React.Component{
 
 
 
-
       </div>
     );
   }
