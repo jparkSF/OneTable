@@ -114,7 +114,7 @@ export default class SearchTool extends React.Component{
         >
           {this.reservationErrorMessage()}
         </Modal>
-  
+
 
       </div>
     );
