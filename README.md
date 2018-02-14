@@ -17,9 +17,9 @@ is a web service application that allows users to browse local restaurants and m
 * React 
 * Redux
   * Redux cycle heavily invloved to provide maximum user experience
-  * Fully implented sing page app(SPA)
+  * Fully implemented sing page app(SPA)
 
-* Goodle Maps API
+* Google Maps API
 * Paperclip/ImageMagick
 
 
