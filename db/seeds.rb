@@ -526,11 +526,11 @@ Restaurant.create!(
 #####################################
 
 temp_variable = Restaurant.find(1)
-temp_variable.image = File.open('app/assets/images/restaurants/temp/kusakabe.jpg')
+temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/sll8oMas-7F5Bgb-RKO2KQ/o.jpg"
 temp_variable.save!
 
 temp_variable = Restaurant.find(2)
-temp_variable.image = File.open('app/assets/images/restaurants/temp/jai_yun.jpg')
+temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/pVqa-rqPYurf1vZdmf88eQ/o.jpg"
 temp_variable.save!
 
 temp_variable = Restaurant.find(3)
