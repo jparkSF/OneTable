@@ -526,7 +526,7 @@ Restaurant.create!(
 #####################################
 
 temp_variable = Restaurant.find(1)
-temp_variable.image = "https://s3-media4.fl.yelpcdn.com/bphoto/sll8oMas-7F5Bgb-RKO2KQ/o.jpg"
+temp_variable.image = File.open("assets/images/restaurants/photos/1.jpg")
 temp_variable.save!
 
 temp_variable = Restaurant.find(2)
