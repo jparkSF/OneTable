@@ -526,7 +526,7 @@ Restaurant.create!(
 #####################################
 
 temp_variable = Restaurant.find(1)
-temp_variable.image = File.open("assets/images/restaurants/photos/1.jpg")
+temp_variable.image = File.open("/assets/images/restaurants/photos/1.jpg")
 temp_variable.save!
 
 temp_variable = Restaurant.find(2)
