@@ -81,5 +81,6 @@ test:
 production:
   <<: *default
   database: onetable_production
-  username: onetable
-  password: <%= ENV['ONETABLE_DATABASE_PASSWORD'] %>
+  # database: onetable_development
+  # username: onetable
+  # password: <%= ENV['ONETABLE_DATABASE_PASSWORD'] %>
