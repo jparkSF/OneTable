@@ -35,7 +35,7 @@ class Restaurant < ApplicationRecord
 
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "default_restaurant.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/, optional: true
-  
+  # validates_attachment_content_type :attachment, :content_type => /image/, optional: true
 
   belongs_to :owner,
     foreign_key: :owner_id,

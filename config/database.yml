@@ -80,7 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: onetable_production
-  # database: onetable_development
+  # database: onetable_production
+  
+  database: onetable_development
   # username: onetable
   # password: <%= ENV['ONETABLE_DATABASE_PASSWORD'] %>
