@@ -53,5 +53,6 @@ class Restaurant < ApplicationRecord
 
   def image_url
      ActionController::Base.helpers.asset_path(image.url)
+    
   end
 end

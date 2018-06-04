@@ -646,7 +646,7 @@ temp_variable.image = File.open('app/assets/images/restaurants/temp/thirsty_bear
 temp_variable.save!
 
 temp_variable = Restaurant.find(13)
-temp_variable.image = File.open('app/assets/images/restaurants/temp/rest-bg-01.jpg')
+temp_variable.image = File.open('app/assets/images/restaurants/temp/kusakabe.jpg')
 temp_variable.save!
 
 Dir.chdir('app/assets/images/restaurants/photos')
