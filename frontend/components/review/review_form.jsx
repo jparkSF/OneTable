@@ -53,7 +53,7 @@ class ReviewForm extends React.Component {
     // this.fetchRestaurant(this.restId);
     // this.fetchAllRestaurants();
     if (isEmpty(this.props.restaurants)) {
-      // console.log("empty");
+      
 
     } else {
 
@@ -94,7 +94,7 @@ class ReviewForm extends React.Component {
               this.reversedReview.map(review => (
                 
                 <li key={review.id}>
-                  {console.log(this.props)}
+                  
                   {review.comment}
                   <br />
                   <hr/>

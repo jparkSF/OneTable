@@ -18,12 +18,20 @@ class MainContent extends React.Component {
 
   destructRestaurant(restaurant) {
 
+    let fixedImageUrl;
+    
+    if(restaurant.id < 9){
+      let imageName = restaurant.name.toLowerCase().split(" ").join("_")
+      console.log(imageName)
+      fixedImageUrl = `assets/restaurants/temp/${imageName}.jpg`
 
-    let fixedImageUrl = restaurant.image_url;
-    console.log(fixedImageUrl)
-    if (restaurant.image_url.includes('://s3.')) {
-      fixedImageUrl = restaurant.image_url.replace('://s3.', 's://s3-us-west-1.');
+    } else {
+      let imageName = Math.floor(Math.random() * 39) + 1;
+      fixedImageUrl = `assets/restaurants/photos/${imageName}.jpg`
     }
+    // if (restaurant.image_url.includes('://s3.')) {
+    //   fixedImageUrl = restaurant.image_url.replace('://s3.', 's://s3-us-west-1.');
+    // }
     // if (restaurant.image_url.includes('one-table.')) {
     //   fixedImageUrl = restaurant.image_url.replace('one-table.', '');
     // }
