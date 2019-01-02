@@ -23,11 +23,11 @@ class MainContent extends React.Component {
     if(restaurant.id < 9){
       let imageName = restaurant.name.toLowerCase().split(" ").join("_")
       console.log(imageName)
-      fixedImageUrl = `assets/restaurants/temp/${imageName}.jpg`
+      fixedImageUrl = `/assets/restaurants/temp/${imageName}.jpg`
 
     } else {
       let imageName = Math.floor(Math.random() * 39) + 1;
-      fixedImageUrl = `assets/restaurants/photos/${imageName}.jpg`
+      fixedImageUrl = `/assets/restaurants/photos/${imageName}.jpg`
     }
     // if (restaurant.image_url.includes('://s3.')) {
     //   fixedImageUrl = restaurant.image_url.replace('://s3.', 's://s3-us-west-1.');
