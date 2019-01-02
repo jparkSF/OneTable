@@ -20,7 +20,7 @@ class MainContent extends React.Component {
 
 
     let fixedImageUrl = restaurant.image_url;
-    
+    console.log(fixedImageUrl)
     if (restaurant.image_url.includes('://s3.')) {
       fixedImageUrl = restaurant.image_url.replace('://s3.', 's://s3-us-west-1.');
     }
@@ -130,6 +130,7 @@ class MainContent extends React.Component {
                 <div className="content-block-body top-cuisines">
                   <ul className="restaurant-lists">
                     {
+                      
                       Object.keys(restaurants).map((index) => this.destructRestaurant(restaurants[index]))
                     }
                   </ul>
