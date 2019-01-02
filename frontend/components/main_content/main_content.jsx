@@ -22,7 +22,7 @@ class MainContent extends React.Component {
     
     if(restaurant.id < 9){
       let imageName = restaurant.name.toLowerCase().split(" ").join("_")
-      console.log(imageName)
+      // console.log(imageName)
       fixedImageUrl = `/assets/restaurants/temp/${imageName}.jpg`
 
     } else {
