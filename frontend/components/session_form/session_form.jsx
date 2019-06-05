@@ -1,17 +1,18 @@
-import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import { login } from '../../utils/sessions';
+import React from "react";
+import { Link, withRouter } from "react-router-dom";
+import { login } from "../../utils/sessions";
 
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    
-    let loginState = { email: '', password: ''};
-    let signUpState = {first_name: '', last_name:''};
+
+    let loginState = { email: "", password: "" };
+    let signUpState = { first_name: "", last_name: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.state = 
-      this.props.formType === "signup" ? 
-        Object.assign(loginState,signUpState) : loginState;
+    this.state =
+      this.props.formType === "signup"
+        ? Object.assign(loginState, signUpState)
+        : loginState;
 
     this.closeModal = props.closeModal;
     this.props.errors.session = [];
@@ -21,23 +22,24 @@ class SessionForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
-      this.props.history.push('/');
+      // this.props.history.push("");
     }
   }
 
   update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+    return e =>
+      this.setState({
+        [field]: e.currentTarget.value
+      });
   }
 
-  resetForm(){
-    
-    let loginState = { email: '', password: '' };
-    let signUpState = { first_name: '', last_name: '' };
+  resetForm() {
+    let loginState = { email: "", password: "" };
+    let signUpState = { first_name: "", last_name: "" };
     let state =
-      this.props.formType === "signup" ?
-        Object.assign(loginState, signUpState) : loginState;
+      this.props.formType === "signup"
+        ? Object.assign(loginState, signUpState)
+        : loginState;
     this.setState(state);
   }
 
@@ -55,100 +57,140 @@ class SessionForm extends React.Component {
     this.props.demoUser(user).then(() => this.props.closeModal());
   }
 
-
   firstNameForm() {
-    return(
-      <input type="text" placeholder="Firstname *" value={this.state.first_name}
-          onChange={this.update('first_name')} className="login-input"/> 
+    return (
+      <input
+        type="text"
+        placeholder="Firstname *"
+        value={this.state.first_name}
+        onChange={this.update("first_name")}
+        className="login-input"
+      />
     );
   }
   lastNameForm() {
-    return(
-      <input type="text" placeholder="Lastname *" value={this.state.last_name}
-          onChange={this.update('last_name')} className="login-input"/>
+    return (
+      <input
+        type="text"
+        placeholder="Lastname *"
+        value={this.state.last_name}
+        onChange={this.update("last_name")}
+        className="login-input"
+      />
     );
   }
-  emailForm(){
-    return(
-      <input type="text" placeholder="Email *" value={this.state.email}
-          onChange={this.update('email')} className="login-input"/>
+  emailForm() {
+    return (
+      <input
+        type="text"
+        placeholder="Email *"
+        value={this.state.email}
+        onChange={this.update("email")}
+        className="login-input"
+      />
     );
   }
   passwordForm() {
-    return(
-      <input type="password" placeholder="Password *" value={this.state.password}
-          onChange={this.update('password')} className="login-input"/>
+    return (
+      <input
+        type="password"
+        placeholder="Password *"
+        value={this.state.password}
+        onChange={this.update("password")}
+        className="login-input"
+      />
     );
   }
   demoEmail() {
     return (
-      <input type="text" placeholder="" value="jpark830@me.com"
-        onChange={this.update('email')} className="login-input" />
+      <input
+        type="text"
+        placeholder=""
+        value="jpark830@me.com"
+        onChange={this.update("email")}
+        className="login-input"
+      />
     );
   }
   demoPassword() {
     return (
-      <input type="password" placeholder="" value="password"
-        onChange={this.update('password')} className="login-input" />
+      <input
+        type="password"
+        placeholder=""
+        value="password"
+        onChange={this.update("password")}
+        className="login-input"
+      />
     );
   }
 
   mainForm() {
-    const button = (this.props.formType === "login") ? 
-      "Sign in " : "Create Account";
+    const button =
+      this.props.formType === "login" ? "Sign in " : "Create Account";
 
-    switch (this.props.formType){
-      case 'login':
-        return(
+    switch (this.props.formType) {
+      case "login":
+        return (
           <div className="login-form">
             <br />
-            {this.emailForm()}<br />
-            {this.passwordForm()}<br /> 
-            <input type="submit" value={button} />
-            {/* <Link to='/demo'> */}
-              <input type="button" onClick={() => this.demoUser()} value="Demo Login" />
-            {/* </Link> */}
-          </div>
-        );  
-    
-      case 'signup':
-        return(
-          <div className="login-form">
+            {this.emailForm()}
             <br />
-            {this.firstNameForm()}<br />
-            {this.lastNameForm()}<br />
-            {this.emailForm()}<br />
-            {this.passwordForm()}<br />
+            {this.passwordForm()}
+            <br />
             <input type="submit" value={button} />
             {/* <Link to='/demo'> */}
-              <input type="button" onClick={() => this.demoUser()} value="Demo Login"/>
+            <input
+              type="button"
+              onClick={() => this.demoUser()}
+              value="Demo Login"
+            />
             {/* </Link> */}
           </div>
         );
-      
-        default:
-          // return (
-          //   // <div className="login-form">
-          //   //   <br />
-          //   //   {this.demoEmail()}<br />
-          //   //   {this.demoPassword()}<br />
-          //   //   <input type="button" onClick={() => this.demoUser()}  value="Demo sign in" />
-          //   //   {/* <button onclick="{}"> Demo sign in</button>
-          //   //   <input type="button"  value="Demo sign in" /> */}
-          //   // </div>
-          // );
-        
+
+      case "signup":
+        return (
+          <div className="login-form">
+            <br />
+            {this.firstNameForm()}
+            <br />
+            {this.lastNameForm()}
+            <br />
+            {this.emailForm()}
+            <br />
+            {this.passwordForm()}
+            <br />
+            <input type="submit" value={button} />
+            {/* <Link to='/demo'> */}
+            <input
+              type="button"
+              onClick={() => this.demoUser()}
+              value="Demo Login"
+            />
+            {/* </Link> */}
+          </div>
+        );
+
+      default:
+      // return (
+      //   // <div className="login-form">
+      //   //   <br />
+      //   //   {this.demoEmail()}<br />
+      //   //   {this.demoPassword()}<br />
+      //   //   <input type="button" onClick={() => this.demoUser()}  value="Demo sign in" />
+      //   //   {/* <button onclick="{}"> Demo sign in</button>
+      //   //   <input type="button"  value="Demo sign in" /> */}
+      //   // </div>
+      // );
     }
   }
 
   renderErrors() {
     const errors = this.props.errors.session;
-     return (
+    return (
       <ul className="error-lists">
         {this.props.errors.session.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
+          <li key={`error-${i}`}>{error}</li>
         ))}
       </ul>
     );
@@ -160,44 +202,55 @@ class SessionForm extends React.Component {
 
   navLink() {
     this.clearErrors();
-    if (this.props.formType === 'login') {
-
-      return <Link to="/signup" onClick={() => this.resetForm()}>Create an account</Link>;
+    if (this.props.formType === "login") {
+      return (
+        <Link to="/signup" onClick={() => this.resetForm()}>
+          Create an account
+        </Link>
+      );
     } else {
-      return <Link to="/login" onClick={() => this.resetForm()}>Sign in</Link>;
+      return (
+        <Link to="/login" onClick={() => this.resetForm()}>
+          Sign in
+        </Link>
+      );
     }
   }
 
   navLinkMsg() {
     const loginMsg = "New to OneTable? ";
     const signUpMsg = "Already have an account? ";
-    if (this.props.formType === 'login') {
+    if (this.props.formType === "login") {
       return loginMsg;
     } else {
-      return signUpMsg; 
+      return signUpMsg;
     }
   }
 
   render() {
-    const welcomeMsg = (this.props.formType === 'login') ?
-      "Please sign in" : "Welcome to OneTable!";
+    const welcomeMsg =
+      this.props.formType === "login"
+        ? "Please sign in"
+        : "Welcome to OneTable!";
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <p>{welcomeMsg}<a onClick={() => this.closeModal()}><i className="fa fa-times" aria-hidden="true"></i></a></p>
+          <p>
+            {welcomeMsg}
+            <a onClick={() => this.closeModal()}>
+              <i className="fa fa-times" aria-hidden="true" />
+            </a>
+          </p>
           <hr />
-          { this.renderErrors() }      
-          
-          {this.mainForm()}
+          {this.renderErrors()}
 
-         
+          {this.mainForm()}
         </form>
         <hr />
         <div className="login-form-links">
           {this.navLinkMsg()}
           {this.navLink()}
         </div>
-        
       </div>
     );
   }
