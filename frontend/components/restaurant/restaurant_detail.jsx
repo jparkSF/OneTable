@@ -213,8 +213,10 @@ export default class RestaurantDetail extends React.Component {
       return <div />;
     } else {
       this.restaurant = this.props.restaurants[this.restId];
-      let fixedImageUrl = this.restaurant.image_url;
-
+      let tempUrl = this.restaurant.image_url.split("/");
+      let imageName = tempUrl[tempUrl.length - 1];
+      let fixedImageUrl = `/assets/restaurants/temp/${imageName}`;
+      console.log(fixedImageUrl);
       if (this.restaurant.image_url.includes("://s3.")) {
         fixedImageUrl = this.restaurant.image_url.replace(
           "://s3.",
